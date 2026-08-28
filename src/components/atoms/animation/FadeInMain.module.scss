@@ -1,0 +1,18 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.fade-wrapper {
+  opacity: 0;
+  /* 기존 rem(20) 보다 훨씬 아래(예: rem(100))에서 시작하게 설정 */
+  transform: translateY(rem(100));
+
+  /* 고급스럽고 부드럽게 올라오도록 속도와 타이밍 함수 조절 */
+  transition:
+    opacity 1s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

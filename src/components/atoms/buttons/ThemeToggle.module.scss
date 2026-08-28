@@ -1,0 +1,11 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.theme-button {
+  padding: rem(8);
+  margin: rem(-8);
+
+  path {
+    stroke: var(--color-gray-1000);
+  }
+}

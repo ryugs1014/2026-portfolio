@@ -1,0 +1,8 @@
+@use './rem' as *;
+
+:root {
+  --content-max-width: #{rem(1460)};
+  --layout-padding: #{rem(80)};
+  --layout-padding-tablet: #{rem(60)};
+  --layout-padding-mobile: #{rem(40)};
+}

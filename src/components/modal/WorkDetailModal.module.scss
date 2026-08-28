@@ -1,0 +1,35 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); // 조금 더 진한 배경
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  position: relative;
+  width: 100vw; // 꽉 차게 보이도록 설정 (조정 가능: 90vw 등)
+  height: 100vh; // 꽉 차게 보이도록 설정
+  //background-color: var(--color-gray-0); // 메인 배경색
+  overflow-y: auto; // 내부 스크롤 활성화
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,155 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.section-container {
+  padding: rem(160) 0;
+}
+
+.section-wrap {
+  @include grid-box(null, rem(60));
+}
+
+.title-section {
+  @include flex-box(space-between, end, row, rem(10));
+  box-sizing: border-box;
+}
+
+.text-section {
+  @include grid-box(null, rem(10));
+
+  .section-title {
+    @include typo(20, 500, 1.4);
+  }
+
+  .section-text {
+    @include typo(48, 500, 1.2);
+  }
+}
+
+.content-section {
+  @include flex-box(space-between, end, row, rem(10));
+  width: 100%;
+  container-type: inline-size;
+  container-name: content;
+  overflow: hidden;
+
+  > li {
+    box-sizing: border-box;
+    @include flex-box(start, start);
+  }
+
+  .contact-mail {
+    //font-size: 17cqw;
+    font-size: rem(310);
+    font-weight: 300;
+    line-height: 0.8;
+    letter-spacing: -10;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none !important;
+    user-select: none;
+  }
+
+  .contact-buttons {
+    width: 100%;
+    @include flex-box(end, center, row, rem(60));
+    @include typo(20, 600, 1);
+
+    .link-button {
+      @include flex-box(end, center, row, rem(12));
+      color: var(--color-gray-1000);
+
+      .link {
+        transform: rotate(-45deg);
+      }
+
+      .file {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+@media (max-width: rem(1600)) {
+  .content-section {
+    .contact-buttons {
+      @include flex-box(end, center, row, rem(24));
+      @include typo(16, 600, 1);
+    }
+  }
+}
+
+@media (max-width: rem(1400)) {
+  .content-section {
+    .contact-mail {
+      font-size: 22cqw;
+    }
+  }
+}
+
+@media (max-width: rem(1000)) {
+  .title-section {
+    .section-title {
+      @include typo(16, 500, 1.4);
+    }
+
+    .section-text {
+      @include typo(34, 500, 1.2);
+    }
+  }
+
+  .content-section {
+    @include flex-box(start, start, column, rem(30));
+    width: 100%;
+
+    > li {
+      width: 100%;
+    }
+
+    .contact-mail {
+      font-size: 30.5cqw;
+    }
+
+    .contact-buttons {
+      @include flex-box(space-between, center, row, rem(60));
+      padding-top: rem(30);
+      border-top: rem(1) solid var(--color-line-noraml);
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: rem(768)) {
+  .title-section {
+    .section-title {
+      @include typo(14, 500, 1.4);
+    }
+
+    .section-text {
+      @include typo(24, 500, 1.2);
+
+      > br {
+        display: none;
+      }
+    }
+  }
+
+  .content-section {
+    .contact-mail {
+      font-size: 30cqw;
+      letter-spacing: -6;
+    }
+
+    .contact-buttons {
+      @include flex-box(space-between, center, row, rem(24));
+    }
+  }
+}
+
+@media (max-width: rem(500)) {
+  .content-section {
+    .contact-mail {
+      font-size: 31cqw;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@use '../rem' as *;
+@use 'sass:meta';
+@use 'sass:math';
+
+// ---------------------------------------------------------
+// 내부 유틸리티 함수 (사용자 입력값 자동 변환기)
+// ---------------------------------------------------------
+
+@function parse-align($val) {
+  @if $val == start {
+    @return flex-start;
+  } @else if $val == end {
+    @return flex-end;
+  }
+  @return $val;
+}
+
+// 2. 숫자 자동 rem 변환 (숫자면 rem 변환, 아니면 그대로 반환)
+@function parse-unit($val) {
+  @if meta.type-of($val) == 'number' and math.is-unitless($val) {
+    @return rem($val);
+  }
+  @return $val; // rem(), % 등 문자가 섞인 값이면 그대로 패스
+}
+
+// ===============================
+// 1. Flex Box (flex-box)
+// ===============================
+// * 사용 예시:
+// @include flex-box();
+// @include flex-box(center, center); // justify, align
+// @include flex-box(start, end, column, 30); // flex-start, flex-end, 세로, 30px(자동 rem)
+// @include flex-box(center, center, null, rem(20)); // 직접 rem() 입력도 완벽 호환
+@mixin flex-box(
+  $justify: flex-start,
+  $align: stretch,
+  $direction: row,
+  $gap: null
+) {
+  display: flex;
+  justify-content: parse-align($justify);
+  align-items: parse-align($align);
+
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+  @if $gap != null {
+    gap: parse-unit($gap);
+  }
+}
+
+// ===============================
+// 2. Grid Box (grid-box) 컨테이너용
+// ===============================
+// * 사용 예시:
+// @include grid-box();
+// @include grid-box(null, 10); // 간격만 10px
+// @include grid-box(repeat(2, 1fr), 16); // 2칸, 간격 16px
+// @include grid-box(repeat(3, 1fr), 20, start, center); // 3칸, 간격, 개체 정렬
+@mixin grid-box($columns: null, $gap: null, $align: null, $justify: null) {
+  display: grid;
+
+  @if $columns != null {
+    grid-template-columns: $columns;
+  }
+  @if $gap != null {
+    gap: parse-unit($gap);
+  }
+
+  // 컨테이너 내부 전체 아이템 정렬
+  @if $align != null and $justify != null {
+    place-items: parse-align($align) parse-align($justify);
+  } @else {
+    @if $align != null {
+      align-items: parse-align($align);
+    }
+    @if $justify != null {
+      justify-items: parse-align($justify);
+    }
+  }
+}
+
+// ===============================
+// 3. Grid Item (grid-item) 개별 요소용
+// ===============================
+// * 사용 예시:
+// @include grid-item(end, end); // 이 아이템만 오른쪽 아래 구석으로
+@mixin grid-item($align: null, $justify: null) {
+  @if $align != null and $justify != null {
+    place-self: parse-align($align) parse-align($justify);
+  } @else {
+    @if $align != null {
+      align-self: parse-align($align);
+    }
+    @if $justify != null {
+      justify-self: parse-align($justify);
+    }
+  }
+}

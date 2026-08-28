@@ -1,0 +1,1333 @@
+[
+  {
+    "id": "dongle-diary",
+    "main-color": "#4BF9F4",
+    "sub-color": "#ffffff",
+    "color-theme": "dark",
+    "font-theme": "dark",
+    "logo-icon": "/svg/icons/logo-icons/dongle-diary.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/dongle-diary-dark.svg",
+    "logo-image": "/image/portfolios/main/dongle-diary.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786744350/dongle-diary-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087863/dongle-dairy-main.png",
+    "main-image": "/image/portfolios/main/dongle-diary.png",
+    "sub-image": "/image/portfolios/main/dongle-diary.png",
+    "work-title": "동글일기 다이어리 앱",
+    "work-title-short": "동글일기 다이어리",
+    "work-title-eng": "Dongle Diary",
+    "full-work-title": "동글일기 - 크로스 플랫폼 다이어리 및 일정 관리 앱",
+    "short-work-explan": "React Native 기반 크로스 플랫폼 다이어리 앱으로, 구글 드라이브 데이터 백업과 맞춤형 에디터를 통한 직관적인 일상 기록 및 일정 관리 시스템 구축",
+    "work-explan": "사용자가 일기, 메모, 할 일 목록(To-do List)을 직관적으로 작성하고 체계적으로 관리할 수 있는 모바일 다이어리 애플리케이션입니다. React Native와 Expo 프레임워크를 활용하여 단일 코드베이스로 Android와 iOS 양대 마켓에 모두 대응하는 크로스 플랫폼 앱으로 개발했습니다. 매일의 일상 기록에 대한 접근성을 높이기 위해 사용자 편의성을 최우선으로 고려한 UI/UX를 설계하고 적용했습니다.",
+    "client": "개인 프로젝트",
+    "category": "Mobile App",
+    "work-start": "2026.06",
+    "work-end": "2026.07",
+    "work-contribution": "기획, UX · UI, 퍼블리싱, 프론트엔드",
+    "key-features": "일기 · 메모 · 할 일 목록(To-do List), 앱 테마 및 UXUI 설정, 구글 드라이브 백업 · 복원, PDF 내보내기, 데이터 초기화, 앱 잠금 및 생체인증",
+    "key-techs": "React Native, Expo, TypeScript, Zustand, OAuth(Google Sign-in), Google Drive API, Async Storage, GitHub, Vercel",
+    "github": "https://github.com/ryugs1014/dongle-diary",
+    "link": "https://github.com/ryugs1014/dongle-diary/releases/download/apk/application-dongle-diary-v1.0.0.apk",
+
+    "features": [
+      {
+        "title": "일기 · 메모 · 할 일 목록(To-do List) 맞춤형 에디터 구현",
+        "description": [
+          "기능별 특성에 맞춰 최적의 에디터를 분리 적용했습니다. 일기 작성은 HTML 기반의 RichEditor를 사용하여 필수적인 최소한의 툴만 제공해 직관성을 높였습니다. 메모 기능은 모바일 환경에 적합한 tentap-editor 라이브러리를 도입하여 되돌리기(Undo), 다시 실행(Redo) 등 대부분의 에디터 툴을 활성화했습니다. 두 기능 모두 백업/복원의 안정성을 위해 에디터 내용을 통째로 저장하는 방식을 채택했습니다. 할 일 목록은 버그 발생률이 낮은 기본 TextInput을 커스텀하여 캘린더와 연동해 날짜별 관리가 가능하도록 구현했습니다. 이외에도 폰트 종류 및 사이즈 적용, 기분(Mood) 선택, 이미지 첨부 기능을 통합 개발했습니다.",
+          "기능별 특성에 맞춰 최적의 에디터를 분리 적용했습니다. 일기 작성은 HTML 기반의 RichEditor를 사용하여 필수적인 최소한의 툴만 제공해 직관성을 높였습니다. 메모 기능은 모바일 환경에 적합한 tentap-editor 라이브러리를 도입하여 되돌리기(Undo), 다시 실행(Redo) 등 대부분의 에디터 툴을 활성화했습니다. 두 기능 모두 백업/복원의 안정성을 위해 에디터 내용을 통째로 저장하는 방식을 채택했습니다. 할 일 목록은 버그 발생률이 낮은 기본 TextInput을 커스텀하여 캘린더와 연동해 날짜별 관리가 가능하도록 구현했습니다. 이외에도 폰트 종류 및 사이즈 적용, 기분(Mood) 선택, 이미지 첨부 기능을 통합 개발했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084110/dongle-diary-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084110/dongle-diary-slide-1-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084111/dongle-diary-slide-1-03.png"
+        ]
+      },
+      {
+        "title": "Google Drive API 기반 클라우드 백업 및 복원 시스템",
+        "description": [
+          "자체 서버 유지보수 비용 절감과 개인정보 보안 강화를 위해, 유저의 구글 클라우드 계정을 직접 연동하는 수동 백업/복원 아키텍처를 설계했습니다. 일기와 메모 데이터를 하나로 통합하지 않고 기능별로 개별 저장되도록 분리하여 안정성을 높였습니다. 텍스트뿐만 아니라 첨부 이미지까지 함께 동기화되며, 일기의 경우 날짜가 겹치는 데이터만 덮어쓰도록 처리해 유실을 방지했습니다. 메모는 항상 최신 작성 내용으로 백업되도록 구현하여, iOS와 Android 등 이기종 기기 간의 완벽한 데이터 연동 및 작성 환경을 제공합니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084115/dongle-diary-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084115/dongle-diary-slide-2-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084115/dongle-diary-slide-2-03.png"
+        ]
+      },
+      {
+        "title": "사용자 친화적 맞춤형 UX/UI 및 환경 최적화",
+        "description": [
+          "사용자의 다양한 사용 패턴을 반영하기 위해 앱 전반의 UX/UI 커스텀 기능을 고도화했습니다. 시스템 다크모드 대응, 다국어 언어 변경, 글꼴 종류 및 크기 조절 시스템을 구축했습니다. 또한, 보안 강화를 위한 생체 인식(Face ID/지문) 암호 잠금 기능과 앱 실행 시 진입할 초기 화면(일기, 메모, 할 일 목록 또는 마지막 사용 화면)을 유저가 직접 선택할 수 있는 개인화 기능을 추가하여 다양한 디바이스 환경에서 통합 테스트를 완료했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084113/dongle-diary-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084112/dongle-diary-slide-3-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084111/dongle-diary-slide-3-03.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "달력 렌더링 최적화 (날짜 기간 설정)",
+        "content": "앱 구동 후 일기 초기 화면 진입 시 달력 컴포넌트의 렌더링 지연으로 인해 앱이 무거워지는 퍼포먼스 저하 현상이 발생했습니다.",
+        "contentImages": [],
+        "cause": "캘린더 라이브러리의 렌더링 기간이 앞뒤로 5년씩(총 10년 치) 과도하게 길게 설정되어 있어 불필요한 메모리 소모와 렌더링 부하를 유발했습니다.",
+        "causeImages": [],
+        "solution": "사용자의 일반적인 다이어리 사용 패턴을 분석하여, 캘린더 렌더링 범위를 '이전 4년'부터 '다음 해 1년'까지로 축소하여 메모리 할당을 최적화했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084114/dongle-diary-noraml-1-01.png"
+        ],
+        "result": "초기 화면 진입 시 발생하는 지연 문제가 완벽히 해결되었으며, 할 일 목록 캘린더에도 동일한 최적화 로직을 적용하여 앱 전반의 퍼포먼스를 크게 향상시켰습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "RichEditor 이미지 로드 시 잘림 현상",
+        "content": "에디터에 첨부한 이미지를 임시저장 후 다시 불러오거나, 뷰어 화면에서 확인할 때 이미지의 하단이 잘려 나가는 렌더링 오류를 발견했습니다.",
+        "contentImages": [],
+        "cause": "RichEditor의 내부 HTML 렌더링 구조상, 이미지 소스를 불러오기 전에 컨테이너의 높이 계산이 먼저 완료되어 발생하는 비동기 렌더링 타이밍 이슈로 파악했습니다.",
+        "causeImages": [],
+        "solution": "이미지를 완전히 불러온(Load) 이후에 컨테이너와 이미지의 실제 길이를 다시 측정하여 리렌더링(Re-rendering)할 수 있도록 상태 관리 및 비동기 처리 로직을 수정했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084113/dongle-diary-noraml-2-01.png"
+        ],
+        "result": "약간의 로딩 딜레이가 추가되었으나, 이미지가 잘림 없이 명확하게 출력되었습니다. 추후 스켈레톤 UI를 도입하여 체감 로딩 속도를 개선하는 방향으로 추가 보완점을 도출했습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "PDF 저장 시 첨부 이미지 누락(미포함) 이슈",
+        "content": "작성한 일기 데이터를 PDF 파일로 내보내기(Export)할 때, OS(iOS/Android)별로 각각 다른 원인에 의해 텍스트만 저장되고 이미지가 첨부되지 않는 현상이 발생했습니다.",
+        "contentImages": [],
+        "cause": "원본 이미지를 압축하지 않아 발생하는 메모리/용량 초과 문제 및 이미지를 Base64 문자열로 치환하여 저장하는 과정에서 PDF 제너레이터가 이를 정상적으로 파싱하지 못했습니다.",
+        "causeImages": [],
+        "solution": "PDF 변환 전 이미지를 적절한 해상도 및 용량으로 압축(Resize & Compress)하는 전처리 모듈을 추가하고, 데이터를 월별 단위로 분할하여 PDF 렌더링 부하를 분산시켰습니다.",
+        "solutionImages": [],
+        "result": "일기에 등록된 감정 이모티콘은 물론 사용자가 직접 첨부한 고용량 사진 데이터까지 누락 없이 모두 온전하게 PDF 문서에 포함되도록 구현을 완료했습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "에디터 Base64 이미지 저장 시 용량 과다 및 성능 저하 이슈",
+        "content": "초기 기획 당시 일기 내용(텍스트+이미지)을 통째로 Base64로 치환해 저장했으나, 장기적으로 데이터가 누적될 경우 구글 드라이브 동기화 시 심각한 용량 초과와 로딩 속도 저하가 발생할 것으로 예측되었습니다.",
+        "contentImages": [],
+        "cause": "텍스트와 고용량 미디어(이미지) 데이터를 분리하지 않고 하나의 JSON/Base64 덩어리로 묶어 처리하려는 아키텍처 설계의 한계였습니다.",
+        "causeImages": [],
+        "solution": "글을 작성하는 동안에는 에디터 처리가 용이한 Base64 형태로 유지하되, '저장'하는 순간 백그라운드에서 해당 데이터를 실제 물리적 파일(.jpg 등)로 변환해 기기에 저장하고, 일기장(DB)에는 파일의 '로컬 경로(주소)'만 텍스트로 기록하는 하이브리드 로직을 설계 및 적용했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084114/dongle-diary-noraml-3-01.png"
+        ],
+        "result": "클라우드 백업 시에는 데이터 형태로 묶어 올리고, 디바이스(로컬)에서는 미디어 파일을 분리 보관하여 앱의 쾌적한 속도를 유지하는 \"모바일 로컬 퍼스트(Local-first)\" 동기화 아키텍처를 성공적으로 구축했습니다. (추후 ZIP 압축 방식 고도화 계획을 수립했습니다.)",
+        "resultImages": []
+      }
+    ]
+  },
+  {
+    "id": "hey-dealer",
+    "main-color": "#0000ED",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "dark",
+    "logo-icon": "/svg/icons/logo-icons/heydealer.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/heydealer-dark.svg",
+    "logo-image": "/image/portfolios/main/heydealer.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739639/heydealer-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087263/heydealer-main.png",
+    "main-image": "/image/portfolios/main/heydealer.png",
+    "sub-image": "/image/portfolios/main/heydealer.png",
+    "work-title": "헤이딜러 웹사이트 클론 프로젝트",
+    "work-title-short": "헤이딜러 클론",
+    "work-title-eng": "Heydealer Colne",
+    "full-work-title": "헤이딜러 중고차 거래 플랫폼 프론트엔드 클론 코딩",
+    "short-work-explan": "실제 서비스 수준의 동적 데이터 렌더링, 3D 차량 뷰어 및 다중 필터링 시스템을 완벽하게 구현한 헤이딜러 프론트엔드 반응형 클론 코딩",
+    "work-explan": "국내 대표 중고차 거래 플랫폼 '헤이딜러'의 공식 웹사이트를 분석하여 UI와 레이아웃을 구현한 클론 코딩 프로젝트입니다. 원본 사이트의 실제 데이터를 활용하여 사용자 경험(UX)과 동적 렌더링을 정교하게 구현했으며, 반응형 웹 디자인 및 컴포넌트 구조화 역량을 검증하기 위해 진행했습니다.",
+    "client": "개인 프로젝트",
+    "category": "Web Platform",
+    "work-start": "2026.05",
+    "work-end": "2026.06",
+    "work-contribution": "퍼블리싱, 프론트엔드",
+    "key-features": "차량 목록 및 검색 필터, 영상 3D 회전, Three.js 3D, 전체 퍼블리싱, 모바일 반응형",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), Swiper, Three.js, Framer-motion, GitHub, Vercel",
+    "github": "https://github.com/ryugs1014/heydealer-fe-clone",
+    "link": "https://heydealer-fe-clone.vercel.app",
+
+    "features": [
+      {
+        "title": "복합 조건에서의 검색 및 다중 필터링 기능 구현",
+        "description": [
+          "브랜드, 차종 등 여러 조건이 중첩되는 복합 검색 기능을 구현했습니다. 원본 사이트의 JSON 매물 데이터를 활용해, 사용자의 다중 선택 조건에 맞춰 데이터를 가공하고 일치하는 결과값을 동적으로 렌더링하는 프론트엔드 로직 처리에 집중했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084109/heydealer-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084110/heydealer-slide-1-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084112/heydealer-slide-1-03.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084107/heydealer-slide-1-04.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084108/heydealer-slide-1-05.png"
+        ]
+      },
+      {
+        "title": "Three.js 기반 360도 자동차 3D 뷰어 및 내부 렌더링",
+        "description": [
+          "원본 사이트의 핵심 기능인 3D 차량 탐색 기능을 두 가지 방식으로 구현했습니다. 첫째, 비디오 소스를 활용하여 스크롤 및 마우스 드래그에 반응하는 3D 회전 인터랙션을 세팅했습니다. 둘째, 단순 비디오 재생을 넘어 실제 HTML5 Canvas와 Three.js를 결합해 차량 내부 3D 모델링 데이터를 삽입하고, 카메라 시점(카메라 위치 및 컨트롤러)을 자유롭게 조작하며 차량 내부를 둘러볼 수 있는 고급 렌더링 기능을 완성했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084103/heydealer-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084104/heydealer-slide-2-02.png"
+        ]
+      },
+      {
+        "title": "복합 UX/UI 레이아웃 클론 및 크로스 디바이스 반응형 최적화",
+        "description": [
+          "겉으로 보이는 디자인 요소뿐만 아니라, 헤이딜러 웹사이트 특유의 복잡하지만 직관적인 UI/UX 뎁스를 분석하여 CSS와 컴포넌트 구조를 직접 재설계했습니다. 시각적인 디자인 요소만으로 CSS와 컴포넌트를 직접 설계하며 1차 구현을 주도적으로 진행했습니다. 구현 한계에 부딪히거나 복잡한 UI/UX 뎁스를 처리해야 할 때만 제한적으로 원본 코드를 참고했습니다. 원본을 파악하는 과정에서 비효율적인 레거시는 모던 리액트 패턴으로 개선하고, 배울 점이 있는 최적화된 로직은 적극적으로 벤치마킹하여 PC, 태블릿, 모바일 환경을 완벽하게 지원하는 반응형 웹사이트를 구축했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084107/heydealer-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084106/heydealer-slide-3-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084106/heydealer-slide-3-03.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "기기별 영상 3D 회전 퍼포먼스 최적화",
+        "content": "비디오 소스를 활용한 360도 3D 회전 인터랙션을 구현한 후 모바일 환경에서 테스트한 결과, 극심한 프레임 드랍과 버벅임(Lag) 이슈가 발생했습니다.",
+        "contentImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084108/heydealer-noraml-1-01.png"
+        ],
+        "cause": "고해상도 비디오의 프레임을 스크롤/터치 이벤트에 맞춰 실시간으로 연속 탐색(Seeking)하는 작업이 모바일 브라우저의 메모리와 CPU에 과도한 부하를 발생시켰습니다. (원본 사이트 역시 모바일에서는 해당 기능을 제외한 상태였습니다.)",
+        "causeImages": [],
+        "solution": "모바일 디바이스의 하드웨어 한계를 인정하고 UX를 타협하는 전략을 취했습니다. 연속적인 프레임 탐색 대신 8방향의 정지된 스냅 뷰(단편적인 이미지 컷)로 전환하여 부드럽게 넘어가도록 모바일 전용 로직을 분리 적용했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084107/heydealer-noraml-1-02.png"
+        ],
+        "result": "퍼포먼스 저하 문제를 완벽히 해결함과 동시에, 모바일 환경에서는 억지스러운 3D 비디오 조작보다 고화질 차량 상세보기 이미지를 여러 장 나열하여 보여주는 것이 모바일 UX 측면에서 훨씬 적합하다는 인사이트를 얻었습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "안드로이드 모바일 브라우저 Sticky 요소 오작동 이슈",
+        "content": "안드로이드 환경 브라우저에서 스크롤을 최하단으로 내릴 때, 브라우저의 기본 주소창이 축소/사라지면서 변경되는 뷰포트(Viewport) 높이만큼 화면 내 position: sticky 요소가 비정상적으로 위로 밀려 올라가는 레이아웃 붕괴 현상이 발생했습니다.",
+        "contentImages": [],
+        "cause": "가로 스크롤 방지 등 특정 레이아웃 이탈 현상을 막기 위해 최상단 HTML/Body 태그에 부여했던 overflow-x: hidden 속성이 모바일 브라우저의 동적 뷰포트 계산 로직과 충돌을 일으킨 것으로 파악했습니다.",
+        "causeImages": [],
+        "solution": "PC 크롬 개발자 도구의 모바일 뷰어에서는 재현되지 않는 네이티브 브라우저 고유의 버그였기 때문에, 동일한 Wi-Fi 환경에서 192.168.0.1:3000 로컬 IP 포워딩을 통해 실제 안드로이드 기기로 접속하여 실시간 CSS 디버깅을 수행했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084104/heydealer-noraml-2-01.png"
+        ],
+        "result": "문제의 원인인 overflow-x: hidden을 삭제하고, 가로 스크롤 이슈는 내부 컨테이너의 구조를 수정하여 대체 해결했습니다. 부수적으로 모달(Modal)이나 모바일 메뉴 오픈 시 배경 스크롤을 막기 위해 작성했던 복잡한 useEffect DOM 제어 로직(document.body.style.overflow = 'hidden')들이 정상적으로 작동하게 되어 코드베이스를 대폭 간소화하는 성과를 얻었습니다.",
+        "resultImages": []
+      }
+    ]
+  },
+  {
+    "id": "narajangteo",
+    "main-color": "#000000",
+    "sub-color": "#21FA00",
+    "color-theme": "light",
+    "font-theme": "dark",
+    "logo-icon": "/svg/icons/logo-icons/glitchor-partners.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/glitchor-partners-dark.svg",
+    "logo-image": "/image/portfolios/main/narajangteo.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739820/narajangteo-video.mp4",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087686/narajangteo-video-main.mp4",
+    "main-image": "/image/portfolios/main/narajangteo.png",
+    "sub-image": "/image/portfolios/main/narajangteo.png",
+    "work-title": "글리처파트너스 사내 나라장터 공고 입찰 플랫폼",
+    "work-title-short": "나라장터 공고 입찰 API",
+    "work-title-eng": "G2B Data API",
+    "full-work-title": "글리처파트너스 전용 나라장터 공공데이터 API 연동 입찰 관리 플랫폼",
+    "short-work-explan": "나라장터 OpenAPI 및 서버리스 DB 연동으로 다중 키워드 검색을 지원하며, 구글 시트 기반 CMS로 운영 비용을 제로화한 사내 맞춤형 입찰 관리 플랫폼",
+    "work-explan": "액셀러레이터(AC) 기업인 글리처파트너스 내부 임직원들의 효율적인 입찰 업무를 지원하기 위해 개발한 사내 전용 플랫폼입니다. 조달청 정보개방포털의 나라장터 공공데이터 OpenAPI를 연동하여 실시간으로 입찰 공고를 불러오며, 사내 맞춤형 필터링과 데이터 시각화를 통해 공고 탐색 및 관리의 업무 생산성을 크게 향상시켰습니다.",
+    "client": "글리처파트너스",
+    "category": "Web Platform",
+    "work-start": "2026.01",
+    "work-end": "2026.02",
+    "work-contribution": "기획, UX · UI, 퍼블리싱, 프론트엔드, DB",
+    "key-features": "구글 인증 로그인, 대시보드, 공공데이터 저장 DB 구축, Cron-Job 스케쥴링, 공고 검색 필터, 공고 목록, 구글 스프레드시트 DB 구축, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), NextAuth, Upstash, GitHub, GitHub Action, Vercel, Vercel KV, Cron-Job, 공공데이터포털 Open API, Google-Spreadsheet",
+    "github": "",
+    "link": "https://partners.glitchor.com/login",
+
+    "features": [
+      {
+        "title": "나라장터 공공데이터 API 서버리스 연동 및 자체 DB 구축",
+        "description": [
+          "조달청에서 제공하는 방대한 나라장터 OpenAPI 데이터를 매번 클라이언트에서 호출하지 않고, 서버리스 아키텍처를 활용해 자체 데이터베이스(Vercel KV)에 안전하게 주기적으로 동기화합니다. 이를 바탕으로 사내 플랫폼 환경에 최적화된 자체 API 엔드포인트를 제작하여 데이터 로딩 속도와 안정성을 극대화했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084097/nara-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084097/nara-slide-1-02.png"
+        ]
+      },
+      {
+        "title": "입찰 공고 다중 키워드 검색 고도화 및 내역 저장 기능",
+        "description": [
+          "기존 나라장터 공식 사이트의 가장 큰 페인포인트(키워드 1개당 1번씩 별도 검색해야 하는 불편함)를 완벽히 개선했습니다. 배열 형태의 다중 키워드 동시 검색 엔진을 개발하고, 임직원들이 검색한 조건과 필터 내역을 프로필에 저장하고 불러올 수 있는 북마크 기능을 구현했습니다. 시간이 지날수록 누적된 검색 데이터를 통해 자사에 필요한 사업 공고를 더욱 빠르고 정확하게 타겟팅할 수 있는 업무 자동화 구조를 완성했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084101/nara-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084100/nara-slide-2-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084100/nara-slide-2-03.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084100/nara-slide-2-04.png"
+        ]
+      },
+      {
+        "title": "사내 워크스페이스 기반 NextAuth 구글 로그인 인증",
+        "description": [
+          "플랫폼의 정보 유출 방지와 인프라 구축 시간의 단축을 위해 NextAuth를 활용한 OAuth 인증 시스템을 도입했습니다. 일반 구글 계정이 아닌 자사 도메인(@glitchor.com)을 소유한 구글 워크스페이스 계정만 플랫폼에 접근할 수 있도록 인가(Authorization) 로직을 설계했습니다. 이를 통해 향후 전사적 사내 ERP 시스템으로 고도화할 수 있는 확장성 있는 보안 기반을 마련했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084097/nara-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084098/nara-slide-3-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084098/nara-slide-3-03.png"
+        ]
+      },
+      {
+        "title": "운영 비용 제로화를 위한 구글 시트(Google Sheet) 데이터베이스화",
+        "description": [
+          "별도의 백엔드 개발자나 서버 유지 비용 없이 비개발 직군도 익숙하게 데이터를 관리할 수 있도록, 구글 스프레드시트를 데이터베이스로 활용하는 아키텍처를 채택했습니다. 임직원별 고유 ID를 부여하여 플랫폼 내에서 북마크 삭제 및 상태 수정 시 시트와 실시간 연동되도록 CRUD 로직을 작성했습니다. 정부 사업 입찰이 1분기에 집중되고 이후에는 트래픽이 급감하는 비즈니스 특성을 기획적으로 판단하여, 사용자들이 빠른 이용이 가능하도록 과도한 오버엔지니어링을 방지하고 최소 비용으로 최대 효율을 내는 최적의 시스템을 구축했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084102/nara-slide-4-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084103/nara-slide-4-02.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "공공 API 실시간 연동 시 속도 지연 및 '최신 공고순' 정렬 부재 이슈",
+        "content": "조달청 무료 API를 클라이언트 단에서 직접 호출하자 데이터량이 워낙 방대해 렌더링 지연이 심각했으며, API 자체에서 '최신순 정렬' 파라미터를 제공하지 않아 UX가 크게 훼손되었습니다. (페이지 이동 마다 상당한 시간이 소요되었습니다.)",
+        "contentImages": [],
+        "cause": "외부 공공기관 API의 응답 속도 한계 및 제공 스펙의 부족이었습니다. 전체 데이터를 클라이언트로 가져와 프론트엔드 메모리 상에서 최신순으로 배열을 재정렬할 경우 심각한 퍼포먼스 결함이 발생했습니다.",
+        "causeImages": [],
+        "solution": "클라이언트 직접 호출을 포기하고 데이터 자동 동기화 아키텍처를 설계했습니다. GitHub Actions를 통해 스케줄러(Scheduler)를 구축하고, REST API를 통해 빠르고 가벼운 서버리스 DB인 Vercel KV(Redis)에 데이터를 적재하도록 구성했습니다. 이후 외부 Cron 플랫폼(console.cron-job.org)을 사용해 정확히 3시간 단위로 최신 데이터를 동기화하고 정렬 처리된 자체 API를 서비스하도록 파이프라인을 개편했습니다. 과거 3개월 이전의 불필요한 공고 데이터는 자동 삭제되도록 메모리 최적화 로직을 추가했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084101/nara-noraml-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084102/nara-noraml-1-03.png"
+        ],
+        "result": "초기 GitHub Actions의 내장 크론 기능이 깃허브 서버 부하 시 지연되거나 실행이 건너뛰어지는 한계를 발견하고, 신뢰성 높은 외부 Cron 서비스로 트리거를 분리함으로써 3시간 간격의 데이터 무결성과 압도적인 로딩 속도를 달성했습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "공공데이터 API 식별자 값(ID) 스펙 변경으로 인한 상세 링크 오류",
+        "content": "특정 일자 이후부터 플랫폼에 노출되는 입찰 공고 클릭 시, 실제 나라장터 상세 페이지로 연결되지 않고 에러 페이지가 노출되는 크리티컬 이슈를 발견했습니다.",
+        "contentImages": [],
+        "cause": "조달청 API 응답 데이터 중 URL 링크를 구성하는 파라미터 구분자가 공식 문서에 명시된 & 값에서 특정 날짜 이후 아무런 사전 안내 없이 ^ 특수문자로 이유 없이 변경 송출되는 외부 기관의 스펙 변경(버그) 문제로 파악되었습니다.",
+        "causeImages": [],
+        "solution": "자체 코드의 문제가 아닌 것을 확인한 뒤에 조달청 공공데이터 개방 담당자에게 오류 리포팅 민원을 접수하여 오류 수정 답변을 받아냈습니다. 동시에 백엔드 패치 전까지 사내 업무에 지장이 가지 않도록, 프론트엔드 단에서 URL 파싱 시 ^ 문자를 감지해 &로 강제 치환(Replace)하는 정규식 방어 코드를 긴급 배포했습니다.",
+        "solutionImages": [],
+        "result": "평소 플랫폼에 수시로 접속하여 기능을 테스트하는 습관 덕분에, 외부 기관의 예고 없는 스펙 변경 이슈를 선제적으로 발견할 수 있었습니다. 공공기관의 API 패치가 이루어지기 전까지 프론트엔드 방어 로직으로 단 하루의 업무 차질 없이 플랫폼을 정상 운영하였으며, 외부 의존성이 높은 데이터를 다룰 때 꼼꼼한 예외 처리와 지속적인 모니터링이 얼마나 중요한지 깨닫는 계기가 되었습니다.",
+        "resultImages": []
+      }
+    ]
+  },
+  {
+    "id": "glitchor-partners",
+    "main-color": "#21FA00",
+    "sub-color": "#000000",
+    "color-theme": "dark",
+    "font-theme": "dark",
+    "logo-icon": "/svg/icons/logo-icons/glitchor-partners.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/glitchor-partners-dark.svg",
+    "logo-image": "/image/portfolios/main/glitchor-partners.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739832/glitchor-partners-video.mp4",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087681/glitchor-partners-video-main.mp4",
+    "main-image": "/image/portfolios/main/glitchor-partners.png",
+    "sub-image": "/image/portfolios/main/glitchor-partners.png",
+    "work-title": "글리처파트너스 공식 웹사이트",
+    "work-title-short": "글리처파트너스",
+    "work-title-eng": "Glitchor Partners",
+    "full-work-title": "NEXT LIFESTYLE VENTURE STUDIO 글리처파트너스 기업 공식 웹사이트 구축",
+    "short-work-explan": "하이엔드 스크롤 인터랙션을 적용한 벤처 스튜디오 공식 웹사이트로, 구글 시트와 Cloudinary를 연동해 비개발 직군의 자체 콘텐츠 관리가 가능한 반응형 웹 구축",
+    "work-explan": "기존 N15파트너스에서 '글리처파트너스'로의 사명 변경 및 리브랜딩에 발맞춰 신규 런칭한 공식 기업 웹사이트입니다. 벤처 스튜디오로서의 기업 비전과 포트폴리오를 효과적으로 전달할 수 있도록 모던하고 신뢰감 있는 UI/UX를 설계했으며, 다양한 디바이스 환경에 최적화된 반응형 웹으로 구축했습니다.",
+    "client": "글리처파트너스",
+    "category": "Responsive Web",
+    "work-start": "2025.10",
+    "work-end": "2025.12",
+    "work-contribution": "기획, UX · UI, 퍼블리싱, 프론트엔드",
+    "key-features": "다국어 번역, 메인 랜딩 페이지, 인터랙션, 스크롤 이벤트, 문의하기 폼, 게시판, 구글 스프레드시트 DB 구축, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, Framer-motion, AOS, Swiper, i18next, Figma, Svgator, papaparse, Google-Spreadsheet",
+    "github": "",
+    "link": "https://partners.glitchor.com/",
+
+    "features": [
+      {
+        "title": "비개발 직군을 위한 Headless CMS 인프라 (Google Sheet & Cloudinary)",
+        "description": [
+          "잦은 업데이트가 발생하는 포트폴리오, 공지사항, 팝업 배너 등의 콘텐츠를 관리하기 위해 막대한 리소스가 드는 전용 관리자(Admin) 어플리케이션을 구축하는 대신, 실무자들에게 가장 익숙한 구글 스프레드시트를 데이터베이스로 활용했습니다. 텍스트 데이터는 구글 시트를 통해 실시간 연동 처리하고, 이미지 및 미디어 에셋은 강력한 리사이징과 포맷 최적화를 지원하는 플랫폼인 Cloudinary를 도입해 URL 기반으로 관리하도록 분리 설계했습니다. 이를 통해 개발 리소스 투입 없이 마케팅/운영팀에서 100% 자율적인 콘텐츠 배포가 가능한 환경을 완성했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084096/glitchor-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084095/glitchor-slide-1-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084094/glitchor-slide-1-03.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084094/glitchor-slide-1-04.png"
+        ]
+      },
+      {
+        "title": "브랜드 아이덴티티 강화를 위한 하이엔드 웹 애니메이션 구현",
+        "description": [
+          "액셀러레이팅 기업 특유의 혁신적이고 속도감 있는 이미지를 전달하기 위해 프론트엔드 애니메이션을 적극 도입했습니다. GSAP, Framer-motion, AOS를 활용하여 사용자가 스크롤을 내릴 때 화면의 요소들이 부드럽게 등장하는 동적 애니메이션을 구현했으며, 꼼꼼한 크로스 디바이스 테스트를 거쳐 모바일 환경에서도 버벅임 없이 자연스러운 모션을 최적화했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084092/glitchor-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084090/glitchor-slide-2-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084091/glitchor-slide-2-03.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084092/glitchor-slide-2-04.png"
+        ]
+      },
+      {
+        "title": "초경량 SVG 애니메이션 컴포넌트(SVGator) 커스텀 제작",
+        "description": [
+          "무거운 Lottie JSON 파일이나 MP4 비디오 대신, 벡터 기반으로 화질 저하가 없고 용량이 매우 가벼운 독립적인 SVG 애니메이션을 도입했습니다. 빠른 제작을 위해 Adobe After Effects 대신 SVGator 플랫폼을 활용하여 서비스 기획 및 프로세스 소개 섹션에 들어갈 인포그래픽 모션 요소들을 직접 기획 및 제작하고, 이를 React 컴포넌트로 래핑하여 렌더링 퍼포먼스를 극대화했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084093/glitchor-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084094/glitchor-slide-3-02.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "GSAP 텍스트 조작과 React 가상 DOM 충돌(렌더링 에러) 해결",
+        "content": "히어로 섹션 진입 시 기업 슬로건에 GSAP ScrambleTextPlugin 애니메이션을 적용하는 과정에서, 화면이 깜빡이는 수준이 아니라 애플리케이션 렌더링이 중단되며 치명적인 에러 코드(React 렌더링 크래시)가 발생하는 이슈를 겪었습니다.",
+        "contentImages": [],
+        "cause": "1초마다 setInterval을 통해 React의 상태(State)가 변경되어 Virtual DOM을 다시 그리려는 시점과, GSAP이 실제 DOM(Real DOM)의 텍스트 노드를 직접 변형(Mutation)하는 시점이 충돌한 것이 원인이었습니다. React가 추적하던 텍스트 노드를 GSAP이 임의로 조작하면서 DOM 트리의 싱크가 어긋나 발생한 하드 에러였습니다.",
+        "causeImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084090/glitchor-noraml-1-01.png"
+        ],
+        "solution": "React와 GSAP의 역할을 명확히 분리하여 충돌을 방지했습니다. React는 텍스트를 직접 렌더링하지 않고 요소의 뼈대(div ref)만 유지하게 한 뒤, 내부 텍스트의 삽입과 스크램블 애니메이션은 전적으로 GSAP이 제어(animateText)하도록 라이프사이클과 DOM 제어권을 동기화했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084092/glitchor-noraml-1-02.png"
+        ],
+        "result": "상태 업데이트 루프(1초 간격)와 복잡한 텍스트 애니메이션이 동시에 실행되는 환경에서도, 브라우저 렌더링 에러 없이 60fps의 안정적이고 부드러운 스크램블 모션이 출력되도록 최적화했습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "Next.js 다국어(i18n) 동적 라우팅 환경에서의 글로벌 SEO 인덱싱 실패 이슈",
+        "content": "한국어와 영어 콘텐츠를 모두 제공하고 구글 검색 유입을 노렸으나, 구글 서치 콘솔(GSC) 모니터링 결과 영문 경로(/en/*)의 페이지들이 전혀 색인(Index)되지 않고 리다이렉트 오류 또는 중복 콘텐츠로 묶여 누락되는 크리티컬한 마케팅 이슈를 발견했습니다.",
+        "contentImages": [],
+        "cause": "1. 라우팅 설계 오류: 사용자의 마지막 브라우저 언어 쿠키값에 의존해 루트(/) 경로 진입 시 무조건 /kr 또는 /en으로 강제 리다이렉트 시키는 미들웨어(Middleware) 로직이 구글 크롤러 봇의 탐색을 차단했습니다.\n\n2. Alternate 태그 부재: 한국어 원문과 영문 번역본이 서로 연결된 동일한 콘텐츠임을 증명하는 hreflang 메타 태그가 HTML 헤더에 누락되었습니다.\n\n3. 동적 사이트맵 결함: 구글 시트를 파싱해 생성한 공지사항 ID(Base64 난수)가 과도하게 길고 복잡해 크롤링 예산(Crawl Budget)을 낭비했습니다.",
+        "causeImages": [],
+        "solution": "1. 과도한 리다이렉트를 제거하고, 한국어는 기본 루트(/)를 그대로 사용하며 영어일 경우에만 하위 디렉토리(/en)를 부여하는 직관적인 라우팅 트리로 구조를 전면 개편했습니다.\n\n2. Next.js의 app/sitemap.ts API를 커스텀하여 빌드 및 런타임 시 구글 시트 데이터를 papaparse로 파싱 후, 한국어 URL과 영문 URL 쌍을 동적으로 자동 매핑해 뱉어내는 강력한 동적 사이트맵 생성기를 개발했습니다.\n\n3. 구글 봇이 문서의 언어적 관계를 정확히 이해할 수 있도록 전역 Layout 컴포넌트에 <link rel=\"alternate\" hreflang=\"언어\"> 태그를 동적 주입 로직으로 추가했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084095/glitchor-noraml-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084096/glitchor-noraml-2-02.png"
+        ],
+        "result": "다국어 SEO의 정석적인 구조재배치를 통해 구글 크롤러의 수집 봇 차단 문제를 완벽히 해결했으며, 영문 기반의 검색 키워드에서도 회사 공지사항과 프로젝트 포트폴리오가 정상적으로 검색 엔진에 노출될 수 있는 인프라를 마련했습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "투명 헤더(Sticky)와 사명 변경 '글리치(Glitch)' 애니메이션 로고의 UI 미감",
+        "content": "기업명 변경을 상징적으로 보여주기 위해 'N15'에서 'Glitchor'로 지지직거리며 전환되는 글리치 효과 로고 컴포넌트를 GNB(헤더)에 배치했으나, 스크롤 시 배경이 투명한 헤더 뒤로 로고에 적용된 '불투명한 흰색 사각 배경'이 그대로 노출되어 UI 퀄리티가 크게 훼손되었습니다.",
+        "contentImages": [],
+        "cause": "CSS 필터와 변형을 활용한 복잡한 글리치 애니메이션을 제어하기 위해 컴포넌트 자체에 강제적인 솔리드 배경색(Solid Background)이 필요했던 구조적 한계였습니다.",
+        "causeImages": [],
+        "solution": "디자인 꼼수와 CSS 블렌딩 모드를 결합했습니다. 애니메이션 로고의 배경을 강렬한 퓨어 블랙(#000000)으로 지정하고, 내부 로고 텍스트 에셋을 퓨어 화이트(#FFFFFF)로 작업한 뒤, 헤더 컨테이너에 mix-blend-mode: difference; CSS 속성을 부여하여 흑백 반전 효과를 통해 배경색을 시각적으로 투명화시키는 기법을 적용했습니다.",
+        "solutionImages": [],
+        "result": "복잡한 애니메이션 코드를 수정하지 않고도 CSS 블렌드 기법을 통해 로고만 깔끔하게 투명하게 얹혀지는 높은 미감의 UI를 완성했습니다. (단, iOS Safari 네이티브의 바운스 스크롤 영역에서는 혼합 모드 제약으로 약간의 한계가 존재함을 인지하고 향후 보완 과제로 남겼습니다.)",
+        "resultImages": []
+      }
+    ]
+  },
+  {
+    "id": "moogm",
+    "main-color": "#000000",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/moogm.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/moogm-dark.svg",
+    "logo-image": "/image/portfolios/main/moogm.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087670/moogm-video.mp4",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087687/moogm-video-main.mp4",
+    "main-image": "/image/portfolios/main/moogm.png",
+    "sub-image": "/image/portfolios/main/moogm.png",
+    "work-title": "무금 캐빈 호텔 공식 웹사이트",
+    "work-title-short": "무금 캐빈 호텔",
+    "work-title-eng": "CABIN HOTEL MOOGM",
+    "full-work-title": "프리미엄 무금 캐빈 호텔(MOOGM Cabin Hotel) 브랜드 소개 및 예약 시스템 연동",
+    "short-work-explan": "다국어 번역 시스템과 ONDA 객실 예약 엔진을 매끄럽게 임베드하여, 방문객 이탈 없는 원스톱 예약 환경을 완성한 프리미엄 캐빈 호텔 브랜드 웹사이트",
+    "work-explan": "프리미엄 숙박 시설인 '무금 캐빈 호텔'의 공간 감성과 브랜드 아이덴티티를 담아낸 공식 웹사이트입니다. 시각적 몰입감을 주는 레이아웃을 적용하였으며, B2B 객실 예약 관리 플랫폼인 ONDA의 예약 엔진을 웹사이트 내에 임베드 방식으로 연동하여 방문객들이 이탈 없이 원스톱으로 객실을 예약할 수 있는 환경을 구축했습니다.",
+    "client": "글리처파트너스",
+    "category": "Responsive Web",
+    "work-start": "2025.08",
+    "work-end": "2025.10",
+    "work-contribution": "기획, UX · UI, 퍼블리싱, 프론트엔드",
+    "key-features": "다국어 번역, 메인 랜딩 페이지, 예약 엔진 임베드, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), GitHub, Vercel, Supabase, Swiper, i18next, Figma, Google-Spreadsheet",
+    "github": "",
+    "link": "https://moogm-frontend-main.vercel.app",
+
+    "features": [
+      {
+        "title": "ONDA 객실 예약 부킹 엔진 임베드 연동 및 UI 최적화",
+        "description": [
+          "ONDA 플랫폼에서 제공하는 부킹 엔진을 Iframe/스크립트 임베드 방식으로 웹사이트에 통합했습니다. 특히 모바일 환경에서 예약 엔진의 높이가 동적으로 늘어날 때 내부 이중 스크롤이 발생하여 레이아웃이 깨지거나 사용성이 저하되는 고질적인 문제를 방지하기 위해, 컨테이너의 반응형 최소 높이(min-height)를 정밀하게 계산하고 CSS를 오버라이딩하여 네이티브 앱과 같은 매끄러운 예약 UX를 완성했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084088/moogm-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084088/moogm-slide-1-02.png"
+        ]
+      },
+      {
+        "title": "구글 시트 연동 기반의 i18n 다국어 번역 시스템 구축",
+        "description": [
+          "외국인 관광객을 핵심 타겟으로 하는 캐빈 호텔의 특성을 반영하여 전면 다국어(i18n) 번역 기능을 도입했습니다. 개발 리소스 절감과 비개발 직군의 용이한 번역 관리를 위해 구글 스프레드시트를 번역 데이터베이스로 활용했습니다. 프론트엔드 코드에서는 T('key') 형태로 구조를 단순화했으며, 번역 데이터 충돌을 막기 위해 구글 시트를 유일한 기준(SSOT)으로 삼고 빌드 타임에 최신 데이터를 동기화하도록 파이프라인을 구축했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084086/moogm-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084087/moogm-slide-2-02.png"
+        ]
+      },
+      {
+        "title": "Supabase 기반 서버리스 데이터베이스 연동 테스트",
+        "description": [
+          "향후 호텔 주변의 관광 인프라, 지역 맛집, 주변 정보 등을 큐레이션하여 제공하는 동적 게시판 구축을 대비해, 오픈소스 서버리스 DB인 Supabase 연동을 선제적으로 테스트했습니다. 정적 사이트 생성을 넘어서는 실시간 데이터 호출 구조를 실험하였고, 미디어 파일은 구글 드라이브 에셋 링크와 결합하는 방식으로 아키텍처의 확장성을 검토했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084089/moogm-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084088/moogm-slide-3-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084090/moogm-slide-3-03.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "Supabase 무료 티어 데이터베이스 자동 일시 중지(Pause) 이슈",
+        "content": "테스트용으로 Supabase에 업로드한 주변 정보 게시물 데이터가 일정 기간 이후 클라이언트에서 호출되지 않고 서버 오류(Fetch fail)를 반환하는 현상이 발생했습니다.",
+        "contentImages": [],
+        "cause": "Supabase 무료 요금제의 정책상, 1주일(7일) 동안 데이터베이스에 API 접근이나 활동이 없으면 서버 자원 보호를 위해 프로젝트를 자동으로 일시 중지(Pause) 모드로 전환해 버리기 때문에 발생한 인프라 제약 이슈입니다.",
+        "causeImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084090/moogm-noraml-1-01.png"
+        ],
+        "solution": "게시물이 메인 페이지에서 즉시 호출되는 것이 아니라, 특정 뎁스로 진입해야만 API가 호출되도록 설계된 구조적 특징과 간헐적인 테스트 환경의 트래픽, 그리고 무료 DB 정책이 맞물려 발생한 현상임을 파악했습니다. 이러한 인프라적 제약에도 불구하고, Supabase가 제공하는 실시간 데이터 연동과 서버리스 백엔드 구축의 편의성이 서비스 확장에 매우 유리하다는 점을 확인했습니다.",
+        "solutionImages": [],
+        "result": "유의미한 트래픽이 보장되는 실제 프로덕션 환경으로 전환하거나 요금제를 업그레이드할 경우 해당 자동 중지 이슈가 발생하지 않음을 검증했으며, 현재는 테스트 상태로 보존하고 추후 정식 고도화 시 Supabase 기반으로 아키텍처를 전면 교체하는 것이 타당하다는 기술적 결론을 도출했습니다.",
+        "resultImages": []
+      }
+    ]
+  },
+  {
+    "id": "glitchor-rental",
+    "main-color": "#FF6738",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "dark",
+    "logo-icon": "/svg/icons/logo-icons/glitchor-rental.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/glitchor-rental-dark.svg",
+    "logo-image": "/image/portfolios/main/glitchor-rental.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739648/glitchor-rental-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087261/glitchor-rental-main.png",
+    "main-image": "/image/portfolios/main/glitchor-rental.png",
+    "sub-image": "/image/portfolios/main/glitchor-rental.png",
+    "work-title": "글리처렌탈(더캡슐) 공식 웹사이트",
+    "work-title-short": "더캡슐 글리처렌탈",
+    "work-title-eng": "Glitchor Rental",
+    "full-work-title": "수면캡슐 렌탈 서비스 '글리처렌탈' 브랜드 웹사이트 구축",
+    "short-work-explan": "제품 상세 옵션에 따른 실시간 렌탈 비용 시뮬레이션 UI와 가로 스크롤 인터랙션을 도입해 고객 전환율을 극대화한 수면캡슐 렌탈 전용 랜딩페이지",
+    "work-explan": "B2B/B2C 수면캡슐 전문 기업 '더캡슐'의 신규 렌탈 비즈니스를 위한 공식 웹사이트입니다. 제품의 특장점과 스펙을 한눈에 파악할 수 있는 상세 페이지와 렌탈 비용 안내, 상담 신청 페이지를 제작했습니다.",
+    "client": "글리처파트너스",
+    "category": "Responsive Web",
+    "work-start": "2025.05",
+    "work-end": "2025.06",
+    "work-contribution": "퍼블리싱, 프론트엔드, SEO",
+    "key-features": "메인 랜딩 페이지, 전체 퍼블리싱, 모바일 반응형",
+    "key-techs": "React, Next.js, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, AOS, Figma",
+    "github": "",
+    "link": "https://glitchor-rental.vercel.app",
+
+    "features": [
+      {
+        "title": "옵션 및 기간에 따른 실시간 렌탈 비용 계산기 구현",
+        "description": [
+          "기획이 완전히 확정되지 않은 상태였으나, 프론트엔드 단에서 대략적인 기준값을 바탕으로 렌탈 비용 계산 UI를 선제적으로 제작했습니다. 사용자가 캡슐 모델, 이용 기간, 보증금 등의 옵션을 변경할 때마다 월 렌탈료와 총 납부액이 실시간으로 즉각 계산되어 화면에 반영되도록 상태(State) 관리를 구현했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084086/glitchor-rental-slide-1-01.png"
+        ]
+      },
+      {
+        "title": "메인 페이지 가로 스크롤(Horizontal Scroll) UI 적용",
+        "description": [
+          "메인 페이지의 제품 갤러리 섹션에 마우스 휠을 내리면 화면이 가로로 이동하는 가로 스크롤 인터랙션을 도입했습니다. 사용자가 여러 이미지 블록과 개체들을 자연스럽게 넘겨볼 수 있도록 구현하여 단조로울 수 있는 페이지에 시각적인 재미를 더했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084085/glitchor-rental-slide-2-01.png"
+        ]
+      },
+      {
+        "title": "전 페이지 모바일 반응형 UI 최적화",
+        "description": [
+          "PC부터 모바일 기기까지 디바이스 환경에 구애받지 않도록 전체 페이지에 반응형 웹 레이아웃을 적용했습니다. 화면 비율을 최적화하여 모바일에서도 불편함 없이 이용할 수 있도록 작업했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084086/glitchor-rental-slide-3-01.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wkbc",
+    "main-color": "#000678",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/wkbc.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/wkbc-dark.svg",
+    "logo-image": "/image/portfolios/main/wkbc.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739654/wkbc-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087280/wkbc-main.png",
+    "main-image": "/image/portfolios/main/wkbc.png",
+    "sub-image": "/image/portfolios/main/wkbc.png",
+    "work-title": "제23차 세계한인비즈니스대회(WKBC) 공식 플랫폼",
+    "work-title-short": "2025 WKBC",
+    "work-title-eng": "2025 WKBC",
+    "full-work-title": "제23차 세계한인비즈니스대회 공식 웹 플랫폼 및 관리자(Admin) 페이지 구축",
+    "short-work-explan": "글로벌 참가자를 위한 다국어 다단계 신청 폼 및 페이팔 결제 모듈을 연동하고, 대규모 행사 운영 효율 극대화를 위한 주최 측 맞춤형 통합 어드민 시스템 구축",
+    "work-explan": "미국 애틀랜타에서 개최된 '제23차 세계한인비즈니스대회(WKBC)'의 글로벌 참가자들을 위한 공식 웹 플랫폼입니다. 대규모 글로벌 행사인 만큼 다국어 지원 및 전체 프로그램 안내와 다양한 방식의 참가 신청 프로세스를 연동하였습니다. 주최 측에서 참가자 데이터와 신청 현황을 실시간으로 모니터링하고 제어할 수 있는 전용 어드민(관리자) 페이지를 함께 개발하여 행사 운영의 효율성을 극대화했습니다.",
+    "client": "미주한인상공회의소총연합회",
+    "category": "Web Platform",
+    "work-start": "2024.12",
+    "work-end": "2025.05",
+    "work-contribution": "UX · UI, 퍼블리싱, 프론트엔드",
+    "key-features": "다국어 번역, 메인 랜딩 페이지, 사용자 대시보드, 사용자 계정 관리, 게시판, 페이팔 결제, 어드민 페이지, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, Axios, Redux, React-Quill, Java, PayPal, GitHub, Vercel, AOS, Swiper, i18next, Kakao Postcode API, Figma, Google-Spreadsheet",
+    "github": "",
+    "link": "https://wkbc.us/ko-KR",
+
+    "features": [
+      {
+        "title": "글로벌 다단계 회원가입 폼 및 복합 프로필(기업/개인) 데이터 관리",
+        "description": [
+          "B2B 컨벤션 특성상 가입 시 약 50여 개의 방대한 개인 및 기업 정보를 수집해야 했습니다. 유저의 피로도와 이탈률을 낮추기 위해 '약관 동의 - 계정 정보 - 개인 정보/휴대폰 - 국적/주소 - 소식지 및 완료'로 이어지는 5단계 스텝형 폼(Multi-step Form)을 도입했습니다. 주소 입력의 경우 국내 유저는 Kakao Postcode API를 연동하여 자동 입력을 지원하고, 정확도가 떨어지는 해외 주소는 수동 기입 창과 국가 선택 셀렉터(react-country-region-selector)를 동적으로 노출시키는 분기 처리를 구현했습니다. 또한, 관리자 페이지에서 커스텀 가능한 '산업 카테고리/직원수' 셀렉트, 필수 사업자등록증 첨부, 로고 이미지 첨부 기능을 구현하고, 모든 데이터에 한/영 다국어 매핑 로직 및 유효성 검사(Validation)를 빈틈없이 세팅했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084083/wkbc-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084082/wkbc-slide-1-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084082/wkbc-slide-1-03.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084083/wkbc-slide-1-04.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084084/wkbc-slide-1-05.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084085/wkbc-slide-1-06.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084084/wkbc-slide-1-07.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084080/wkbc-slide-1-08.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084081/wkbc-slide-1-09.png"
+        ]
+      },
+      {
+        "title": "다중 주관사 행사 지원 신청 및 티켓팅(등록 확인증) 시스템",
+        "description": [
+          "복수의 주관사가 각기 다른 방식(구글 폼, 당사 플랫폼 내부 신청 등)으로 행사를 운영하는 복잡한 기획 요구사항을 완벽히 수용했습니다. 플랫폼 내부 신청의 경우 지원 프로그램, 지원사 형태, 옵션 추가 여부에 따라 결제 금액이 동적으로 계산되는 알고리즘을 구현했습니다. 최종 결제 후 마이페이지 내에서 '신청 상황'과 '결제 상황'을 명확히 분리하여 노출하며, 어드민 승인 시 동적으로 직인(도장)이 포함된 웹 기반 '등록 확인증(Invoice/Ticket)'이 발급되도록 개발했습니다. 지원 철회 시 환불 프로세스로 자연스럽게 이어지는 UX를 설계했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084080/wkbc-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084079/wkbc-slide-2-02.png"
+        ]
+      },
+      {
+        "title": "해외 타겟 PayPal API 결제 파이프라인 및 환불 자동화 구축",
+        "description": [
+          "미국 기반 주최사의 환경에 맞추어 PayPal Checkout API를 결제 게이트웨이로 단독 연동했습니다. 기존 워드프레스 플랫폼 시절 계좌이체에 의존하여 발생하던 막대한 수작업 리소스를 개선했습니다. 클라이언트에서 PayPal의 orderId 토큰을 발급받아 공식 PayPal 결제창으로 리다이렉트시키고, 결제 승인 후 백엔드 서버에서 API를 호출해 최종 실결제를 완료하는 안전한 2-way 결제 아키텍처를 설계했습니다. 결제 취소 시 즉각적인 환불 처리 및 어드민 내 환불 상태 트래킹 기능을 완비했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084084/wkbc-slide-3-01.png"
+        ]
+      },
+      {
+        "title": "회차별 통합 어드민 시스템 및 마스터 권한 제어(RBAC)",
+        "description": [
+          "단발성 행사가 아닌 2025년도 이후의 차기 대회에서도 플랫폼을 지속 사용할 수 있도록, 시스템 코어를 '회차별(Season)'로 데이터베이스를 분리 관리할 수 있는 어드민을 구축했습니다. 다수 기관이 참여하는 만큼 방대한 신청 현황 데이터를 엑셀(CSV/XLSX) 포맷으로 가공하여 반출하는 기능을 구현했으며, 최고 관리자(Master)가 생성한 부관리자 계정별로 접근할 수 있는 메뉴와 권한을 차등 부여하는 역할 기반 접근 제어(RBAC) 시스템을 완성했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084082/wkbc-slide-4-01.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "단기 프로젝트 일정 내 기획 변경 대응 및 개발 생산성 확보",
+        "content": "대규모 플랫폼임에도 불구하고 다수 주관사 간의 의견 조율 지연으로 기획 확정이 연기되면서, 실제 개발 및 배포까지 단 2개월이라는 극단적으로 부족한 작업 시간이 주어졌습니다.",
+        "contentImages": [],
+        "cause": "미국 주관사와의 물리적 시차, 페이팔 비즈니스 계정 승인 및 심사 절차 지연, 행사 신청 페이지 및 정책의 실시간 변경 등 예측 불가한 외부 병목 요소가 동시다발적으로 발생했습니다.",
+        "causeImages": [],
+        "solution": "이전 금융/HR 대형 플랫폼(NH, 하이어코리아) 구축 경험을 토대로, 반복되는 보일러플레이트와 폼 구조 생성에 AI 코딩 어시스턴트를 적극 활용하여 생산성을 극대화했습니다. 팀 전체가 풀타임 재택(크런치 모드)으로 전환하여 물리적 출퇴근 시간을 코드 작성에 투자했습니다. 피그마 디자인 완성을 기다리지 않고 요구사항이 확정되는 즉시 코드 레벨에서 디자인과 퍼블리싱을 동시 병행하는 극한의 애자일(Agile) 프로세스를 가동했습니다.",
+        "solutionImages": [],
+        "result": "기적적인 속도로 데드라인 내에 핵심 기능을 모두 릴리즈하여 글로벌 행사를 차질 없이 시작했으며, 행사 기간 중 실시간으로 접수되는 CS 및 추가 요구사항 핫픽스(Hotfix)를 안정적으로 배포하는 놀라운 프로젝트 완수 역량을 증명했습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "결제 수단별(PayPal vs 계좌이체) 비동기 철회 및 환불 처리 이슈",
+        "content": "해외 결제(PayPal)뿐만 아니라 국내 참가를 위한 무통장 계좌이체 방식이 급작스럽게 추가 기획되면서, 코드 단에서 실시간 결제 완료 여부를 트래킹하고 환불을 자동화하는 로직 처리에 심각한 모순이 발생했습니다.",
+        "contentImages": [],
+        "cause": "계좌이체의 경우 물리적인 송금 확인이 필요하므로 시스템이 즉각적으로 결제 완료(Success) 상태를 반환할 수 없었으며, 촘촘한 개발 일정 상 은행 오픈뱅킹 API를 스크래핑할 물리적 시간이 부재했습니다.",
+        "causeImages": [],
+        "solution": "기존 과거 워드프레스 수작업 방식을 시스템 프로세스 안으로 세련되게 융합하는 우회 전략을 기획했습니다. 사용자가 계좌이체 선택 시 명확한 '이체 후 가이드라인' UI를 띄우고 상태를 '입금 대기'로 고정했습니다. 관리자가 실제 입금 확인 후 어드민 페이지에서 해당 기업의 참여 신청 버튼을 '수동 승인'으로 변경하면, 그 즉시 플랫폼 내에서 공식 등록 확인증(Invoice)이 자동으로 렌더링되어 발급되도록 하이브리드 워크플로우를 고안했습니다.",
+        "solutionImages": [],
+        "result": "물리적인 한계를 직관적인 UX와 어드민 기능의 결합으로 유연하게 극복하여 런칭을 사수했으며, 계좌이체 환불 건 역시 사용자와 관리자 모두에게 수동 절차 안내 메시지를 강제 노출함으로써 CS 분쟁 소지를 사전에 완벽히 차단했습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "사용자 결제 상태에 따른 복합적 접근 제어 및 UI 렌더링 이슈",
+        "content": "마이페이지의 '컨벤션 지원 목록'에서 유저가 결제한 상태(대기, 완료, 철회, 무료 프로모션 코드 적용 등)에 따라 클릭 가능한 버튼, 출력되는 경고 메시지, 등록확인증 열람 가능 여부를 제어하는 로직이 스파게티 코드로 얽혔습니다.",
+        "contentImages": [],
+        "cause": "촉박한 일정 속에서 백엔드 API 설계 구조를 100% 숙지하지 못한 상태로 프론트엔드 단에서 조건문을 중첩 추가하다 보니, 특정 이벤트(무료 쿠폰 결제) 시 일반 결제와 상태 값이 충돌하는 사이드 이펙트가 발생했습니다.",
+        "causeImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084081/wkbc-normal-1-01.png"
+        ],
+        "solution": "개발을 잠시 멈추고 백엔드 개발자와 긴급 싱크업 회의를 소집하여, 상태 값(Status Code)에 따른 프론트엔드의 행동 강령 매트릭스를 문서화했습니다. 불확실한 분기 처리는 과감히 걷어내고, 등록확인증이 노출되어야 하는 명확한 '결제 완료' 상태에만 버튼이 활성화되도록 방어적 프로그래밍(Defensive Programming) 기법을 엄격하게 적용했습니다.",
+        "solutionImages": [],
+        "result": "시간이 부족한 상황에서도 감에 의존하지 않고 명확한 소통을 통해 상태 관리 구조를 리팩토링함으로써, 유저가 결제 전 행사장에 무단 입장하거나 취소 후 티켓이 발급되는 치명적인 크리티컬 버그를 완벽하게 차단해 냈습니다.",
+        "resultImages": []
+      }
+    ]
+  },
+  {
+    "id": "stage-cloud",
+    "main-color": "#7747FF",
+    "sub-color": "#B9A3F9",
+    "color-theme": "light",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/stage-cloud-dao.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/stage-cloud-dao-dark.svg",
+    "logo-image": "/image/portfolios/main/stage-cloud-dao.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739842/stage-cloud-dao-video.mp4",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087694/stage-cloud-dao-video-main.mp4",
+    "main-image": "/image/portfolios/main/stage-cloud-dao.png",
+    "sub-image": "/image/portfolios/main/stage-cloud-dao.png",
+    "work-title": "스테이지 클라우드 DAO 플랫폼 기획 및 퍼블리싱",
+    "work-title-short": "스테이지 클라우드 DAO",
+    "work-title-eng": "STAGE CLOUD DAO",
+    "full-work-title": "이모션웨이브 스테이지 클라우드 DAO(블록체인) 플랫폼 UX/UI 디자인 및 프론트엔드 퍼블리싱",
+    "short-work-explan": "블록체인 프로젝트 맞춤형 UX/UI 기획부터 GSAP 기반 하이엔드 스크롤 인터랙션 구현 및 후속 개발을 위한 완벽한 컴포넌트 모듈화까지 전담한 웹 플랫폼 퍼블리싱",
+    "work-explan": "이모션웨이브의 신규 블록체인(DAO) 프로젝트를 위한 플랫폼 구축 외주 작업으로, 웹 서비스의 첫인상인 UX/UI 디자인 기획부터 프론트엔드 퍼블리싱까지 전담하여 수행했습니다. 사용자 중심의 인터페이스를 설계했으며, 원활한 후속 개발 작업 연동을 위해 시맨틱 마크업과 컴포넌트 기반의 깔끔한 퍼블리싱 환경을 세팅했습니다.",
+    "client": "이모션웨이브",
+    "category": "Web Platform",
+    "work-start": "2024.12",
+    "work-end": "2025.02",
+    "work-contribution": "기획, UX · UI, 퍼블리싱",
+    "key-features": "모듈화 퍼블리싱, 메인 랜딩 페이지, 사용자 대시보드, 인터랙션, 스크롤 이벤트, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), pnpm, GitHub, GSAP, Swiper, Recharts, Figma",
+    "github": "",
+    "link": "https://muta-stage-cloude-main.vercel.app",
+
+    "features": [
+      {
+        "title": "GSAP 기반 하이엔드 스크롤 인터랙션 및 미디어 렌더링 최적화",
+        "description": [
+          "클라이언트의 요청에 따라 DAO 플랫폼 특유의 화려한 시각 효과를 주기 위해 GSAP 라이브러리를 적극 활용하여 복합적인 스크롤 애니메이션을 구현했습니다. 모바일 환경에서는 과도한 자바스크립트 기반 애니메이션이 배터리 소모와 프레임 드랍을 유발한다는 점을 기획 단계에서 짚어내고, 분기 처리를 통해 모바일에서는 가벼운 네이티브 수준의 스크롤 애니메이션만 작동하도록 반응형 최적화를 이뤄냈습니다. 더불어 백그라운드 영상 개체의 코덱과 비트레이트를 정밀 최적화하여 화질 손상 없이 로딩 속도를 대폭 개선했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084079/stage-cloud-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084078/stage-cloud-slide-1-02.png"
+        ]
+      },
+      {
+        "title": "Web3 타겟 맞춤형 UX/UI 디자인 시스템 기획 및 구축",
+        "description": [
+          "디자인 에이전시에 의존하지 않고, 직접 피그마(Figma)를 활용해 플랫폼 전체의 웹 디자인과 톤 앤 매너(Typography, Color Palette)를 정의하고 구축했습니다. 추후 유지보수와 후속 개발이 용이하도록 디자인 시스템을 명확히 문서화하고, 이를 바탕으로 시각적인 통일성이 유지되는 퍼블리싱을 완수했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084077/stage-cloud-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084076/stage-cloud-slide-2-02.png"
+        ]
+      },
+      {
+        "title": "Next.js 15 & pnpm 기반 후속 개발용 컴포넌트 모듈화",
+        "description": [
+          "프론트엔드 껍데기만 만드는 단편적 퍼블리싱을 넘어, 추후 방대한 블록체인 API 및 로직 코드가 덧붙여질 상황을 대비했습니다. UI 요소와 데이터 주입부를 컴포넌트 단위로 분리(Modularity)하고, 디자인 토큰(Design Token)을 SCSS 변수와 믹스인(Mixin)으로 모듈화했습니다. 최신 런타임인 Next.js 15 버전과 패키지 관리 속도가 압도적인 pnpm 환경으로 초기 아키텍처를 세팅하여 클라이언트 개발팀에 완벽한 개발자 경험(DX)을 인계했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084079/stage-cloud-slide-3-01.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "커스텀 스쿼클(Squircle) 프로필 이미지 SVG 렌더링 병합 이슈",
+        "content": "플랫폼의 디자인 미감을 하이엔드급으로 끌어올리기 위해, 흔한 원형이나 둥근 사각형(Round Square)이 아닌 애플(Apple) 생태계의 부드러운 곡률을 가진 '스쿼클(Squircle)' 쉐이프 내부에 유저 프로필 이미지를 렌더링하고자 했으나, 일반적인 CSS border-radius로는 구현이 불가하고 SVG 에셋 내부에 동적 이미지를 마스킹하는 과정에서 실패가 발생했습니다.",
+        "contentImages": [],
+        "cause": "React 컴포넌트 내에서 일반적인 <img> 태그에 SVG 패스를 씌우는 방식은 브라우저 렌더링 방식의 한계로 곡률이 깨지거나, 외부 서버에서 불러오는 동적 프로필 이미지 URL이 SVG <image> 태그 내부에 적절히 파싱되지 않아 출력이 무시되는 현상이 원인이었습니다.",
+        "causeImages": [],
+        "solution": "CSS 단의 속임수가 아닌 정석적인 벡터 마스킹 기법을 도입했습니다. SVG <defs> 태그 내부에 스쿼클 곡률을 완벽히 계산한 수학적 path를 정의하여 <clipPath id=\"squircle-clip\">으로 선언했습니다. 이후 동적으로 받아오는 imageUrl 존재 여부에 따라 <image href={...} clipPath=\"url(#squircle-clip)\"> 속성을 부여하여 런타임에 완벽히 잘려진 스쿼클 프로필이 렌더링되도록 자체 컴포넌트화(SquircleImage)를 진행했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084077/stage-cloud-normal-1-02.png"
+        ],
+        "result": "원하는 곡률의 스쿼클 프로필 렌더링에 성공했습니다. 프로필 이미지의 사용처를 고려하여 로직을 재사용 가능한(Reusable) 모듈형 컴포넌트로 패키징하여 사이즈와 이미지만 Props로 넘기면 플랫폼 내 어디서든 즉각 사용할 수 있는 UI를 만들었습니다.",
+        "resultImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084077/stage-cloud-normal-1-01.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kb",
+    "main-color": "#F9B000",
+    "sub-color": "#ffffff",
+    "color-theme": "dark",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/kb.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/kb-dark.svg",
+    "logo-image": "/image/portfolios/main/kb.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739690/kb-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087269/kb-main.png",
+    "main-image": "/image/portfolios/main/kb.png",
+    "sub-image": "/image/portfolios/main/kb.png",
+    "work-title": "KB국민카드 FUTURE9 랜딩페이지 구축",
+    "work-title-short": "KB국민카드 FUTURE 9",
+    "work-title-eng": "KB FUTURE 9",
+    "full-work-title": "KB국민카드 FUTURE9 오픈이노베이션 프로그램 공식 랜딩페이지 마이그레이션",
+    "short-work-explan": "기존 워드프레스의 한계를 벗어나 모던 프론트엔드 환경으로 전면 마이그레이션하고, 동적인 스크롤 인터랙션을 적용하여 브랜드 위상을 높인 오픈이노베이션 랜딩페이지",
+    "work-explan": "KB국민카드의 오픈이노베이션 프로그램 'FUTURE9'의 공식 랜딩페이지 전환 및 리팩토링 프로젝트입니다. 기존 워드프레스(WordPress) 기반 환경에서 발생하던 유지 비용을 줄이고자 일반적인 모던 프론트엔드 코드로 마이그레이션을 진행했습니다. 이를 통해 사이트 로딩 속도 최적화, 렌더링 성능 향상, 향후 유지보수의 용이성을 안정적으로 확보했습니다.",
+    "client": "KB국민카드",
+    "category": "Landing Page",
+    "work-start": "2024.09",
+    "work-end": "2024.10",
+    "work-contribution": "퍼블리싱, 프론트엔드",
+    "key-features": "메인 랜딩 페이지, 인터랙션, 스크롤 이벤트, 전체 퍼블리싱, 모바일 반응형",
+    "key-techs": "React, Next.js, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, AOS, Figma",
+    "github": "",
+    "link": "https://kb-future9.vercel.app",
+
+    "features": [
+      {
+        "title": "레거시 WordPress 생태계의 모던 프론트엔드 전면 마이그레이션",
+        "description": [
+          "기존 외주사가 구축했던 워드프레스 환경은 플러그인 호환성 오류가 잦고, 복잡한 디자인을 구현하기에 태생적인 한계가 있었습니다. 이를 과감히 걷어내고 React 생태계로 코드를 직접 작성하는 마이그레이션을 주도했습니다. 누적되어 불필요하게 노출되던 구 기수(Archive) 더미 페이지들을 정리하여 SEO를 최적화했으며, 향후 후속 기수(10기, 11기 등) 오픈 시 비즈니스 로직과 콘텐츠만 쉽게 갈아 끼울 수 있도록 컴포넌트 아키텍처를 설계하여 GitHub 기반의 체계적인 버전 관리 체계를 정립했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084075/kb-slide-1-01.png"
+        ]
+      },
+      {
+        "title": "디바이스 파편화에 완벽 대응하는 모바일 반응형 퍼블리싱",
+        "description": [
+          "기존 워드프레스 테마의 고정된 틀로 인해 레이아웃이 깨지거나 가독성이 떨어지던 모바일 환경의 한계를 극복했습니다. 미디어 쿼리와 유연한 CSS-in-JS(Styled-components) 설계를 바탕으로 모바일, 태블릿, 데스크탑을 아우르는 완벽한 크로스 디바이스 반응형 퍼블리싱을 구현하여 지원자들의 모바일 접근성을 대폭 끌어올렸습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084076/kb-slide-2-01.png"
+        ]
+      },
+      {
+        "title": "시선 유도 및 체류 시간 증대를 위한 스크롤 인터랙션 고도화",
+        "description": [
+          "자칫 지루해질 수 있는 단순 스크롤 기반의 정보 전달 페이지에 GSAP과 AOS 라이브러리를 전략적으로 배치했습니다. 프로그램 참가 신청 프로세스와 핵심 베네핏 등 시선이 집중되어야 하는 주요 섹션에 세련된 요소별 등장 타이밍과 인터랙션을 입혀, 사용자 체류 시간을 늘리고 전문적인 대기업 오픈이노베이션 프로그램의 위상을 시각적으로 증명했습니다."
+        ],
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "starcorn",
+    "main-color": "#FFC000",
+    "sub-color": "#ffffff",
+    "color-theme": "dark",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/starcorn.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/starcorn-dark.svg",
+    "logo-image": "/image/portfolios/main/starcorn.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739675/starcorn-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087276/starcorn-main.png",
+    "main-image": "/image/portfolios/main/starcorn.png",
+    "sub-image": "/image/portfolios/main/starcorn.png",
+    "work-title": "2024 스타콘 페스타 랜딩페이지 구축",
+    "work-title-short": "2024 스타콘 페스타",
+    "work-title-eng": "2024 STARCORN FESTA",
+    "full-work-title": "2024 중소벤처기업부 기획전 '스타콘 페스타' 공식 랜딩페이지 구축",
+    "short-work-explan": "다자간 주관사의 브랜드 요구사항을 통합하고, 오프라인 대규모 현장 트래픽에 대비해 원페이지 기반 직관적 정보 설계와 렌더링 최적화를 이뤄낸 공공기관 기획전 페이지",
+    "work-explan": "중소벤처기업부가 주최하고 네이버와 카카오가 함께 참여한 대규모 기획전 '2024 스타콘 페스타'의 온라인 거점이 되는 공식 랜딩페이지입니다. 공공기관 주관 행사 웹사이트인 만큼 폭넓은 연령층의 웹 접근성을 고려하여 직관적인 UI를 설계하였고, 단기간에 집중되는 트래픽에도 기획전 정보와 참여 안내를 안정적으로 전달할 수 있도록 가볍고 최적화된 코드로 구현했습니다.",
+    "client": "중소벤처기업부",
+    "category": "Landing Page",
+    "work-start": "2024.09",
+    "work-end": "2024.10",
+    "work-contribution": "퍼블리싱, 프론트엔드, SEO",
+    "key-features": "메인 랜딩 페이지, 인터랙션, 스크롤 이벤트, 전체 퍼블리싱, 모바일 반응형",
+    "key-techs": "React, Next.js, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, AOS, Figma",
+    "github": "",
+    "link": "https://2024-starcorn.vercel.app",
+
+    "features": [
+      {
+        "title": "원페이지(One-page) 기반 직관적인 행사 일정 안내",
+        "description": [
+          "복잡한 행사별 세부 일정과 안내 사항을 방문객이 한눈에 파악할 수 있도록 원페이지 랜딩페이지로 구현했습니다. 여러 페이지를 이동할 필요 없이, 스크롤만으로 행사 시간표와 위치 정보를 쉽고 직관적으로 찾을 수 있도록 레이아웃을 배치했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084075/starcorn-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084075/starcorn-slide-1-02.png"
+        ]
+      },
+      {
+        "title": "오프라인 현장 사용성을 고려한 모바일 환경 최적화",
+        "description": [
+          "행사 당일 오프라인 현장에서 방문객들이 스마트폰으로 접속해 일정을 확인하는 상황이 가장 중요했습니다. 이를 위해 모바일 뷰(Mobile-First)를 최우선으로 반응형 웹을 구현했으며, 현장에서도 화면이 끊김 없이 빠르게 열릴 수 있도록 기본적인 렌더링 및 이미지 최적화에 신경 썼습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084073/starcorn-slide-2-01.png"
+        ]
+      },
+      {
+        "title": "다수 주최/주관사(KB, 네이버, 카카오) 요구사항 통합 반영",
+        "description": [
+          "KB국민은행, 네이버, 카카오 등 3개사가 공동 주관하는 행사인 만큼 각 기업의 다양한 UI/UX 요구사항들이 있었습니다. 이러한 여러 요청사항들을 프론트엔드 단에서 적절히 소통하고 조율하여, 어느 한쪽으로 치우치거나 어색함 없이 하나의 공통된 웹사이트에 문제없이 반영했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084074/starcorn-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084075/starcorn-slide-3-02.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "samsung",
+    "main-color": "#1428A0",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "dark",
+    "logo-icon": "/svg/icons/logo-icons/samsung.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/samsung-dark.svg",
+    "logo-image": "/image/portfolios/main/samsung.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739851/samsung-video.mp4",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087692/samsung-video-main.mp4",
+    "main-image": "/image/portfolios/main/samsung.png",
+    "sub-image": "/image/portfolios/main/samsung.png",
+    "work-title": "삼성물산 FutureScape 랜딩페이지 구축",
+    "work-title-short": "삼성물산 FUTURE SCAPE",
+    "work-title-eng": "Samsung FutureScape ",
+    "full-work-title": "삼성물산 FutureScape 오픈이노베이션 프로그램 공식 랜딩페이지 기획 및 개발",
+    "short-work-explan": "삼성물산 브랜드 가이드를 준수하며 3D 키비주얼 렌더링 최적화와 다이내믹 모션으로 스타트업 지원 여정을 명확하게 안내하는 반응형 랜딩페이지 구축",
+    "work-explan": "삼성물산이 주도하는 스타트업 오픈이노베이션 프로그램 'FutureScape'의 런칭을 위한 공식 랜딩페이지입니다. 대기업의 브랜드 가이드라인을 준수하면서도, 유망 스타트업들의 지원을 독려할 수 있도록 세련된 인터랙션을 적용했습니다. 명확한 정보 전달 구조를 바탕으로 프로그램 소개부터 지원 신청 페이지로 이어지는 원활한 사용자 여정을 설계했습니다.",
+    "client": "삼성물산",
+    "category": "Landing Page",
+    "work-start": "2024.05",
+    "work-end": "2024.07",
+    "work-contribution": "UX · UI, 퍼블리싱, 프론트엔드, SEO",
+    "key-features": "메인 랜딩 페이지, 인터랙션, 스크롤 이벤트, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, AOS, Figma",
+    "github": "",
+    "link": "https://samsung-futurescape.vercel.app",
+
+    "features": [
+      {
+        "title": "메인 히어로 섹션 3D 키비주얼 적용",
+        "description": [
+          "프로그램 포스터에 사용된 3D 렌더링 이미지를 메인 히어로 섹션에 적용했습니다. 고해상도 PNG 이미지가 웹 환경에서 너무 무겁지 않게 적절한 크기와 비율로 표시되도록 조율하여, 시각적인 퀄리티를 유지하면서도 로딩에 무리가 없도록 구현했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084072/samsung-slide-1-01.png"
+        ]
+      },
+      {
+        "title": "스크롤 이벤트 기반 UI 인터랙션 구현",
+        "description": [
+          "행사 진행 과정과 프로그램 안내를 사용자가 쉽게 이해할 수 있도록 스크롤 위치에 맞춘 UI 인터랙션을 적용했습니다. 화면을 내릴 때마다 정보가 자연스럽게 나타나는 효과를 주어 가독성을 높이고 시각적인 이목을 집중시켰습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084072/samsung-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084072/samsung-slide-2-02.png"
+        ]
+      },
+      {
+        "title": "홍보 포스터 QR 접속을 고려한 모바일 반응형 최적화",
+        "description": [
+          "오프라인 홍보 포스터에 삽입된 QR코드를 통해 스마트폰으로 접속하는 사용자가 많을 것을 고려하여 모바일 반응형에 집중했습니다. 작은 모바일 기기 화면에서도 텍스트와 이미지가 깨짐 없이 최적화된 레이아웃으로 보이도록 작업했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084073/samsung-slide-3-01.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "asiaplat",
+    "main-color": "#000000",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/asiaplat.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/asiaplat-dark.svg",
+    "logo-image": "/image/portfolios/main/asiaplat.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739683/asiaplat-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087257/asiaplat-main.png",
+    "main-image": "/image/portfolios/main/asiaplat.png",
+    "sub-image": "/image/portfolios/main/asiaplat.png",
+    "work-title": "ASIA PLAT 태국 영문 뉴스레터 플랫폼",
+    "work-title-short": "ASIA PLAT",
+    "work-title-eng": "ASIA PLAT",
+    "full-work-title": "태국 현지 서비스용 영문 뉴스레터 플랫폼 (ASIA PLAT) 프로토타입 구축",
+    "short-work-explan": "백엔드 연동 없이 JSON 기반 정적 렌더링과 순수 프론트엔드 필터링을 통해 개발 리소스와 배포 일정을 획기적으로 단축한 태국 타겟 영문 뉴스레터 프로토타입",
+    "work-explan": "태국 현지 사용자를 타겟으로 한 글로벌 영문 뉴스레터 웹 플랫폼 구축 프로젝트입니다. 사업 초기의 빠른 시장 배포와 가설 검증을 목표로, 복잡한 백엔드 없이도 JSON 데이터를 기반으로 기사를 손쉽게 렌더링하고 업데이트할 수 있도록 프론트엔드를 설계했습니다. 이를 통해 개발 리소스를 최소화하고 배포 일정을 획기적으로 단축한 작업물입니다.",
+    "client": "N15파트너스",
+    "category": "Web Platform",
+    "work-start": "2024.04",
+    "work-end": "2024.06",
+    "work-contribution": "기획, UX · UI, 퍼블리싱, 프론트엔드, SEO",
+    "key-features": "메인 랜딩 페이지, 뉴스레터 게시글, json 기사 작성, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, Sass(SCSS), styled-components, Express, GitHub, Vercel, GSAP, AOS, Figma, Lottie",
+    "github": "",
+    "link": "https://asiaplat.vercel.app",
+
+    "features": [
+      {
+        "title": "JSON 파일 기반 정적 기사 데이터 관리 및 가이드 제작",
+        "description": [
+          "빠른 서비스 런칭을 위해 백엔드 서버 없이 프론트엔드 코드 내에 JSON 파일로 기사 데이터를 관리하도록 구현했습니다. 기사 작성을 담당하는 비개발 직군을 위해 JSON 작성 가이드를 별도로 제작하여 전달함으로써 원활한 콘텐츠 업데이트가 가능하도록 했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084070/asiaplat-slide-1-01.png"
+        ]
+      },
+      {
+        "title": "진입 경로에 맞춘 기사 탐색 및 검색 기능 구현",
+        "description": [
+          "백엔드 서버 없이 프론트엔드 단에서 기사 검색 및 정렬 기능을 구현했습니다. 전체 카테고리 또는 개별 카테고리 등 사용자의 진입 경로에 따라 '다음/이전 기사'가 알맞게 노출되도록 로직을 작성했으며, 코드가 복잡해지지 않도록 관련 로직을 모듈화하여 관리했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084069/asiaplat-slide-2-01.png"
+        ]
+      },
+      {
+        "title": "구글 시트 연동 기반 뉴스레터 구독 폼 제작",
+        "description": [
+          "뉴스레터 구독을 위한 입력 폼(이메일, 개인정보 수집 필수 동의, 마케팅 수신 선택 동의)을 구현했습니다. 추후 전문 뉴스레터 발송 플랫폼과 연동하기 전 임시 단계로, 입력된 구독자 정보가 구글 스프레드시트에 자동으로 정리되도록 연동하여 운영 편의성을 높였습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084070/asiaplat-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084071/asiaplat-slide-3-02.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "개발 리소스 부족에 따른 정적 데이터 관리 및 협업 프로세스 구축",
+        "content": "짧은 개발 일정으로 인해 기사를 관리할 어드민 페이지와 데이터베이스(DB)를 구축할 수 없어 콘텐츠 업로드에 차질이 예상되는 상황이었습니다.",
+        "contentImages": [],
+        "cause": "DB 연동 없이 프론트엔드 단에서 실제 기사 데이터를 업로드하고 관리할 대체 수단이 필요했습니다.",
+        "causeImages": [],
+        "solution": "DB 구축 대신 프론트엔드 코드 내에 articles.json 파일을 두어 기사 데이터를 렌더링하는 방식으로 구현했습니다. 비개발자인 기획/운영 담당자도 직접 기사를 업로드할 수 있도록 'JSON 기사 작성법 가이드'를 문서화하여 전달함으로써, 개발팀은 프론트엔드 화면 단 구현에만 집중할 수 있도록 업무를 분리했습니다.",
+        "solutionImages": [],
+        "result": "제한된 일정과 리소스 속에서도 백엔드 없이 안정적으로 기사 데이터를 보여줄 수 있었으며, 비개발 직군과의 원활한 협업 프로세스를 통해 프로젝트를 무사히 런칭했습니다.",
+        "resultImages": []
+      }
+    ]
+  },
+  {
+    "id": "nh",
+    "main-color": "#0060D1",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/nh.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/nh-dark.svg",
+    "logo-image": "/image/portfolios/main/nh.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739661/nh-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087273/nh-main.png",
+    "main-image": "/image/portfolios/main/nh.png",
+    "sub-image": "/image/portfolios/main/nh.png",
+    "work-title": "NH오픈비즈니스허브 스타트업 데이터 검색 플랫폼",
+    "work-title-short": "NH 오픈비즈니스허브",
+    "work-title-eng": "NH OPEN BUSINESS HUB",
+    "full-work-title": "NH농협은행 NH오픈비즈니스허브 스타트업 검색 및 통합 관리 플랫폼 구축",
+    "short-work-explan": "대규모 엑셀 데이터 파싱, 다중 권한 제어 어드민, DnD 동적 폼 빌더를 결합하여 스타트업 탐색 및 다단계 심사 평가 인프라를 전면 전산화한 통합 데이터 관리 플랫폼",
+    "work-explan": "NH농협은행의 엑셀러레이팅 육성 스타트업 정보를 통합 관리하고 검색할 수 있는 데이터 플랫폼입니다. 다수의 기업 데이터를 산업군 및 기술 분야별로 빠르게 필터링할 수 있는 검색 최적화 UI를 구현했습니다. 또한, 방대한 스타트업 데이터베이스를 담당자가 손쉽게 추가, 수정, 삭제할 수 있는 전용 관리자(Admin) 페이지를 통합 개발하여 운영 효율성을 극대화했습니다.",
+    "client": "NH농협은행",
+    "category": "Web Platform",
+    "work-start": "2024.01",
+    "work-end": "2024.11",
+    "work-contribution": "UX · UI, 퍼블리싱, 프론트엔드",
+    "key-features": "메인 랜딩 페이지, 기업 목록 페이지, 프로그램 신청 페이지, 사용자 대시보드, 사용자 계정 관리, 어드민 페이지, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, Tailwind CSS, Axios, Redux, jQuery, React Quill, React Form Builder, Java, Docker, GitHub, Vercel, AOS, Swiper, Google-Maps API, Figma",
+    "github": "",
+    "link": "https://nhdic.com",
+
+    "features": [
+      {
+        "title": "엔터프라이즈급 스타트업 DB 구축 및 대규모 엑셀 파일 검증 업로드",
+        "description": [
+          "관리자가 하나씩 수기 등록하는 방식의 한계를 넘어, 엑셀(XLSX/CSV) 파일 하나로 수백 개의 기존 기업 데이터를 일괄 파싱하여 DB에 업로드하는 대규모 마이그레이션 기능을 구현했습니다. 업로드 시 브라우저 단에서 엑셀 데이터의 필드 누락, 정규식 오류, 중복 여부를 1차 검증(Validate)하는 로직을 추가하여 서버 부하를 막고 데이터 무결성을 보장했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084068/nh-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084068/nh-slide-1-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084068/nh-slide-1-03.png"
+        ]
+      },
+      {
+        "title": "태블릿 최적화 통합 어드민 및 다중 권한(RBAC) 접근 제어 아키텍처",
+        "description": [
+          "방대한 데이터와 통계를 다루는 관리자 페이지 특성을 반영해, 마스터 관리자(NH 본사 임원), 프로젝트 담당자, 외부 심사위원 등 등급(Role)에 따라 접근 메뉴와 쓰기/읽기 권한이 엄격히 분리되는 보안 라우팅을 설계했습니다. 특히 외부 행사 현장에서 임직원들의 태블릿 접속 비율이 높을 것을 대비해, 복잡한 데이터 그리드와 차트 UI가 태블릿 환경에서도 쾌적하게 조작되도록 터치 인터페이스와 레이아웃을 정밀 최적화했습니다. 별도 요구사항이었던 사이트 로고 및 배너 동적 변경(커스텀) 기능까지 프론트엔드 상태로 반영하도록 고도화했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084063/nh-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084064/nh-slide-2-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084064/nh-slide-2-03.png"
+        ]
+      },
+      {
+        "title": "Drag & Drop 기반 동적 폼 빌더 및 심사 자동화 인프라",
+        "description": [
+          "스타트업 지원 시 매 기수마다 달라지는 지원서 양식을 개발자 도움 없이 생성할 수 있도록 react-form-builder를 도입해 구글 폼 수준의 Drag & Drop 동적 폼 생성기를 내재화했습니다. 서류 제출 후 이뤄지는 프로젝트 단계별 평가(서류/대면)를 위해 동적 평가표 렌더링, 외부 심사자 전용 채점 페이지 연동, 합격/불합격 상태에 따른 이메일 템플릿(변수 자동 치환) 자동 발송 로직까지 기획/개발을 리드하며 심사 인프라의 완전 전산화를 이룩했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084067/nh-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084067/nh-slide-3-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084067/nh-slide-3-03.png"
+        ]
+      },
+      {
+        "title": "공공데이터포털(국세청) 사업자등록번호 이중 검증 자동화 API 연동",
+        "description": [
+          "기업 신뢰도가 최우선인 금융권 플랫폼이므로 무분별한 허위 가입을 막기 위해 깐깐한 인증 시스템을 도입했습니다. 백엔드 팀과 협업하여 회원가입 시 클라이언트에서 넘긴 사업자 번호가 국세청 API를 통해 실제 존재 여부는 물론 '휴업/폐업' 상태까지 2중으로 검증(Validation)되도록 처리하여 보안 신뢰성을 금융권 표준에 맞췄습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084066/nh-slide-4-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084065/nh-slide-4-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084065/nh-slide-4-03.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "동적 폼(DnD) 에디터 렌더링 충돌 에러 (React-DND 충돌)",
+        "content": "관리자가 지원서 양식을 커스텀하기 위해 react-form-builder의 Drag & Drop 화면에 진입하거나 개체를 수정하려고 할 때, 화면이 정지하며 브라우저 콘솔에 치명적인 에러 메시지(Cannot have two HTML5 backends at the same time.)가 무한 출력되는 현상이 발생했습니다.",
+        "contentImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084065/nh-noraml-1-01.png"
+        ],
+        "cause": "프론트엔드 상태 관리(Client-side State)와 라이브러리가 내부적으로 사용하는 HTML5 Drag API 백엔드(Context)가 컴포넌트 마운트/언마운트 사이클에서 강제로 두 번 인스턴스화되면서 충돌이 일어나는 고질적인 오픈소스 라이브러리 호환성 결함이었습니다.",
+        "causeImages": [],
+        "solution": "폼 데이터 자체를 Client(useState, useEffect)로 무리하게 상태 관리하려는 접근을 폐기하고, 오직 Backend API 통신으로만 폼 구조(JSON)를 읽고 쓰도록 데이터 흐름을 근본적으로 교체했습니다. 또한, 좌측 툴박스(개체 목록)와 우측 캔버스(폼 에디터) 양쪽에서 동시에 DnD 이벤트가 난입하는 것을 막기 위해, CSS 레벨과 로직을 제어하여 사용자가 '신규 추가' 액션을 완료하기 전까지 기존 개체의 '수정(Drag)'을 강제 잠금(Disabled 처리)하고 안내 툴팁을 띄우는 UX적 방어막을 구축했습니다.",
+        "solutionImages": [],
+        "result": "차선책의 UI 제어를 통해 오픈소스 라이브러리와 Next.js 환경 간의 호환성 이슈를 안정적으로 우회하며 기능 생성을 완료했습니다. 이를 통해 무료 기반 React 패키지의 한계를 명확히 실감했으며, 차후 엔터프라이즈 프로젝트에서는 자체 DnD 로직 설계의 필요성을 뼈저리게 체감한 기술적 성장 사례입니다.",
+        "resultImages": []
+      },
+      {
+        "title": "다단계 프로젝트 심사 프로세스의 API 상태 값 불일치 및 구조화 난항",
+        "content": "하나의 프로젝트 내부에 서류 심사, 대면 평가, 최종 합격 등 여러 세부 단계가 존재하는데, 단계가 깊어질수록 프론트엔드 컴포넌트를 구성하고 상태를 제어하는 데 큰 어려움을 겪었습니다.",
+        "contentImages": [],
+        "cause": "초기 기획 문서의 모호함으로 인해, 실제 백엔드 API에서 응답으로 내려주는 상태 값(Status)들의 명칭과 의미가 프론트엔드 파트에서 이해한 비즈니스 로직과 다르게 파편화되어 사용되고 있었습니다. 이로 인해 상태에 따른 뷰(View) 렌더링 분기 처리가 복잡해지고 데이터 바인딩 오류가 누적되었습니다.",
+        "causeImages": [],
+        "solution": "코드를 무작정 추가하기 전에 백엔드 개발 파트와 긴급 소통을 진행했습니다. 단계별로 다르게 쓰이고 있던 API 상태 값들의 정확한 명칭과 도메인적 의미, 그리고 라이프사이클을 명확히 정의하고 프론트엔드의 이해도와 일치시키는 구조화 작업을 우선 진행했습니다.",
+        "solutionImages": [],
+        "result": "백엔드와의 명확한 소통을 통해 API 구조를 완벽히 이해한 후, 최상위 컴포넌트부터 상태 값을 체계적으로 내려주는 방향으로 로직을 재구성했습니다. 결과적으로 복잡하게 얽혀 있던 상위 뎁스의 심사 제어 기능들을 오류 없이 깔끔하게 렌더링하고 구축하는 데 성공했습니다.",
+        "resultImages": []
+      },
+      {
+        "title": "금융권 망분리 환경 Vercel 클라우드 배포 화이트리스트 차단 이슈",
+        "content": "클라우드 Vercel 인프라에서 배포를 마치고 NH농협은행 내부 보안망(사내망)에서 최종 인수 테스트를 진행하려던 찰나, 접근 자체가 거부(Block)되어 화면이 렌더링되지 않는 크리티컬 배포 장애가 발생했습니다.",
+        "contentImages": [],
+        "cause": "금융권 사내망은 철저한 보안을 위해 허용된 IP/도메인만 접근 가능한 화이트리스트 정책을 쓰는데, Vercel은 글로벌 CDN 특성상 할당 IP가 유동적으로 변동되어 보안팀에 특정 IP를 화이트리스트로 고정 등록할 수 없었던 치명적 방화벽 충돌이 원인이었습니다.",
+        "causeImages": [],
+        "solution": "인프라 변경이라는 엄청난 결단을 내렸습니다. NH 측으로 소스코드를 전체 이관하는 최종 목적을 조기 달성하기로 협의하고, 즉시 Vercel 호스팅을 폐기했습니다. 대신 개발팀 내에서 급하게 Docker 컨테이너라이제이션 기술을 학습하여, 프론트엔드 Next.js 앱을 도커 이미지(Dockerfile)로 말아 온프레미스(또는 고정 IP가 부여된 클라우드 인스턴스) 서버 위에서 가동되도록 배포 파이프라인을 밤샘 리빌딩했습니다.",
+        "solutionImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084066/nh-noraml-1-01-1.png"
+        ],
+        "result": "난생처음 실무에 Docker를 도입하는 위기 상황이었음에도 불구하고, 코드 베이스 자체를 갈아엎는 일 없이 환경 변수 및 설정 파일만 기민하게 튜닝하여 사내망 접근에 100% 성공했습니다. 납기 일정 지연 없이 금융사 망분리 환경이라는 극한의 보안 테스트를 무사히 통과하며 강력한 인프라 트러블슈팅 경험치를 축적했습니다.",
+        "resultImages": []
+      }
+    ]
+  },
+  {
+    "id": "hirekorea",
+    "main-color": "#66D9FF",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/hirekorea.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/hirekorea-dark.svg",
+    "logo-image": "/image/portfolios/main/hirekorea.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739668/hirekorea-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087268/hirekorea-main.png",
+    "main-image": "/image/portfolios/main/hirekorea.png",
+    "sub-image": "/image/portfolios/main/hirekorea.png",
+    "work-title": "하이어코리아 글로벌 HR 채용 플랫폼",
+    "work-title-short": "하이어코리아 HR",
+    "work-title-eng": "HIREKOREA HR",
+    "full-work-title": "하이어코리아 국내 체류 외국인 근로자 전용 구인구직 HR 플랫폼 및 크롤링 시스템 구축",
+    "short-work-explan": "외국인 타겟 전면 다국어 번역 및 직관적 아이콘 필터링을 바탕으로, 일자리 크롤링 자동화 시스템과 회원 커뮤니티를 결합한 국내 체류자 맞춤형 구인구직 HR 플랫폼",
+    "work-explan": "국내 체류 외국인 근로자들을 타겟으로 한 글로벌 맞춤형 채용 플랫폼입니다. 주 사용자의 언어 장벽을 해소하기 위해 전면 다국어 번역 기능을 구축했습니다. 더불어 매일 업데이트되는 국내 구인 공고를 자동으로 크롤링하여 영문으로 변환 후 업로드하는 기능을 구축함으로써, 운영자의 리소스를 절감하고 최신 일자리 정보를 지속적으로 제공하는 자동화 시스템을 완성했습니다.",
+    "client": "비아이벤처스",
+    "category": "Web Platform",
+    "work-start": "2023.06",
+    "work-end": "2024.03",
+    "work-contribution": "기획, UX · UI, 퍼블리싱, 프론트엔드",
+    "key-features": "다국어 번역, 메인 랜딩 페이지, 사용자 대시보드, 사용자 계정 관리, 공고 목록 페이지, 공고 필터, 게시판, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, Axios, Redux, Java, Docker, Cron-Job, GitHub, Vercel, i18next, Figma, Google-Spreadsheet",
+    "github": "",
+    "link": "https://hirekorea-frontend-main.vercel.app/ko-KR",
+
+    "features": [
+      {
+        "title": "i18next 기반 다국어(i18n) 지원 시스템 구축",
+        "description": [
+          "다양한 국적의 외국인 근로자 타겟에 맞춰 i18next 라이브러리를 활용해 다국어 기능을 구현했습니다. 영어와 한국어뿐만 아니라 향후 3개 국어 이상의 다양한 언어를 쉽게 추가하고 관리할 수 있도록 번역 데이터 구조를 유연하게 설계하여 적용했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084061/hirekorea-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084062/hirekorea-slide-1-02.png"
+        ]
+      },
+      {
+        "title": "비회원 접근성을 높인 공고 관리 및 직관적인 필터 UI",
+        "description": [
+          "서비스 초기 활성화를 위해 비회원도 자유롭게 공고를 작성, 수정, 삭제할 수 있도록 하고 특정 핵심 기능에서만 회원가입을 유도했습니다. 외국인 사용자가 한국어 텍스트 없이도 쉽게 정보를 파악할 수 있도록 지도와 아이콘을 활용한 시각적 필터 UI를 제공했으며, 공고 작성 페이지와 검색 필터의 옵션 구조를 동일하게 맞춰 일관된 사용자 경험(UX)을 제공했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084060/hirekorea-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084061/hirekorea-slide-2-02.png"
+        ]
+      },
+      {
+        "title": "이메일 인증 기반 회원 시스템 및 커뮤니티 기능 구현",
+        "description": [
+          "이메일 인증을 포함한 회원가입, 로그인, 마이페이지 등 서비스에 필요한 전반적인 회원 시스템을 구축했습니다. 사용자 간 소통을 위한 게시판(댓글 및 대댓글)을 구현했으며, 작성한 공고/댓글 관리, 북마크, 최근 읽은 공고 목록 기능 등을 작업했습니다. 추가로 구직자에게 유용한 실시간 최저임금 계산기 기능을 함께 구현했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084063/hirekorea-slide-3-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084062/hirekorea-slide-3-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084062/hirekorea-slide-3-03.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "biventures",
+    "main-color": "#0861FF",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "dark",
+    "logo-icon": "/svg/icons/logo-icons/biventures.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/biventures-dark.svg",
+    "logo-image": "/image/portfolios/main/biventures.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739812/biventures-video.mp4",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087678/biventures-video-main.mp4",
+    "main-image": "/image/portfolios/main/biventures.png",
+    "sub-image": "/image/portfolios/main/biventures.png",
+    "work-title": "비아이벤처스(BI Ventures) 공식 웹사이트",
+    "work-title-short": "비아이벤처스",
+    "work-title-eng": "BI VENTURES",
+    "full-work-title": "UNLOCK THE SECRET 벤처 캐피탈 비아이벤처스 웹사이트 리뉴얼 및 퍼블리싱",
+    "short-work-explan": "투자 기업의 신뢰감과 트렌디함을 돋보이게 하는 스플래시 로딩 및 인터랙티브 커서를 도입하고, 픽셀 퍼펙트 퍼블리싱으로 완성한 벤처 캐피탈 공식 웹사이트 리뉴얼",
+    "work-explan": "벤처 캐피탈 및 액셀러레이터 전문 기업 '비아이벤처스'의 공식 기업 웹사이트 전면 리뉴얼 프로젝트입니다. 금융/투자 기업이 요구하는 신뢰감과 트렌디한 기업 이미지를 동시에 전달하기 위해 세련된 인터랙티브 디자인을 기획했습니다. 시각적 디자인을 정교한 코드로 100% 구현해 내는 프론트엔드 퍼블리싱을 수행하여 기업의 브랜드 가치를 한 단계 끌어올렸습니다.",
+    "client": "비아이벤처스",
+    "category": "Responsive Web",
+    "work-start": "2023.06",
+    "work-end": "2023.08",
+    "work-contribution": "기획, UX · UI, 퍼블리싱, 프론트엔드, SEO",
+    "key-features": "메인 랜딩 페이지, 인터랙션, 스크롤 이벤트, 문의하기 폼, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, Sass(SCSS), styled-components, EmailJS, Kakao Maps API, GitHub, Vercel, GSAP, AOS, React Animated Cursor, Figma, Lottie",
+    "github": "",
+    "link": "https://www.biventures.kr",
+
+    "features": [
+      {
+        "title": "웹사이트 진입 및 페이지 전환 로딩 화면 구현",
+        "description": [
+          "웹사이트 특유의 무게감 있는 브랜드 경험을 제공하기 위해 페이지 로딩(전환) 화면을 추가했습니다. 특히 최초 진입 시에는 기업명을 확실하게 인지시킬 수 있도록 로고 애니메이션이 포함된 초기 로딩 화면을 구현했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084060/biventures-slide-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084059/biventures-slide-1-02.png"
+        ]
+      },
+      {
+        "title": "요소별 상호작용이 가능한 커스텀 마우스 커서 적용",
+        "description": [
+          "클라이언트의 특별한 시각적 인터랙션 요구사항을 반영하여, 기본 마우스 포인터 대신 애니메이션이 가미된 커스텀 커서를 도입했습니다. 단순히 마우스를 따라다니는 것을 넘어, 클릭 가능한 버튼이나 특정 개체에 마우스를 올렸을 때 커서의 형태와 반응이 다르게 나타나도록 디테일을 살렸습니다."
+        ],
+        "images": []
+      },
+      {
+        "title": "동적 스크롤 인터랙션 및 모바일 반응형 웹 리뉴얼",
+        "description": [
+          "기존의 구형 웹사이트를 전면 리뉴얼하며 화면 스크롤에 맞춰 반응하는 화려하고 동적인 UI 인터랙션을 새롭게 디자인하고 적용했습니다. 이러한 시각적 효과들이 PC뿐만 아니라 모바일 환경에서도 끊김 없이 자연스럽게 동작하도록 전체적인 반응형 레이아웃과 최적화 작업을 완료했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084058/biventures-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084058/biventures-slide-2-02.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "Swiper 무한 롤링(Marquee) 슬라이드의 간헐적 끊김 현상 완화",
+        "content": "Swiper 라이브러리를 활용해 파트너사 로고가 가로로 계속 흘러가는 무한 스크롤(Marquee) 영역을 구현했으나, 다음 슬라이드로 넘어가는 루프 시점에 약 0.1초 정도 모션이 멈칫하며 끊어지는 현상이 발생했습니다.",
+        "contentImages": [],
+        "cause": "Swiper의 기본 슬라이드 전환 타이밍과 트랜지션(Transition) 로직이 일정한 속도로 계속 흘러가야 하는 무한 스크롤 방식(Marquee)과 충돌하여 발생하는 최적화 문제였습니다.",
+        "causeImages": [],
+        "solution": "Swiper 옵션 내부의 애니메이션 속도(speed)와 대기 시간(delay), 그리고 CSS의 전환 속도 함수(transition-timing-function: linear) 등을 Marquee 상태에 알맞게 맞춤형으로 튜닝하고 최적화하여 멈추는 구간의 딜레이를 최소화했습니다.",
+        "solutionImages": [],
+        "result": "라이브러리 자체의 한계로 인해 발생하던 간헐적인 끊김 현상을 시각적으로 눈치채기 어려울 만큼 매끄럽게 완화하여, 안정적이고 자연스러운 무한 롤링 효과를 구현했습니다.",
+        "resultImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084059/biventures-noraml-1-01.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "barfdog",
+    "main-color": "#CA1010",
+    "sub-color": "#ffffff",
+    "color-theme": "light",
+    "font-theme": "light",
+    "logo-icon": "/svg/icons/logo-icons/barfdog.svg",
+    "logo-icon-dark": "/svg/icons/logo-icons/barfdog-dark.svg",
+    "logo-image": "/image/portfolios/main/barfdog.png",
+    "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739633/barfdog-scroll.png",
+    "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087258/barfdog-main.png",
+    "main-image": "/image/portfolios/main/barfdog.png",
+    "sub-image": "/image/portfolios/main/barfdog.png",
+    "work-title": "바프독 반려견 맞춤형 커머스 플랫폼",
+    "work-title-short": "프레쉬아워 바프독",
+    "work-title-eng": "Freshour BARFDOG",
+    "full-work-title": "바프독(BARFDOG) 프리미엄 애견 식품 맞춤형 쇼핑몰 및 관리자 시스템 구축",
+    "short-work-explan": "반려견 건강 데이터 기반의 맞춤형 큐레이션 다단계 폼, 다이내믹 결제 프로세스, 그리고 통합 어드민 대시보드까지 완벽하게 구축한 프리미엄 자연식 커머스 플랫폼",
+    "work-explan": "프리미엄 반려견 자연식 브랜드 '바프독(BARFDOG)'의 맞춤형 이커머스 플랫폼입니다. 고객이 등록한 반려견의 품종, 연령, 체중, 알러지 정보 등의 데이터를 기반으로 최적화된 맞춤형 사료를 큐레이션하여 제공하고 결제할 수 있는 로직을 구현했습니다. 프론트엔드 쇼핑몰 인터페이스부터 상품 및 결제 내역을 제어하는 강력한 관리자(Admin) 페이지까지 전자상거래에 필요한 전체 시스템을 성공적으로 구축했습니다.",
+    "client": "프레쉬아워",
+    "category": "Web Platform",
+    "work-start": "2022.06",
+    "work-end": "2023.05",
+    "work-contribution": "UX · UI, 퍼블리싱, 프론트엔드",
+    "key-features": "메인 랜딩 페이지, 사용자 대시보드, 사용자 계정 관리, 맞춤형 폼, 커머스, 게시판, 어드민 페이지, 전체 퍼블리싱, 모바일 반응형, UXUI 디자인",
+    "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, Tailwind CSS, Axios, Redux, Java, GitLab, GitHub, Vercel, GSAP, AOS, Recharts, Swiper, Figma",
+    "github": "",
+    "link": "https://barfdog.co.kr",
+
+    "features": [
+      {
+        "title": "기획/디자인 시안에 맞춘 전체 퍼블리싱 및 모바일 반응형 구현",
+        "description": [
+          "이커머스 프로젝트 전반의 광범위한 프론트엔드 퍼블리싱 작업을 전담했습니다. 기획 및 디자인 파트에서 전달된 시안을 최대한 원본에 가깝게 구현하는 데 집중했으며, 모바일 쇼핑 환경을 고려하여 기기별 화면 크기에 맞춰 레이아웃이 자연스럽게 적응하도록 모바일 반응형 웹을 최적화했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084057/barfdog-slide-1-01.png"
+        ]
+      },
+      {
+        "title": "다양한 OS 및 기기 환경에서의 크로스 브라우징 QA 테스트",
+        "description": [
+          "Windows(PC), macOS, iOS, Android 등 다양한 운영체제와 실제 모바일 기기 환경에서 최적화 테스트를 꼼꼼하게 진행했습니다. 반복적인 크로스 브라우징 테스트를 통해 레이아웃 깨짐이나 기능 오작동 등의 이슈를 사전에 파악하고 배포 일정 전까지 안정적으로 수정 완료했습니다."
+        ],
+        "images": []
+      },
+      {
+        "title": "스크롤 이벤트 및 마우스 인터랙션 적용",
+        "description": [
+          "기획 요구사항에 맞춰 랜딩 페이지 등 주요 화면에 스크롤 위치에 따른 애니메이션 이벤트와 마우스 오버(Hover) 인터랙션을 구현했습니다. 밋밋할 수 있는 화면에 적절한 시각적 효과를 부여하여 사용자에게 더 나은 웹 탐색 경험을 제공했습니다."
+        ],
+        "images": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084058/barfdog-slide-2-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084059/barfdog-slide-2-02.png"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "title": "다단계 설문조사 폼(Form) UI의 Swiper 렌더링 충돌 및 로직 개선",
+        "content": "반려견 맞춤 큐레이션 설문조사(3단계) 화면을 Swiper 라이브러리를 활용해 슬라이드 형태로 구현했으나, 모바일 반응형 화면에서 이전/다음 단계의 UI가 겹쳐 보이거나 유저가 강제로 다음 페이지로 넘어갈 수 있는 기능적 문제가 발생했습니다.",
+        "contentImages": [],
+        "cause": "입력 중인 데이터를 슬라이드 안에서 쉽게 보존하기 위해 Swiper를 도입했으나, 엄격한 입력 제어가 필요한 다단계 폼에 단순 슬라이드 방식을 적용한 것이 레이아웃 충돌과 비정상적인 단계 이동을 유발한 원인이었습니다.",
+        "causeImages": [],
+        "solution": "기존의 슬라이드 방식을 걷어내고, 단계별로 화면이 명확하게 구분되도록 구조를 개편했습니다. CSS를 통해 현재 작성 중인 단계의 폼만 화면에 노출되도록 제어하고, 사용자가 임의로 이전/다음 단계를 조작할 수 없도록 프론트엔드 방어 로직을 추가했습니다.",
+        "solutionImages": [],
+        "result": "화면 겹침 및 비정상적인 단계 이동 문제를 완벽하게 해결했습니다. 이 과정을 통해 다단계 입력 폼을 개발할 때는 UI 컴포넌트에 의존해 데이터를 남겨두는 것이 아니라, 각 단계별로 값을 상태(State)에 임시 저장하며 체계적으로 진행(Step)을 제어해야 한다는 점을 배웠습니다.",
+        "resultImages": [
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084474/barfdog-noraml-1-01.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084475/barfdog-noraml-1-02.png",
+          "https://res.cloudinary.com/o2ldruee/image/upload/v1787084475/barfdog-noraml-1-03.png"
+        ]
+      }
+    ]
+  }
+]

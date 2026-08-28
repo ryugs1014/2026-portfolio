@@ -1,0 +1,99 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-gray-0);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.close-button-wrap {
+  width: 100%;
+  @include flex-box(end, center);
+  background: none;
+  border: none;
+  transition: color 0.2s;
+  padding: 0 rem(60);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: rem(62);
+  z-index: 1;
+
+  .close-wrap {
+    @include svg-box(rem(20));
+    cursor: pointer;
+    margin-top: rem(20);
+    color: var(--color-gray-1000);
+  }
+}
+
+.modal-content-wrap {
+  margin: 0 auto;
+}
+
+.form-wrap {
+  margin-top: rem(60); // 타이틀과 폼 사이 간격
+}
+
+.title-section {
+  @include flex-box(space-between, end, row, rem(10));
+  box-sizing: border-box;
+  padding-top: rem(160);
+}
+
+.text-section {
+  @include grid-box(null, rem(10));
+
+  .section-title {
+    @include typo(20, 500, 1.4);
+  }
+
+  .section-text {
+    @include typo(48, 500, 1.2);
+  }
+}
+
+@media (max-width: rem(1000)) {
+  .title-section {
+    .section-title {
+      @include typo(16, 500, 1.4);
+    }
+
+    .section-text {
+      @include typo(34, 500, 1.2);
+    }
+  }
+
+  .close-button-wrap {
+    padding: 0 rem(40);
+  }
+}
+@media (max-width: rem(768)) {
+  .title-section {
+    .section-title {
+      @include typo(14, 500, 1.4);
+    }
+
+    .section-text {
+      @include typo(24, 500, 1.2);
+    }
+  }
+}

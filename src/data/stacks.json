@@ -1,0 +1,191 @@
+[
+  {
+    "category": "Frontend",
+    "stack": "HTML",
+    "detail": "시맨틱 태그를 적절히 활용해 웹 접근성과 검색엔진 최적화(SEO)를 고려한 탄탄한 구조의 웹을 설계합니다.",
+    "icon-image": "/svg/icons/stack-icons/html.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/html-dark.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "CSS",
+    "detail": "반응형 웹 디자인 구현에 능숙하고, 크로스 브라우징 이슈를 정확히 이해하여 해결 방안을 제시합니다.",
+    "icon-image": "/svg/icons/stack-icons/css.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/css-dark.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "JavaScript",
+    "detail": "ES6+ 모던 문법을 바탕으로 DOM 조작과 비동기 통신을 다루며, 유려한 동적 사용자 경험을 이끌어냅니다.",
+    "icon-image": "/svg/icons/stack-icons/javascript.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "TypeScript",
+    "detail": "정적 타이핑으로 런타임 에러를 사전에 차단하며, 명확한 인터페이스 정의로 코드의 유지보수성을 크게 높입니다.",
+    "icon-image": "/svg/icons/stack-icons/typescript.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "React",
+    "detail": "컴포넌트 기반 아키텍처에 대한 깊은 이해를 바탕으로, 커스텀 훅을 활용해 비즈니스 로직을 분리하고 상태를 효율적으로 관리해 냅니다.",
+    "icon-image": "/svg/icons/stack-icons/react.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "Next.js",
+    "detail": "SSR, SSG, ISR 등 다양한 렌더링 방식을 요구사항에 맞게 적용하고, App Router를 활용해 최적화된 웹 환경 구축에 탁월합니다.",
+    "icon-image": "/svg/icons/stack-icons/nextjs.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/nextjs-dark.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "jQuery",
+    "detail": "레거시 코드의 흐름을 빠르게 파악해 기존 프로젝트를 안정적으로 유지보수하고 DOM을 원활하게 조작합니다.",
+    "icon-image": "/svg/icons/stack-icons/jquery.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "React Native",
+    "detail": "React 생태계 지식을 활용해 iOS와 Android 양대 마켓을 아우르는 크로스 플랫폼 모바일 앱을 성공적으로 빌드합니다.",
+    "icon-image": "/svg/icons/stack-icons/react.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "Expo",
+    "detail": "내장된 배포 파이프라인과 빠른 프로토타이핑 기능을 적극 활용해 모바일 앱의 테스트 및 배포 주기를 효과적으로 단축시킵니다.",
+    "icon-image": "/svg/icons/stack-icons/expo.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/expo-dark.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "Sass(SCSS)",
+    "detail": "변수와 Mixin을 적재적소에 활용하여 반복적인 스타일 코드를 최소화하고, 모듈화를 통해 전반적인 유지보수성을 끌어올립니다.",
+    "icon-image": "/svg/icons/stack-icons/sass.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "styled-components",
+    "detail": "CSS-in-JS 패턴으로 컴포넌트 단위의 스타일 캡슐화를 진행하며, props를 이용해 동적이고 유연한 테마 환경을 구축합니다.",
+    "icon-image": "/svg/icons/stack-icons/styledcomponents.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "Tailwind CSS",
+    "detail": "직관적인 클래스명을 바탕으로 디자인 시스템을 코드에 빠르게 녹여내어, 일관성 있고 통일감 있는 UI를 완성합니다.",
+    "icon-image": "/svg/icons/stack-icons/tailwind.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "Three.js",
+    "detail": "웹 브라우저 상의 인터랙티브 3D 그래픽을 다루며, 최적화된 3D 모델로 사용자에게 깊은 몰입감을 선사합니다.",
+    "icon-image": "/svg/icons/stack-icons/threejs.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/threejs-dark.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "Axios",
+    "detail": "RESTful API 연동을 통해 비동기 데이터를 안정적으로 불러오며, 인터셉터로 공통 에러를 매끄럽게 처리해 냅니다.",
+    "icon-image": "/svg/icons/stack-icons/axios.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "Redux",
+    "detail": "규모가 큰 애플리케이션의 복잡한 전역 상태를 체계적으로 구조화하고 효율적인 업데이트 로직을 설계합니다.",
+    "icon-image": "/svg/icons/stack-icons/redux.svg"
+  },
+  {
+    "category": "Frontend",
+    "stack": "Zustand",
+    "detail": "가볍고 직관적인 상태 관리 방식을 도입하여 불필요한 리렌더링을 막고 앱의 렌더링 성능을 극대화합니다.",
+    "icon-image": "/svg/icons/stack-icons/zustand.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/zustand-dark.svg"
+  },
+  {
+    "category": "Backend & DevOps",
+    "stack": "Supabase",
+    "detail": "빠른 속도로 기본 백엔드 인프라를 구축한 뒤, 프론트엔드 환경과 지연 없이 매끄럽게 연동하는 데 능숙합니다.",
+    "icon-image": "/svg/icons/stack-icons/supabase.svg"
+  },
+  {
+    "category": "Backend & DevOps",
+    "stack": "AWS",
+    "detail": "클라우드 컴퓨팅 생태계를 이해하고, EC2나 S3 등의 주요 서비스를 활용해 호스팅과 정적 파일 배포를 원활히 진행합니다.",
+    "icon-image": "/svg/icons/stack-icons/aws.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/aws-dark.svg"
+  },
+  {
+    "category": "Backend & DevOps",
+    "stack": "Vercel",
+    "detail": "GitHub 연동으로 프론트엔드 프로젝트의 자동 배포 파이프라인을 구축하며, 배포 환경과 SEO 설정을 세밀하게 조정합니다.",
+    "icon-image": "/svg/icons/stack-icons/vercel.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/vercel-dark.svg"
+  },
+  {
+    "category": "Backend & DevOps",
+    "stack": "Docker",
+    "detail": "컨테이너 기반 가상화 기술을 적극 활용해, 어디서나 동일하게 동작하는 일관된 개발 및 배포 환경을 조성합니다.",
+    "icon-image": "/svg/icons/stack-icons/docker.svg"
+  },
+  {
+    "category": "Collaboration Tools",
+    "stack": "Git",
+    "detail": "기능 단위로 브랜치를 분리해 코드를 체계적으로 추적하고, 충돌 상황을 유연하게 해결하며 안전한 버전 관리를 지향합니다.",
+    "icon-image": "/svg/icons/stack-icons/git.svg"
+  },
+  {
+    "category": "Collaboration Tools",
+    "stack": "GitHub",
+    "detail": "코드 리뷰 문화와 이슈 트래킹 시스템에 대한 높은 이해도를 바탕으로 팀원들과의 비동기적 협업을 매끄럽게 이끕니다.",
+    "icon-image": "/svg/icons/stack-icons/github.svg",
+    "icon-image-dark": "/svg/icons/stack-icons/github-dark.svg"
+  },
+  {
+    "category": "Collaboration Tools",
+    "stack": "Jira",
+    "detail": "티켓 기반의 프로젝트 관리론을 적용하여 전체 일정과 잠재적 리스크를 빈틈없이 추적하고 관리해 나갑니다.",
+    "icon-image": "/svg/icons/stack-icons/jira.svg"
+  },
+  {
+    "category": "Design",
+    "stack": "UX/UI & Web Design",
+    "detail": "사용자의 관점에서 서비스의 페인 포인트를 발굴하고, 직관성과 편의성을 동시에 잡은 인터페이스를 제안합니다.",
+    "icon-image": "/svg/icons/stack-icons/figma.svg"
+  },
+  {
+    "category": "Design",
+    "stack": "Figma",
+    "detail": "기획 및 디자인 팀의 숨은 의도를 정확히 읽어내고 원활하게 소통하여, 프로젝트가 흔들림 없이 올바른 방향으로 나아가도록 돕습니다.",
+    "icon-image": "/svg/icons/stack-icons/figma.svg"
+  },
+  {
+    "category": "Design",
+    "stack": "Adobe Illustrator",
+    "detail": "로고나 아이콘 같은 벡터 기반 그래픽을 손수 제작해 웹과 앱 디자인의 시각적 완성도를 한층 끌어올립니다.",
+    "icon-image": "/svg/icons/stack-icons/illustrator.svg"
+  },
+  {
+    "category": "Design",
+    "stack": "Adobe Photoshop",
+    "detail": "고품질 이미지 리터칭 및 최적화 작업을 거쳐, UI/UX와 웹 콘텐츠에 생기를 불어넣는 비주얼 리소스를 직접 생산해 냅니다.",
+    "icon-image": "/svg/icons/stack-icons/photoshop.svg"
+  },
+  {
+    "category": "Design",
+    "stack": "Adobe Premiere Pro",
+    "detail": "다양한 영상 편집 기술과 효과를 다루며, 서비스 홍보에 필요한 임팩트 있는 멀티미디어 콘텐츠를 기획하고 편집합니다.",
+    "icon-image": "/svg/icons/stack-icons/premiere.svg"
+  },
+  {
+    "category": "3D Modeling",
+    "stack": "SketchUp",
+    "detail": "입체적인 공간 구조 파악 능력을 바탕으로 3D 모델링을 수행하며, 웹이나 앱에 필요한 3D 요소를 가볍고 효율적으로 최적화해 냅니다.",
+    "icon-image": "/svg/icons/stack-icons/sketchup.svg"
+  },
+  {
+    "category": "3D Modeling",
+    "stack": "Blender",
+    "detail": "모델링부터 텍스처링, 렌더링까지 이어지는 3D 에셋 파이프라인을 거쳐 서비스 디자인을 돋보이게 할 입체적 시각 효과를 완성합니다.",
+    "icon-image": "/svg/icons/stack-icons/blender.svg"
+  }
+]

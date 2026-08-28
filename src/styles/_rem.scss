@@ -1,0 +1,12 @@
+// convert px to rem
+@use 'sass:math';
+
+@function rem($px, $context: 16) {
+  @return #{math.div($px, $context)}rem;
+}
+
+// ===============================
+// rem 사용 예시
+// ===============================
+
+//@use '@/styles/rem' as *;

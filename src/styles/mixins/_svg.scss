@@ -1,0 +1,28 @@
+@use '../rem' as *;
+
+// ===============================
+// svgBox 사용 예시
+// ===============================
+
+// * 고정 너비로 사용 (width: rem(120))
+//@include svgBox(rem(120));
+
+// * 최대 너비만 지정 (반응형 + 제한)
+//@include svgBox(100%, rem(200));
+
+@mixin svg-box($width: 100%, $max-width: null) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+
+  @if $max-width != null {
+    max-width: $max-width;
+  }
+
+  // 내부 svg 크기를 컨테이너에 맞춤
+  //svg {
+  //  width: 100%;
+  //  height: auto;
+  //}
+}

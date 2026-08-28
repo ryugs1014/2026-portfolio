@@ -1,0 +1,70 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.section-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: rem(160) 0;
+}
+
+.bar-wrapper {
+  position: relative;
+  width: 100%;
+  height: rem(780);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  top: rem(-100);
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--color-bar);
+  transform-origin: center;
+  animation: flowDown 15s cubic-bezier(0.15, 0.46, 0.45, 0.94) infinite;
+  animation-delay: calc(-15s / 14 * var(--i));
+}
+
+@keyframes flowDown {
+  0% {
+    height: rem(80);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    transform: translateY(rem(780));
+    opacity: 1;
+  }
+}
+
+@media (max-width: rem(768)) {
+  .title-container {
+    padding: 0;
+  }
+
+  //.bar-wrapper {
+  //  height: rem(390);
+  //}
+  //
+  //.bar {
+  //  animation: flowDown 7.5s cubic-bezier(0.15, 0.46, 0.45, 0.94) infinite;
+  //  animation-delay: calc(-7.5s / 14 * var(--i));
+  //}
+  //
+  //@keyframes flowDown {
+  //  0% {
+  //    height: rem(40);
+  //    transform: translateY(0);
+  //    opacity: 1;
+  //  }
+  //  100% {
+  //    height: 0;
+  //    transform: translateY(rem(390));
+  //    opacity: 1;
+  //  }
+  //}
+}

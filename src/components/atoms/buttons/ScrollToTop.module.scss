@@ -1,0 +1,56 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.scroll-button {
+  position: fixed;
+  right: rem(24);
+  bottom: rem(-60); // 처음엔 화면 아래에 숨김
+  width: rem(36);
+  height: rem(36);
+  border-radius: 50%;
+  background-color: var(--color-gray-1000);
+  color: var(--color-gray-0);
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(24);
+
+  &.show {
+    bottom: rem(40);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.footer {
+    bottom: rem(10);
+
+    [data-color-scheme='dark'] & {
+      background-color: var(--color-bg-button);
+      color: var(--color-white-fix);
+    }
+  }
+
+  &:hover {
+    transform: translateY(rem(-5));
+  }
+}
+
+@media (max-width: rem(1000)) {
+  .scroll-button {
+    right: rem(20);
+  }
+}
+
+@media (max-width: rem(768)) {
+  .scroll-button {
+    right: rem(10);
+  }
+}

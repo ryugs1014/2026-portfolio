@@ -1,0 +1,33 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.title-wrapper {
+  padding-top: rem(165);
+  padding-bottom: rem(80);
+}
+
+.title {
+  @include typo(48, 500, 1.2);
+  word-break: keep-all;
+}
+
+.description {
+  @include typo(18, 400, 1.5);
+  color: var(--color-gray-400);
+}
+
+@media (max-width: rem(1600)) {
+  .title {
+    @include typo(42, 700, 1.4);
+  }
+}
+
+@media (max-width: rem(1000)) {
+  .title-wrapper {
+    padding-top: rem(135);
+  }
+
+  .title {
+    @include typo(32, 700, 1.4);
+  }
+}

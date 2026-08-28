@@ -1,0 +1,59 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.section-container {
+  padding: rem(160) 0;
+  min-height: 100dvh;
+  display: grid;
+}
+
+.section-wrap {
+  @include flex-box(space-between, start, column, rem(60));
+  padding: 0 rem(40);
+}
+
+.title-section {
+  @include flex-box(space-between, start, row, rem(10));
+  height: 100%;
+}
+
+.section-title {
+  @include typo(90, 600, 1, rem(-1.8));
+  text-transform: uppercase;
+}
+
+.text-section {
+  @include flex-box(end, start);
+  width: 100%;
+}
+
+.section-text {
+  max-width: rem(420);
+  text-align: right;
+}
+
+@media (max-width: rem(1000)) {
+  .section-wrap {
+    padding: 0 rem(30);
+  }
+}
+
+@media (max-width: rem(768)) {
+  .section-wrap {
+    padding: 0 rem(20);
+  }
+
+  .section-title {
+    @include typo(72, 600, 1, rem(-1.8));
+  }
+
+  .section-text {
+    @include typo(14, 400, 1.5);
+  }
+}
+
+@media (max-width: rem(460)) {
+  .section-title {
+    @include typo(42, 600, 1, rem(-1.8));
+  }
+}

@@ -1,0 +1,23 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.svg-box {
+  @include svg-box(rem(36));
+  min-width: rem(36);
+  height: rem(36);
+
+  rect,
+  path {
+    stroke: var(--color-font-noraml);
+  }
+}
+
+@media (max-width: rem(768)) {
+  .svg-box {
+    &.responsive-size {
+      @include svg-box(rem(24));
+      min-width: rem(24);
+      height: rem(24);
+    }
+  }
+}

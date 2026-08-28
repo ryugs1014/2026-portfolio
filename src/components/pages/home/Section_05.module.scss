@@ -1,0 +1,381 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.section-container {
+  padding: rem(160) 0 rem(240);
+}
+
+.section-wrap {
+  @include grid-box(1fr 1fr, rem(40));
+}
+
+.title-section {
+  position: sticky;
+  top: rem(64);
+  flex-shrink: 0;
+  @include flex-box(space-between, start, row, rem(10));
+  padding: 0 rem(40);
+  box-sizing: border-box;
+  align-self: start;
+  transition: top 0.5s ease;
+
+  &.up {
+    top: rem(126);
+  }
+}
+
+.text-section {
+  @include grid-box(null, rem(10));
+
+  .section-title {
+    @include typo(20, 500, 1.4);
+  }
+
+  .section-text {
+    @include typo(48, 500, 1.2);
+  }
+}
+
+.accordion-wrap {
+}
+
+.accordion-item {
+  padding: 0 rem(40);
+}
+
+.accordion-header {
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: var(--color-gray-1000);
+    color: var(--color-gray-0);
+
+    .header-left {
+      border-color: var(--color-gray-1000);
+    }
+
+    .icon-box {
+      filter: invert(1);
+    }
+  }
+}
+
+.header-left {
+  cursor: pointer;
+  padding: rem(25) rem(24);
+  border-bottom: rem(1) solid var(--color-line-noraml);
+  box-sizing: border-box;
+  @include flex-box(start, center, row, rem(10));
+  width: 100%;
+}
+
+.category-title-group {
+  @include flex-box(space-between, center, row, rem(10));
+  width: 100%;
+}
+
+.category-title {
+  @include typo(48, 500, 1.4);
+}
+
+.icon-box {
+  width: rem(48);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  @include flex-box(center, center);
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  position: relative;
+}
+
+.category-desc {
+  @include typo(24, 500, 1.4);
+}
+
+.accordion-content-wrapper {
+  @include grid-box();
+  padding: 0 rem(24);
+
+  .about-title {
+    @include grid-box(null, rem(8));
+    @include grid-item(start, start);
+    @include typo(24, 700, 1);
+
+    .sub-title {
+      color: var(--color-gray-200);
+    }
+  }
+
+  .about-content {
+    @include typo(15, 400, 1.5);
+    padding: rem(60) 0;
+
+    [data-color-scheme='dark'] & {
+      font-weight: 500;
+    }
+  }
+
+  .about-content-list {
+    @include grid-box(null, rem(16));
+    padding: rem(60) 0;
+
+    > li {
+      @include grid-box(rem(210) 1fr, rem(60));
+      @include typo(15, 400, 1.5);
+      color: var(--color-gray-400);
+
+      [data-color-scheme='dark'] & {
+        font-weight: 500;
+      }
+
+      .flex-box {
+        @include flex-box(space-between, start, row, rem(60));
+
+        .list-title {
+          color: var(--color-gray-1000);
+        }
+
+        .list-title-sub {
+          color: var(--color-gray-400);
+        }
+
+        .list-title-bar {
+          font-weight: 200;
+          color: var(--color-gray-400);
+        }
+
+        .list-sub {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .about-block-list {
+    @include flex-box(start, start, row, rem(10));
+    flex-wrap: wrap;
+    padding: rem(60) 0;
+
+    .about-block {
+      @include flex-box(center, center);
+      @include typo(13, 400, 1);
+      padding: rem(4) rem(4);
+      box-sizing: border-box;
+      border-radius: rem(4);
+      background-color: var(--color-gray-100);
+
+      [data-color-scheme='dark'] & {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: rem(1600)) {
+  .section-wrap {
+    @include grid-box(1fr, rem(80));
+  }
+
+  .title-section {
+    position: static;
+  }
+
+  .header-left {
+    padding: rem(25) 0;
+  }
+
+  .accordion-item {
+    padding: 0;
+
+    .accordion-header {
+      padding: 0 rem(30);
+    }
+  }
+
+  .category-title {
+    @include typo(36, 500, 1.4);
+  }
+
+  .category-desc {
+    @include typo(16, 400, 1.4);
+  }
+
+  .stack-name {
+    @include typo(20, 500, 1.4);
+  }
+
+  .stack-detail {
+    @include typo(14, 400, 1.4);
+  }
+
+  .icon-box {
+    margin-right: rem(24);
+  }
+
+  .accordion-content-wrapper {
+    padding: 0;
+
+    .about-content {
+      padding: rem(60) rem(30);
+    }
+
+    .about-content-list {
+      padding: rem(60) rem(30);
+    }
+
+    .about-block-list {
+      padding: rem(60) rem(30);
+    }
+  }
+}
+
+@media (max-width: rem(1200)) {
+  .category-title {
+    @include typo(32, 500, 1.4);
+  }
+
+  .category-desc {
+    @include typo(14, 400, 1.4);
+  }
+}
+
+@media (max-width: rem(1000)) {
+  .title-section {
+    padding: 0 rem(30);
+
+    .section-title {
+      @include typo(16, 500, 1.4);
+    }
+
+    .section-text {
+      @include typo(34, 500, 1.2);
+    }
+  }
+
+  .stack-item {
+    padding: 0 rem(30);
+  }
+
+  .header-left {
+    @include flex-box(start, start, row, rem(10));
+  }
+
+  .toggle-indicator {
+    @include flex-box(center, center);
+    height: rem(44);
+  }
+
+  .icon-box {
+    width: rem(30);
+  }
+
+  .stack-name {
+    @include typo(16, 500, 1.4);
+  }
+
+  .accordion-content-wrapper {
+    .about-content-list {
+      > li {
+        @include grid-box(rem(160) 1fr, rem(20));
+      }
+    }
+  }
+}
+
+@media (max-width: rem(768)) {
+  .title-section {
+    padding: 0 rem(20);
+
+    .section-title {
+      @include typo(14, 500, 1.4);
+    }
+
+    .section-text {
+      @include typo(24, 500, 1.2);
+
+      > br {
+        display: none;
+      }
+    }
+  }
+
+  .header-left {
+    padding: rem(20) 0;
+  }
+
+  .accordion-item {
+    .accordion-header {
+      padding: 0 rem(20);
+    }
+  }
+
+  .stack-item {
+    padding: 0 rem(20);
+  }
+
+  .toggle-indicator {
+    height: rem(34);
+  }
+
+  .category-title {
+    @include typo(24, 500, 1.4);
+  }
+
+  .category-desc {
+    @include typo(12, 400, 1.4);
+  }
+
+  .stack-item {
+    padding: 0 rem(20);
+  }
+
+  .stack-detail {
+    @include typo(12, 400, 1.4);
+  }
+
+  .accordion-content-wrapper {
+    .about-content {
+      padding: rem(40) rem(20);
+      @include typo(14, 400, 1.5);
+    }
+
+    .about-content-list {
+      padding: rem(40) rem(20);
+
+      > li {
+        @include grid-box(1fr, rem(4));
+
+        .list-time {
+          order: 1;
+          @include typo(14, 400, 1.4);
+        }
+
+        .flex-box {
+          @include grid-box(1fr, rem(4));
+
+          .list-title {
+            @include flex-box(start, start, row, rem(6));
+            flex-wrap: wrap;
+            @include typo(20, 700, 1.4);
+          }
+
+          .list-title-sub {
+            font-weight: 400;
+          }
+
+          .list-sub {
+            text-align: left;
+            white-space: unset;
+            color: var(--color-gray-1000);
+            @include typo(14, 400, 1.4);
+          }
+        }
+      }
+    }
+
+    .about-block-list {
+      padding: rem(40) rem(20);
+    }
+  }
+}

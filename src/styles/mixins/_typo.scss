@@ -1,0 +1,44 @@
+@use '../rem' as *;
+
+// ===============================
+// typo 사용 예시
+// ===============================
+
+// * font-size: rem(16); font-weight: 500; line-height: 1.4;
+//@include font-style(16, 500, 1.4);
+
+// ===============================
+// typo mixin 설정
+// ===============================
+@mixin typo($size, $weight: 400, $lh: 1.5, $ls: rem(-0.16)) {
+  font-size: rem($size);
+  font-weight: $weight;
+  line-height: $lh; // line-height는 rem 단위보다 1.5 같은 배율 단위가 반응형에 유리합니다.
+  letter-spacing: $ls;
+}
+
+// 2. 말줄임표 (Line Clamp)
+@mixin text-ellipsis($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if $line == 1 {
+    white-space: nowrap; // 1줄일 때는 가장 안정적인 방식 사용
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    white-space: normal;
+  }
+}
+
+// 3. 커스텀 밑줄
+@mixin text-underline($thickness: 1, $offset: 5%) {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: rem($thickness);
+  text-underline-offset: $offset;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+}

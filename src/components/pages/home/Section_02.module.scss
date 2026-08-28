@@ -1,0 +1,262 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.section-container {
+  padding: rem(160) 0 0;
+}
+
+.section-wrap {
+  @include grid-box(null, rem(80));
+}
+
+.title-section {
+  @include flex-box(space-between, end, row, rem(10));
+  padding: 0 rem(40);
+  box-sizing: border-box;
+}
+
+.text-section {
+  @include grid-box(null, rem(10));
+
+  .section-title {
+    @include typo(20, 500, 1.4);
+  }
+
+  .section-text {
+    @include typo(48, 500, 1.2);
+  }
+}
+
+.works-wrap {
+  @include grid-box();
+}
+
+.category-group {
+  @include flex-box(start, start);
+}
+
+.portfolio-list {
+  @include grid-box();
+  width: 100%;
+
+  .portfolio-item {
+    padding: 0 rem(40);
+
+    &:hover {
+      background-color: var(--color-gray-1000);
+      color: var(--color-gray-0);
+
+      .item-button {
+        border-color: var(--color-gray-1000);
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.portfolio-item {
+  .item-button {
+    cursor: pointer;
+    border-bottom: rem(1) solid var(--color-line-noraml);
+    padding: rem(25) 0;
+    box-sizing: border-box;
+  }
+
+  .work-info {
+    @include flex-box(space-between, start, column, rem(16));
+    padding: 0 rem(16);
+  }
+
+  .info-header {
+    @include grid-box(0.5fr 1fr 0.5fr, rem(40));
+    width: 100%;
+    align-items: center;
+  }
+
+  .text-info {
+    @include typo(16, 400, 1.4);
+    //color: var(--color-gray-500);
+
+    [data-color-scheme='dark'] & {
+      font-weight: 500;
+    }
+
+    .work-title-text {
+      display: inline-block;
+    }
+  }
+
+  .work-year {
+    @include typo(48, 500, 1.4);
+  }
+
+  .work-title {
+    @include typo(48, 500, 1.4);
+  }
+
+  .text-info {
+    .work-title-text {
+      @include text-ellipsis(2);
+    }
+  }
+}
+
+.scroll-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: object-position 10s 0.5s ease-in-out;
+}
+
+.scrolling {
+  object-position: bottom !important;
+}
+
+//@media (max-width: rem(1600)) {
+//  .category-name {
+//    .category-content {
+//      > span {
+//        @include typo(40, 700, 1.2);
+//      }
+//    }
+//  }
+//
+//  .portfolio-item {
+//    .item-button {
+//      @include grid-box(0.8fr 1fr, rem(24));
+//    }
+//
+//    .work-title {
+//      @include typo(42, 700, 1.4);
+//    }
+//
+//    .work-links {
+//      bottom: rem(10);
+//      padding: 0 rem(10);
+//    }
+//
+//    .work-image {
+//      //border-radius: rem(28);
+//    }
+//  }
+//}
+
+@media (max-width: rem(1200)) {
+  .portfolio-item {
+    .work-info {
+      padding: 0;
+    }
+
+    .info-header {
+      @include grid-box(rem(60) 1fr 0.5fr, rem(40));
+    }
+
+    .text-info {
+      @include grid-box(null, rem(4));
+      @include typo(14, 400, 1.4);
+    }
+
+    .work-year {
+      @include typo(32, 500, 1.4);
+    }
+
+    .work-title {
+      @include typo(32, 500, 1.4);
+    }
+  }
+}
+
+@media (max-width: rem(1000)) {
+  .title-section {
+    padding: 0 rem(30);
+
+    .section-title {
+      @include typo(16, 500, 1.4);
+    }
+
+    .section-text {
+      @include typo(34, 500, 1.2);
+    }
+  }
+
+  .portfolio-list {
+    .portfolio-item {
+      padding: 0 rem(30);
+    }
+  }
+}
+
+@media (max-width: rem(768)) {
+  .title-section {
+    padding: 0 rem(20);
+
+    .section-title {
+      @include typo(14, 500, 1.4);
+    }
+
+    .section-text {
+      @include typo(24, 500, 1.2);
+
+      > br {
+        display: none;
+      }
+    }
+  }
+
+  .portfolio-list {
+    .portfolio-item {
+      padding: 0 rem(20);
+    }
+  }
+
+  .portfolio-item {
+    .item-button {
+      padding: rem(20) 0;
+    }
+
+    .info-header {
+      @include grid-box(rem(100) 1fr, rem(0));
+    }
+
+    .work-year {
+      @include typo(54, 500, 1.4);
+      grid-row: 1 / span 2;
+      line-height: 1;
+    }
+
+    .work-title {
+      @include typo(24, 500, 1.4);
+    }
+
+    .text-info {
+      @include typo(12, 400, 1.5);
+
+      .work-title-text {
+        @include text-ellipsis(1);
+      }
+    }
+  }
+}
+
+@media (max-width: rem(460)) {
+  .portfolio-item {
+    .info-header {
+      @include grid-box(rem(60) 1fr, rem(0));
+    }
+
+    .work-year {
+      @include typo(34, 500, 1.4);
+      grid-row: 1 / span 2;
+      line-height: 1;
+    }
+
+    .work-title {
+      @include typo(20, 500, 1.4);
+    }
+  }
+}

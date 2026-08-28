@@ -1,0 +1,15 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.fade-wrapper {
+  opacity: 0;
+  transform: translateY(rem(20));
+  transition:
+    opacity 0.8s,
+    transform 0.8s;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

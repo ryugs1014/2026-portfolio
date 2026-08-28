@@ -1,0 +1,146 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(20);
+}
+
+.modal {
+  max-width: rem(460);
+  width: 100%;
+  position: relative;
+  text-align: center;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-wrap {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  max-height: calc(100vh - #{rem(160)});
+  background-color: var(--color-white-fix);
+  color: var(--color-text-normal, #111111);
+  padding: rem(24) rem(24) rem(40);
+  border-radius: rem(20);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.button-wrap {
+  width: 100%;
+  @include flex-box(end, center);
+  margin-bottom: rem(12);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  .close-wrap {
+    @include svg-box(rem(20));
+  }
+}
+
+.title {
+  @include typo(24, 600, 1.2);
+  margin-bottom: rem(12);
+}
+
+.desc {
+  @include typo(14, 400, 1.5);
+  color: var(--color-gray-500);
+  margin-bottom: rem(24);
+}
+
+.qrWrapper {
+  background-color: var(--color-white-fix);
+  padding: rem(16);
+  border-radius: rem(12);
+  display: inline-block;
+  margin-bottom: rem(24);
+  border: rem(1) solid var(--color-line-fix);
+}
+
+.guide {
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: rem(20);
+  border-radius: rem(12);
+  margin-bottom: rem(32);
+
+  strong {
+    display: block;
+    @include typo(14, 500, 1.5);
+    margin-bottom: rem(10);
+  }
+
+  ol {
+    @include typo(14, 500, 1.6);
+    color: #8d8f92;
+    margin: 0;
+  }
+}
+
+.actionWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.downloadBtn {
+  @include flex-box(center, center);
+  background-color: var(--color-black-fix);
+  color: var(--color-white-fix);
+  padding: 0 rem(24);
+  height: rem(54);
+  border-radius: rem(50);
+  @include typo(16, 600, 1);
+  text-decoration: none;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(rem(20));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: rem(768)) {
+  .title {
+    @include typo(20, 600, 1.2);
+  }
+
+  .desc {
+    @include typo(13, 400, 1.5);
+  }
+
+  .guide {
+    strong {
+      @include typo(13, 500, 1.5);
+    }
+
+    ol {
+      @include typo(13, 500, 1.6);
+    }
+  }
+
+  .downloadBtn {
+    padding: 0 rem(20);
+    height: rem(46);
+    @include typo(14, 600, 1);
+  }
+}

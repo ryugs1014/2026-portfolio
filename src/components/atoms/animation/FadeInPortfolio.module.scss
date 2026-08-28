@@ -1,0 +1,14 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/rem' as *;
+
+.fade-wrapper {
+  /*
+    🚨 프레이머 모션이 직접 opacity와 y값을 인라인으로 실시간 제어하므로,
+    초기값(0)이나 transition 같은 애니메이션 관련 속성을 모두 지워야 합니다.
+    기본 껍데기 역할만 남겨주세요.
+  */
+  position: relative;
+  width: 100%;
+}
+
+/* is-visible 클래스도 더 이상 필요 없으므로 삭제합니다. */
