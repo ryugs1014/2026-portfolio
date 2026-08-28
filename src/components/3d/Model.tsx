@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { MeshTransmissionMaterial, useGLTF } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
@@ -14,7 +14,7 @@ export default function Model({
 }: {
   currentSection?: number;
 }) {
-  const { nodes } = useGLTF('/models/torrus.glb') as any;
+  const { nodes } = useGLTF('/models/torrus_optimized.glb') as any;
   const { viewport } = useThree();
 
   const groupRef = useRef<THREE.Group>(null);
@@ -25,8 +25,14 @@ export default function Model({
   const currentSpeed = useRef(0.02);
   const currentTransmission = useRef(0.9);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     window.dispatchEvent(new Event('model-loaded'));
+
+    // 모바일 감지 (UserAgent 기반 간단한 체크)
+    const mobileCheck = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+    setIsMobile(mobileCheck);
 
     const savedTheme = localStorage.getItem('theme') || 'light';
     isDarkMode.current = savedTheme === 'dark';
@@ -129,13 +135,13 @@ export default function Model({
         <MeshTransmissionMaterial
           ref={materialRef}
           thickness={0.2}
-          roughness={0}
+          roughness={0.05}
           transmission={1}
-          ior={1.3}
-          chromaticAberration={0.1}
+          ior={1.2}
+          chromaticAberration={isMobile ? 0 : 0.1}
           backside={true}
-          resolution={512}
-          samples={4}
+          resolution={isMobile ? 128 : 256}
+          samples={isMobile ? 1 : 4}
         />
       </mesh>
     </group>
@@ -143,4 +149,4 @@ export default function Model({
 }
 
 // 초기 렌더링 지연 방지 및 자원 관리 프리로드
-useGLTF.preload('/models/torrus.glb');
+useGLTF.preload('/models/torrus_optimized.glb');
