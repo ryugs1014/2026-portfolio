@@ -40,6 +40,7 @@ export default function Scene({
     // pointerEvents: 'auto' 시 3D 영역 내 다시 마우스 인터랙션이 가능(선택)
     <Canvas
       dpr={[1, 1.5]}
+      gl={{ antialias: false, powerPreference: 'default' }}
       frameloop="demand"
       style={{
         width: '100%',

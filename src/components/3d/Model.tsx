@@ -5,6 +5,10 @@ import { MeshTransmissionMaterial, useGLTF } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
+// 렌더링 시 반복 생성 불가, 컴포넌트 분리 (메모리 최적화)
+const targetPosition = new THREE.Vector3(0, 0, 0);
+const targetScale = new THREE.Vector3(1, 1, 1);
+
 export default function Model({
   currentSection = 0,
 }: {
@@ -17,24 +21,16 @@ export default function Model({
   const torusRef = useRef<THREE.Mesh>(null);
   const materialRef = useRef<any>(null);
 
-  // 현재 테마 상태 저장 ref(useFrame 내부 접근용)
   const isDarkMode = useRef(false);
-
   const currentSpeed = useRef(0.02);
   const currentTransmission = useRef(0.9);
 
-  const targetPosition = new THREE.Vector3(0, 0, 0);
-  const targetScale = new THREE.Vector3(1, 1, 1);
-
-  // 컴포넌트 마운트시 테마 감지 및 이벤트 리스너 등록
   useEffect(() => {
     window.dispatchEvent(new Event('model-loaded'));
 
-    // 1. 초기 테마 값 세팅
     const savedTheme = localStorage.getItem('theme') || 'light';
     isDarkMode.current = savedTheme === 'dark';
 
-    // 2. ThemeToggle 발송 'theme-change' 이벤트 수신
     const handleThemeChange = (e: Event) => {
       const customEvent = e as CustomEvent;
       isDarkMode.current = customEvent.detail === 'dark';
@@ -48,9 +44,10 @@ export default function Model({
   }, []);
 
   useFrame((state, delta) => {
-    let targetSpeed = 0.02;
+    // delta 값 커지는 것 방지 (애니메이션 튐 현상 제어)
+    const dt = Math.min(delta, 0.1);
 
-    // 기본 투명도
+    let targetSpeed = 0.02;
     let targetTransmission = isDarkMode.current ? 0.2 : 0.9;
 
     switch (currentSection) {
@@ -93,16 +90,17 @@ export default function Model({
         break;
     }
 
+    // delta 대신 dt 적용
     currentSpeed.current = THREE.MathUtils.lerp(
       currentSpeed.current,
       targetSpeed,
-      delta * 3,
+      dt * 3,
     );
 
     currentTransmission.current = THREE.MathUtils.lerp(
       currentTransmission.current,
       targetTransmission,
-      delta * 3,
+      dt * 3,
     );
 
     if (torusRef.current) {
@@ -110,8 +108,8 @@ export default function Model({
     }
 
     if (groupRef.current) {
-      groupRef.current.position.lerp(targetPosition, delta * 3);
-      groupRef.current.scale.lerp(targetScale, delta * 3);
+      groupRef.current.position.lerp(targetPosition, dt * 3);
+      groupRef.current.scale.lerp(targetScale, dt * 3);
     }
 
     if (materialRef.current) {
@@ -143,3 +141,6 @@ export default function Model({
     </group>
   );
 }
+
+// 초기 렌더링 지연 방지 및 자원 관리 프리로드
+useGLTF.preload('/models/torrus.glb');
