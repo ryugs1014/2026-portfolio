@@ -76,6 +76,7 @@ export default function HomeClient() {
         data-index={2}
         style={{
           ...wrapperStyle,
+          zIndex: 2,
         }}
       >
         <Section_02 />

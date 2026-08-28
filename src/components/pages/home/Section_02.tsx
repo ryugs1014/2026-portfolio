@@ -31,12 +31,14 @@ interface Portfolio {
 const PortfolioItemCard = memo(function PortfolioItemCard({
   work,
   isMobile,
+  isActive,
   onHoverStart,
   onHoverEnd,
   onClick,
 }: {
   work: Portfolio;
   isMobile: boolean;
+  isActive: boolean;
   onHoverStart: (work: Portfolio, e: React.MouseEvent) => void;
   onHoverEnd: () => void;
   onClick: (id: string) => void;
@@ -47,7 +49,8 @@ const PortfolioItemCard = memo(function PortfolioItemCard({
 
   return (
     <li
-      className={s['portfolio-item']}
+      className={`${s['portfolio-item']} ${isActive ? s['active'] : ''}`}
+      data-portfolio-id={work.id}
       style={{ cursor: 'pointer' }}
       onMouseEnter={(e) => !isMobile && onHoverStart(work, e)}
       onMouseLeave={() => !isMobile && onHoverEnd()}
@@ -77,13 +80,14 @@ export default function Section_02() {
   const [isMobile, setIsMobile] = useState(false);
 
   const [activeWork, setActiveWork] = useState<Portfolio | null>(null);
-
   const [selectedPortfolioId, setSelectedPortfolioId] = useState<string | null>(
     null,
   );
 
   const cursorRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLUListElement>(null); // 💡 리스트 컨테이너 참조
 
+  // 1. 데이터 로드
   useEffect(() => {
     const loadData = async () => {
       const data = (await fetchPortfolios()) as Portfolio[];
@@ -92,6 +96,60 @@ export default function Section_02() {
     loadData();
   }, []);
 
+  // 모바일(768px 이하) 감지 로직
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // 초기 확인
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // 모바일 스크롤 중앙선 감지 (Intersection Observer)
+  useEffect(() => {
+    if (!isMobile || portfolios.length === 0 || !listRef.current) {
+      if (!isMobile) setActiveWork(null); // PC로 돌아가면 초기화
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // 화면을 벗어나는 요소 먼저 처리 (잔상 방지)
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-portfolio-id');
+            setActiveWork((prev) => (prev?.id === id ? null : prev));
+          }
+        });
+        // 화면 중앙 선에 닿은 요소 처리
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-portfolio-id');
+            const work = portfolios.find((p) => p.id === id);
+            if (work) setActiveWork(work);
+          }
+        });
+      },
+      {
+        // 화면 상단 50%, 하단 49%를 버려서 '가운데 1px'의 가상 선
+        rootMargin: '-50% 0px -49% 0px',
+        threshold: 0,
+      },
+    );
+
+    const items = listRef.current.querySelectorAll('[data-portfolio-id]');
+    items.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, [isMobile, portfolios]);
+
+  // PC -> 모바일 전환 시 PC용 커서 트랜스폼 잔재 지우기
+  useEffect(() => {
+    if (isMobile && cursorRef.current) {
+      cursorRef.current.style.transform = 'translateX(-50%)';
+    }
+  }, [isMobile]);
+
+  // PC용 마우스 이동 로직
   const handleMouseMove = useCallback(
     (e: React.MouseEvent) => {
       if (cursorRef.current && !isMobile) {
@@ -126,18 +184,20 @@ export default function Section_02() {
             <div className={s['category-group']}>
               <ul
                 className={s['portfolio-list']}
-                onMouseLeave={() => setActiveWork(null)}
+                ref={listRef} // 💡 ref 연결
+                onMouseLeave={() => !isMobile && setActiveWork(null)}
               >
                 {portfolios.map((work) => (
                   <PortfolioItemCard
                     key={work.id}
                     work={work}
                     isMobile={isMobile}
+                    isActive={activeWork?.id === work.id}
                     onHoverStart={(workData, e) => {
                       if (cursorRef.current && !isMobile) {
                         cursorRef.current.style.transform = `translate(calc(${e.clientX}px + 20px), calc(${e.clientY}px - 50%))`;
                       }
-                      setActiveWork(workData); // 위치 잡은 후 상태 업데이트
+                      setActiveWork(workData);
                     }}
                     onHoverEnd={() => setActiveWork(null)}
                     onClick={(id) => setSelectedPortfolioId(id)}
@@ -148,40 +208,55 @@ export default function Section_02() {
           </div>
         </div>
 
-        {!isMobile && (
+        {isMobile && (
           <div
-            ref={cursorRef}
             style={{
               position: 'fixed',
-              top: 0,
+              top: '50%',
               left: 0,
-              width: '360px',
-              aspectRatio: '12 / 9',
-              overflow: 'hidden',
+              width: '100%',
+              height: '1px',
+              opacity: 0.3,
+              zIndex: 50,
               pointerEvents: 'none',
-              zIndex: 100,
-              opacity: activeWork ? 1 : 0,
-              visibility: activeWork ? 'visible' : 'hidden',
-              transition: 'opacity 0.3s ease, visibility 0.3s ease',
-              willChange: 'transform, opacity',
             }}
-          >
-            {activeWork && (
-              <img
-                src={activeWork['main-image']}
-                alt="portfolio preview"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                }}
-              />
-            )}
-          </div>
+          />
         )}
+
+        <div
+          ref={cursorRef}
+          style={{
+            position: 'fixed',
+            top: isMobile ? 'auto' : 0,
+            bottom: isMobile ? '40px' : 'auto',
+            left: isMobile ? '50%' : 0,
+            transform: isMobile ? 'translateX(-50%)' : 'none',
+            width: isMobile ? '65%' : '360px',
+            maxWidth: '300px',
+            aspectRatio: '12 / 9',
+            overflow: 'hidden',
+            pointerEvents: 'none',
+            zIndex: 9999,
+            opacity: activeWork ? 1 : 0,
+            visibility: activeWork ? 'visible' : 'hidden',
+            transition: 'opacity 0.3s ease, visibility 0.3s ease',
+            willChange: 'transform, opacity',
+          }}
+        >
+          {activeWork && (
+            <img
+              src={activeWork['main-image']}
+              alt="portfolio preview"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          )}
+        </div>
       </section>
 
-      {/* selectedPortfolioId 값 존재시 모달 컴포넌트 렌더링 */}
       {selectedPortfolioId && (
         <WorkDetailModal
           id={selectedPortfolioId}

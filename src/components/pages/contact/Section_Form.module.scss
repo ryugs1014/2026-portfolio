@@ -34,6 +34,14 @@
       position: relative;
       padding: rem(20) 0;
 
+      &.email-wrap {
+        &.has-error {
+          input {
+            color: var(--color-red);
+          }
+        }
+      }
+
       &.has-value {
         .place-holder {
           display: none;
@@ -262,16 +270,16 @@
   cursor: pointer;
   width: 100%;
   @include typo(16, 700, 1);
-  color: var(--color-black-fix);
 }
 
-.modal-buttons button:first-child {
+.confirm {
   background-color: var(--color-black-fix);
   color: var(--color-white-fix);
 }
 
-.modal-buttons button:last-child {
+.cancel {
   background-color: var(--color-bar-fix);
+  color: var(--color-black-fix);
 }
 
 .toast-container {

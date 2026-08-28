@@ -79,8 +79,14 @@ export default function Section_Form() {
   const handleConfirmSubmit = () => {
     const newErrors: Partial<Record<keyof FormDataType, string>> = {};
 
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
     if (!form.name.trim()) newErrors.name = '- 이름을 입력해주세요.';
-    if (!form.email.trim()) newErrors.email = '- 이메일을 입력해주세요.';
+    if (!form.email.trim()) {
+      newErrors.email = '- 이메일을 입력해주세요.';
+    } else if (!emailRegex.test(form.email.trim())) {
+      newErrors.email = '- 올바른 이메일 형식이 아닙니다.';
+    }
     if (!form.message.trim()) newErrors.message = '- 문의 내용을 입력해주세요.';
     // if (!form.company.trim()) newErrors.company = '- 기업명을 입력해주세요.';
     // if (!form.phone.trim()) newErrors.phone = '- 연락처를 입력해주세요.';
@@ -88,7 +94,11 @@ export default function Section_Form() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length > 0) {
-      addToast('필수로 작성해야 하는 항목이 빠져있습니다.', 'error');
+      if (newErrors.email === '- 올바른 이메일 형식이 아닙니다.') {
+        addToast('올바른 이메일 형식을 입력해주세요.', 'error');
+      } else {
+        addToast('필수로 작성해야 하는 항목이 빠져있습니다.', 'error');
+      }
       return;
     }
 
@@ -180,7 +190,7 @@ export default function Section_Form() {
 
             <div className={s['input-group-wrap']}>
               <div
-                className={`${s['input-group']} ${s['forced']} ${focusedField === 'email' ? s['focused'] : ''} ${form.email ? s['has-value'] : ''}
+                className={`${s['input-group']} ${s['email-wrap']} ${s['forced']} ${focusedField === 'email' ? s['focused'] : ''} ${form.email ? s['has-value'] : ''}
                 ${errors.email ? s['has-error'] : ''}
                 `}
               >
@@ -282,8 +292,15 @@ export default function Section_Form() {
             <h3>문의 내용을 제출하시겠습니까?</h3>
             <p>제출 후에는 수정이 불가합니다.</p>
             <div className={s['modal-buttons']}>
-              <button onClick={handleSubmit}>확인</button>
-              <button onClick={() => setShowModal(false)}>취소</button>
+              <button className={s['confirm']} onClick={handleSubmit}>
+                확인
+              </button>
+              <button
+                className={s['cancel']}
+                onClick={() => setShowModal(false)}
+              >
+                취소
+              </button>
             </div>
           </div>
         </div>

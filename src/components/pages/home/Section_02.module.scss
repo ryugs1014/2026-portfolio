@@ -42,6 +42,14 @@
   .portfolio-item {
     padding: 0 rem(40);
 
+    &.active {
+      background-color: var(--color-gray-1000);
+      color: var(--color-gray-0);
+      .item-button {
+        border-color: var(--color-gray-1000);
+      }
+    }
+
     &:hover {
       background-color: var(--color-gray-1000);
       color: var(--color-gray-0);
