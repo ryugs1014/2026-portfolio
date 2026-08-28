@@ -10,6 +10,8 @@
 .section-wrap {
   @include flex-box(space-between, start, column, rem(60));
   padding: 0 rem(40);
+  user-select: none;
+  pointer-events: none;
 }
 
 .title-section {
