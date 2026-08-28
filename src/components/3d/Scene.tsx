@@ -15,6 +15,7 @@ export default function Scene({
     // pointerEvents: 'auto' 시 3D 영역 내 다시 마우스 인터랙션이 가능(선택)
     <Canvas
       dpr={[1, 1.5]}
+      gl={{ antialias: false, powerPreference: 'default' }}
       style={{
         width: '100%',
         height: '100%',
@@ -24,7 +25,7 @@ export default function Scene({
     >
       <Model currentSection={currentSection} />
       <directionalLight intensity={2} position={[0, 2, 3]} />
-      <Environment preset="city" />
+      <Environment preset="city" resolution={256} />
     </Canvas>
   );
 }

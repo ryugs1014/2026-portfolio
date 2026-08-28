@@ -27,7 +27,7 @@
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100%;
-  max-height: calc(100vh - #{rem(160)});
+  max-height: calc(100svh - #{rem(160)});
   background-color: var(--color-white-fix);
   color: var(--color-text-normal, #111111);
   padding: rem(24) rem(24) rem(40);
