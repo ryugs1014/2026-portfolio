@@ -109,6 +109,7 @@
   .text-info {
     .work-title-text {
       @include text-ellipsis(2);
+      word-break: keep-all;
     }
   }
 }
