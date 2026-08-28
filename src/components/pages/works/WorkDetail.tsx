@@ -127,14 +127,18 @@ const ImageSlider = ({ images }: { images: string[] }) => {
             onClick={handlePrev}
             disabled={isAtStart}
           >
-            <SlideLeftArrow width="20" height="20" viewBox="0 0 20 20" />
+            <div className={s['svg-box']}>
+              <SlideLeftArrow width="20" height="20" viewBox="0 0 20 20" />
+            </div>
           </button>
           <button
             className={`${s['arrow-btn']} ${isAtEnd ? s['disabled'] : ''}`}
             onClick={handleNext}
             disabled={isAtEnd}
           >
-            <SlideRightArrow width="20" height="20" viewBox="0 0 20 20" />
+            <div className={s['svg-box']}>
+              <SlideRightArrow width="20" height="20" viewBox="0 0 20 20" />
+            </div>
           </button>
         </div>
       )}

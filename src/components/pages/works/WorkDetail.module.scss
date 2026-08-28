@@ -874,6 +874,7 @@
     @include typo(13, 700, 1);
     padding: rem(16) 0;
     max-width: 100%;
+    width: 100%;
   }
 
   .main-image-box {
@@ -989,6 +990,32 @@
 
       [data-color-scheme='dark'] & {
         font-weight: 500;
+      }
+    }
+  }
+
+  .image-slider-container {
+    position: relative;
+    width: 100%;
+
+    .slider-controls {
+      padding: rem(16) rem(16) rem(16) rem(24);
+
+      .arrow-btn {
+        width: rem(32);
+        height: rem(32);
+
+        &:hover:not(.disabled) {
+          background: #f5f5f5;
+        }
+        &.disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
+        .svg-box {
+          @include svg-box(rem(16));
+        }
       }
     }
   }
