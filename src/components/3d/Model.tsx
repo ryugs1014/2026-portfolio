@@ -138,7 +138,7 @@ export default function Model({
           roughness={0.05}
           transmission={1}
           ior={1.2}
-          chromaticAberration={isMobile ? 0 : 0.1}
+          chromaticAberration={0.1}
           backside={true}
           resolution={isMobile ? 128 : 256}
           samples={isMobile ? 2 : 4}
