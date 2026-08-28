@@ -49,6 +49,7 @@
 
   .close-wrap {
     @include svg-box(rem(20));
+    color: var(--color-black-fix);
   }
 }
 
