@@ -136,6 +136,8 @@ export default function Model({
           ior={1.3}
           chromaticAberration={0.1}
           backside={true}
+          resolution={512}
+          samples={4}
         />
       </mesh>
     </group>

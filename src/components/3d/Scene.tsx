@@ -14,6 +14,7 @@ export default function Scene({
   return (
     // pointerEvents: 'auto' 시 3D 영역 내 다시 마우스 인터랙션이 가능(선택)
     <Canvas
+      dpr={[1, 1.5]}
       style={{
         width: '100%',
         height: '100%',

@@ -106,7 +106,7 @@
 }
 
 .stack-detail {
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.5s 1s ease;
   text-align: right;
   width: 100%;
@@ -177,6 +177,7 @@
   .stack-info {
     @include grid-box(rem(30) 1fr, rem(10));
     row-gap: 0;
+    padding: rem(24) 0;
   }
 
   .icon-box {
@@ -188,6 +189,7 @@
   }
 
   .stack-detail {
+    opacity: 1;
     grid-column: 1 / span 2;
     text-align: left;
     padding-left: rem(40);
