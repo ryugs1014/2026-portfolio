@@ -3,9 +3,8 @@
 
 import React, { useEffect } from 'react';
 import { Canvas, invalidate } from '@react-three/fiber';
-import { Environment, Stats } from '@react-three/drei';
+import { Environment } from '@react-three/drei';
 import Model from './Model';
-import s from './Scene.module.scss';
 
 function FpsLimiter({ limit = 60 }) {
   useEffect(() => {
@@ -50,8 +49,6 @@ export default function Scene({
       }}
       camera={{ position: [0, 0, 10], fov: 35 }}
     >
-      <Stats className={s['stats']} />
-
       <Model currentSection={currentSection} />
       <directionalLight intensity={2} position={[0, 2, 3]} />
       <Environment preset="city" resolution={32} />

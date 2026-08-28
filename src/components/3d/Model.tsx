@@ -141,7 +141,7 @@ export default function Model({
           chromaticAberration={isMobile ? 0 : 0.1}
           backside={true}
           resolution={isMobile ? 128 : 256}
-          samples={isMobile ? 1 : 4}
+          samples={isMobile ? 2 : 4}
         />
       </mesh>
     </group>
