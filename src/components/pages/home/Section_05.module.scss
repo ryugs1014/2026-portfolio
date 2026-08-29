@@ -109,6 +109,8 @@
 
   .about-content {
     @include grid-box(null, rem(16));
+    @include typo(15, 400, 1.5);
+    padding: rem(60) 0;
 
     .about-title {
       @include typo(24, 500, 1);
@@ -119,11 +121,8 @@
       }
     }
 
-    @include typo(15, 400, 1.5);
-    padding: rem(60) 0;
-
-    [data-color-scheme='dark'] & {
-      font-weight: 500;
+    .content-text {
+      color: var(--color-gray-500);
     }
   }
 
