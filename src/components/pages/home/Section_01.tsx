@@ -13,7 +13,7 @@ export default function Section_01() {
             <br />
             developer and
             <br />
-            problem solver.
+            problem solver.<span className={s['cursor']}>|</span>
           </div>
         </div>
 
