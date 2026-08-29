@@ -463,7 +463,7 @@ export default function WorkDetail({ data, onClose }: WorkDetailProps) {
       </section>
 
       {data.features?.length || data.issues?.length ? (
-        <Container>
+        <Container size={'small'}>
           <div className={s['content-with-sidebar']}>
             <aside className={`${s['sidebar']}`}>
               <nav className={s['sticky-nav']}>
