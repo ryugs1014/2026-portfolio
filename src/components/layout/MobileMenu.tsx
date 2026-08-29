@@ -145,8 +145,11 @@ export default function MobileMenu() {
 
               <ul className={s['mobile-footer-wrap']}>
                 <li className={s['menu-item']}>
-                  <a href="mailto:ryugs@gmail.com" className={s['menu-link']}>
-                    <span>ryugs@gmail.com</span>
+                  <a
+                    href="mailto:ryugs1014@gmail.com"
+                    className={s['menu-link']}
+                  >
+                    <span>ryugs1014@gmail.com</span>
 
                     <div className={s['svg-box']}>
                       <RotateArrow width="24" height="24" viewBox="0 0 36 36" />

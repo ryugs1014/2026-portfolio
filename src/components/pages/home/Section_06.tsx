@@ -11,7 +11,7 @@ import ContactModal from '@/components/modal/ContactModal';
 export default function Section_06() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const getEmail = () => {
-    return 'ryugs@gmail.com';
+    return 'ryugs1014@gmail.com';
   };
 
   return (

@@ -20,8 +20,8 @@ export default function Footer() {
 
         <ul className={s['footer-wrap']}>
           <li className={s['menu-item']}>
-            <a href="mailto:ryugs@gmail.com" className={s['menu-link']}>
-              ryugs@gmail.com ↗
+            <a href="mailto:ryugs1014@gmail.com" className={s['menu-link']}>
+              ryugs1014@gmail.com ↗
             </a>
           </li>
 
