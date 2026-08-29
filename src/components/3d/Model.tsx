@@ -22,15 +22,17 @@ export default function Model({
   const materialRef = useRef<any>(null);
 
   const isDarkMode = useRef(false);
-  const currentSpeed = useRef(0.02);
   const currentTransmission = useRef(0.9);
+
+  // 💡 1. 3D(X, Y, Z) 회전 속도를 개별적으로 다루기 위한 상태
+  const currentRotSpeed = useRef(new THREE.Vector3(0.02, 0, 0));
+  const targetRotSpeed = new THREE.Vector3(0.02, 0, 0);
 
   const [isLowPerformanceDevice, setIsLowPerformanceDevice] = useState(false);
 
   useEffect(() => {
     window.dispatchEvent(new Event('model-loaded'));
 
-    // 1. 아이패드(데스크톱 모드 포함) 및 모바일 기기 통합 감지
     const isStandardMobile = /Mobi|Android|iPhone|iPad/i.test(
       navigator.userAgent,
     );
@@ -58,58 +60,67 @@ export default function Model({
   }, []);
 
   useFrame((state, delta) => {
-    // delta 값 커지는 것 방지 (애니메이션 튐 현상 제어)
     const dt = Math.min(delta, 0.1);
 
-    let targetSpeed = 0.02;
+    // 💡 2. 시간에 따른 꿀렁임/부유 효과를 만들기 위한 시간 값
+    const time = state.clock.elapsedTime;
+
     let targetTransmission = isDarkMode.current ? 0.2 : 0.9;
+
+    // 기본 회전 속도 (X축)
+    targetRotSpeed.set(0.02, 0, 0);
+    // 기본 부유(Floating) 높이 설정
+    let targetFloatY = 0;
 
     switch (currentSection) {
       case 0:
       case 1:
         targetPosition.set(0, 0, 0);
         targetScale.set(5, 5, 5);
-        targetSpeed = 0.05;
+        targetRotSpeed.set(0.05, 0, 0); // 기존: 약간 빠른 X축 회전
         targetTransmission = isDarkMode.current ? 1 : 0.9;
         break;
       case 2:
         targetPosition.set(-viewport.width / 3.5, 0, 0);
         targetScale.set(2, 2, 2);
-        targetSpeed = 0.01;
+        // 💡 [새로운 움직임] X, Y축 동시 회전 및 위아래로 부유 (Floating)
+        targetRotSpeed.set(0.01, 0.03, 0);
+        targetFloatY = Math.sin(time * 2) * 0.3;
         targetTransmission = isDarkMode.current ? 1 : 0.9;
         break;
       case 3:
         targetPosition.set(0, 0, 0);
         targetScale.set(4, 4, 4);
-        targetSpeed = 0.05;
+        // 💡 [새로운 움직임] 대각선(X, Y 반대 방향)으로 빠르게 회전
+        targetRotSpeed.set(0.05, 0, 0);
         targetTransmission = isDarkMode.current ? 1 : 0.9;
         break;
       case 4:
         targetPosition.set(0, 0, 0);
         targetScale.set(8, 8, 8);
-        targetSpeed = 0.001;
+        // 💡 [새로운 움직임] 거대한 상태에서 세 축으로 아주 미세하게 회전
+        targetRotSpeed.set(0.001, 0, 0);
         targetTransmission = isDarkMode.current ? 1 : 1;
         break;
       case 5:
         targetPosition.set(-viewport.width / 3.5, -1, 0);
         targetScale.set(2, 2, 2);
-        targetSpeed = 0.03;
+        // 💡 [새로운 움직임] 시간에 따라 Z축으로 꿀렁거리는 회전
+        // targetRotSpeed.set(0.03, 0, Math.sin(time) * 0.02);
+        targetRotSpeed.set(0, 0.05, 0);
         targetTransmission = isDarkMode.current ? 1 : 0.9;
         break;
       case 6:
         targetPosition.set(viewport.width / 4, 0, 0);
         targetScale.set(4, 4, 4);
-        targetSpeed = 0.05;
+        // 💡 [새로운 움직임] 시계추처럼 Y축으로 왔다갔다 스윙
+        targetRotSpeed.set(0.05, Math.cos(time) * 0.05, 0);
         targetTransmission = isDarkMode.current ? 1 : 0.9;
         break;
     }
 
-    // delta 대신 dt 적용
-    currentSpeed.current = THREE.MathUtils.lerp(
-      currentSpeed.current,
-      targetSpeed,
-      dt * 3,
-    );
+    // 회전 속도 부드러운 전환 (Lerp)
+    currentRotSpeed.current.lerp(targetRotSpeed, dt * 3);
 
     currentTransmission.current = THREE.MathUtils.lerp(
       currentTransmission.current,
@@ -118,7 +129,17 @@ export default function Model({
     );
 
     if (torusRef.current) {
-      torusRef.current.rotation.x += currentSpeed.current;
+      // 💡 3. 계산된 3축 속도를 실제 메쉬에 적용
+      torusRef.current.rotation.x += currentRotSpeed.current.x;
+      torusRef.current.rotation.y += currentRotSpeed.current.y;
+      torusRef.current.rotation.z += currentRotSpeed.current.z;
+
+      // 💡 4. 부유(Floating) 효과 부드러운 적용 (토러스 메쉬의 로컬 위치를 제어)
+      torusRef.current.position.y = THREE.MathUtils.lerp(
+        torusRef.current.position.y,
+        targetFloatY,
+        dt * 3,
+      );
     }
 
     if (groupRef.current) {
@@ -156,5 +177,4 @@ export default function Model({
   );
 }
 
-// 초기 렌더링 지연 방지 및 자원 관리 프리로드
 useGLTF.preload('/models/torrus_optimized.glb');

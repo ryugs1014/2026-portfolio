@@ -108,6 +108,17 @@
   }
 
   .about-content {
+    @include grid-box(null, rem(16));
+
+    .about-title {
+      @include typo(24, 500, 1);
+      @include flex-box(start, center, row, rem(10));
+
+      .sub-title {
+        color: var(--color-gray-200);
+      }
+    }
+
     @include typo(15, 400, 1.5);
     padding: rem(60) 0;
 
@@ -336,8 +347,13 @@
 
   .accordion-content-wrapper {
     .about-content {
+      @include grid-box(null, rem(10));
       padding: rem(40) rem(20);
       @include typo(14, 400, 1.5);
+
+      .about-title {
+        @include typo(20, 500, 1);
+      }
     }
 
     .about-content-list {
