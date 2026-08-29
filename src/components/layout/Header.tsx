@@ -100,6 +100,13 @@ export default function Header() {
     sessionStorage.removeItem('worksScrollY');
   };
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    clearScrollMemory();
+
+    window.location.href = '/';
+  };
+
   return (
     <header
       className={`${s['header']} ${scrollDirection === 'down' ? s['down'] : ''} ${isActive ? s['active'] : ''}`}
@@ -107,16 +114,12 @@ export default function Header() {
       <div className={s['header-wrap']}>
         <Container className={s['header-container']}>
           <div className={s['logo-wrap']}>
-            <Link
-              href="/"
-              className={s['logo-link']}
-              onClick={clearScrollMemory}
-            >
+            <a href="/" className={s['logo-link']} onClick={handleLogoClick}>
               <div className={s['logo']}>
                 <div className={s['logo-main']}>GANGSAN.YOU</div>
                 <span className={s['logo-sub']}>FE DEV</span>
               </div>
-            </Link>
+            </a>
           </div>
 
           <div className={s['function-wrap']}>
