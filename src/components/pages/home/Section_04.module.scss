@@ -59,6 +59,7 @@
 
 .category-title {
   @include typo(48, 500, 1.4);
+  text-transform: uppercase;
 }
 
 .category-desc {
