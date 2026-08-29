@@ -382,7 +382,12 @@ export default function WorkDetail({ data, onClose }: WorkDetailProps) {
           <div
             className={s['main-image-box']}
             ref={mediaBoxRef}
-            style={{ position: 'relative', overflow: 'hidden' }}
+            style={{
+              position: 'relative',
+              overflow: 'hidden',
+              width: '100%',
+              aspectRatio: '16 / 9',
+            }}
             onClick={() => {
               if (hasHoverContent) setIsPaused(!isPaused);
             }}
@@ -406,20 +411,6 @@ export default function WorkDetail({ data, onClose }: WorkDetailProps) {
                 )}
               </button>
             )}
-
-            <Image
-              src={data['main-image']}
-              alt="layout-placeholder"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-                opacity: 0,
-              }}
-            />
 
             {!isMediaLoaded && <div className={s['image-skeleton']} />}
 
