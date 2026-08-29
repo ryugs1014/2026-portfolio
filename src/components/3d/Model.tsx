@@ -99,7 +99,7 @@ export default function Model({
         targetPosition.set(0, 0, 0);
         targetScale.set(8, 8, 8);
         // 💡 [새로운 움직임] 거대한 상태에서 세 축으로 아주 미세하게 회전
-        targetRotSpeed.set(0.001, 0, 0);
+        targetRotSpeed.set(0.002, 0, 0);
         targetTransmission = isDarkMode.current ? 1 : 1;
         break;
       case 5:
