@@ -52,7 +52,7 @@ export default function Scene({
       <Model currentSection={currentSection} />
       <directionalLight intensity={2} position={[0, 2, 3]} />
       <ambientLight intensity={0.5} />
-      <Environment preset="city" resolution={32} />
+      <Environment preset="city" resolution={16} />
       <FpsLimiter limit={60} />
     </Canvas>
   );

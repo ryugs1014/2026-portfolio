@@ -25,14 +25,23 @@ export default function Model({
   const currentSpeed = useRef(0.02);
   const currentTransmission = useRef(0.9);
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isLowPerformanceDevice, setIsLowPerformanceDevice] = useState(false);
 
   useEffect(() => {
     window.dispatchEvent(new Event('model-loaded'));
 
-    // 모바일 감지 (UserAgent 기반 간단한 체크)
-    const mobileCheck = /Mobi|Android|iPhone/i.test(navigator.userAgent);
-    setIsMobile(mobileCheck);
+    // 1. 아이패드(데스크톱 모드 포함) 및 모바일 기기 통합 감지
+    const isStandardMobile = /Mobi|Android|iPhone|iPad/i.test(
+      navigator.userAgent,
+    );
+    const isMacWithTouch =
+      navigator.maxTouchPoints &&
+      navigator.maxTouchPoints > 2 &&
+      /Macintosh/.test(navigator.userAgent);
+
+    if (isStandardMobile || isMacWithTouch) {
+      setIsLowPerformanceDevice(true);
+    }
 
     const savedTheme = localStorage.getItem('theme') || 'light';
     isDarkMode.current = savedTheme === 'dark';
@@ -43,7 +52,6 @@ export default function Model({
     };
 
     window.addEventListener('theme-change', handleThemeChange);
-
     return () => {
       window.removeEventListener('theme-change', handleThemeChange);
     };
@@ -140,7 +148,7 @@ export default function Model({
           ior={1.2}
           chromaticAberration={0.1}
           backside={true}
-          resolution={isMobile ? 128 : 256}
+          resolution={isLowPerformanceDevice ? 64 : 256}
           samples={4}
         />
       </mesh>
