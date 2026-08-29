@@ -52,10 +52,11 @@ export default function InitialLoader() {
 
     const updateProgress = () => {
       setDisplayProgress((prev) => {
-        // 실제 다운로드율(realProgress)과 현재 보여지는 숫자(prev)의 차이를 좁힘
-        // (모델이 이미 캐싱되어 0%에서 100%로 순식간에 점프하더라도, 숫자는 스르륵 올라가게 보정)
+        // 실제 다운로드율과 현재 숫자의 차이를 좁힘
         const step = (realProgress - prev) * 0.1;
-        const next = prev + step;
+        let next = prev + step;
+
+        next = Math.max(prev, next);
 
         // 99.5% 이상 도달 시 100으로 고정
         if (realProgress === 100 && next >= 99.5) {
@@ -103,7 +104,17 @@ export default function InitialLoader() {
             alignItems: 'center',
           }}
         >
-          <div className={s['number']}>{Math.round(displayProgress)}</div>
+          <div className={s['number-wrapper']}>
+            {Math.round(displayProgress)
+              .toString()
+              .padStart(3, '0')
+              .split('')
+              .map((digit, index) => (
+                <span key={index} className={s['digit-box']}>
+                  {digit}
+                </span>
+              ))}
+          </div>
         </motion.div>
       ) : (
         (null as any)

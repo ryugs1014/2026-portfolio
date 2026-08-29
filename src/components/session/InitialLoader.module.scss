@@ -8,8 +8,30 @@
   pointer-events: none;
 }
 
+.number-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digit-box {
+  @include typo(320, 400, 1);
+  letter-spacing: rem(-6);
+  user-select: none;
+  pointer-events: none;
+  width: 0.65em;
+  text-align: center;
+  font-size: 16.5cqw;
+}
+
 @media (max-width: rem(1600)) {
-  .number {
+  .digit-box {
+    font-size: 18cqw;
+  }
+}
+
+@media (max-width: rem(1200)) {
+  .digit-box {
     font-size: 26cqw;
   }
 }
