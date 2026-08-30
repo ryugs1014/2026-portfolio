@@ -176,8 +176,8 @@ export default function Model({
           ior={1.2}
           chromaticAberration={0.1}
           backside={true}
-          resolution={isLowPerformanceDevice ? 64 : 256}
-          samples={4}
+          resolution={isLowPerformanceDevice ? 64 : 128}
+          samples={1}
         />
       </mesh>
     </group>
