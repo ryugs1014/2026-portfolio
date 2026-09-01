@@ -47,7 +47,7 @@
 
 .section-text {
   max-width: rem(420);
-  text-align: right;
+  //text-align: right;
 }
 
 @media (max-width: rem(1000)) {
@@ -67,6 +67,7 @@
 
   .section-text {
     @include typo(14, 400, 1.5);
+    text-align: right;
   }
 }
 

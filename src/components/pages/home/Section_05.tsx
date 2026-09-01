@@ -6,7 +6,14 @@ import { fetchStacks } from '@/api/stack';
 import FadeInMain from '@/components/atoms/animation/FadeInMain';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IconPlus, IconMinus } from '@tabler/icons-react';
-import Image from 'next/image';
+import {
+  AboutIcon,
+  ExperienceIcon,
+  CertificationIcon,
+  EducationIcon,
+  StacksIcon,
+} from '@public/svg';
+// import Image from 'next/image'; // Image 컴포넌트는 더 이상 사용하지 않으므로 제거 또는 주석 처리
 
 interface Stack {
   stack: string;
@@ -73,7 +80,15 @@ export default function Section_05() {
     {
       id: 'ABOUT',
       title: 'ABOUT',
-      icon: '/svg/icons/about-icons/about.svg',
+      // 문자열 경로 대신 리액트 컴포넌트를 직접 렌더링합니다. (필요 시 className 부여 가능)
+      icon: (
+        <AboutIcon
+          width={'100%'}
+          height={'100%'}
+          viewBox={'0 0 48 48'}
+          className={s['svg-icon']}
+        />
+      ),
       content: (
         <div className={s['about-content']}>
           <div className={s['about-title']}>
@@ -121,7 +136,14 @@ export default function Section_05() {
     {
       id: 'EDUCATION',
       title: 'EDUCATION',
-      icon: '/svg/icons/about-icons/education.svg',
+      icon: (
+        <EducationIcon
+          width={'100%'}
+          height={'100%'}
+          viewBox={'0 0 48 48'}
+          className={s['svg-icon']}
+        />
+      ),
       content: (
         <ol className={s['about-content-list']}>
           <li>
@@ -151,7 +173,14 @@ export default function Section_05() {
     {
       id: 'CERTIFICATE',
       title: 'CERTIFICATE',
-      icon: '/svg/icons/about-icons/certification.svg',
+      icon: (
+        <CertificationIcon
+          width={'100%'}
+          height={'100%'}
+          viewBox={'0 0 48 48'}
+          className={s['svg-icon']}
+        />
+      ),
       content: (
         <ol className={s['about-content-list']}>
           <li>
@@ -174,7 +203,14 @@ export default function Section_05() {
     {
       id: 'EXPERIENCE',
       title: 'EXPERIENCE',
-      icon: '/svg/icons/about-icons/experience.svg',
+      icon: (
+        <ExperienceIcon
+          width={'100%'}
+          height={'100%'}
+          viewBox={'0 0 48 48'}
+          className={s['svg-icon']}
+        />
+      ),
       content: (
         <ol className={s['about-content-list']}>
           <li>
@@ -202,7 +238,14 @@ export default function Section_05() {
     {
       id: 'STACKS & TOOLS',
       title: 'STACKS & TOOLS',
-      icon: '/svg/icons/about-icons/stacks.svg',
+      icon: (
+        <StacksIcon
+          width={'100%'}
+          height={'100%'}
+          viewBox={'0 0 48 48'}
+          className={s['svg-icon']}
+        />
+      ),
       content: (
         <div className={s['about-block-list']}>
           {stacks.map((item, idx) => (
@@ -254,15 +297,8 @@ export default function Section_05() {
                       <div className={s['category-title-group']}>
                         <h2 className={s['category-title']}>{item.title}</h2>
 
-                        <div className={s['icon-box']}>
-                          <Image
-                            src={item.icon}
-                            alt={`${item.title} icon`}
-                            fill
-                            sizes="(max-width: 768px) 20vw, 10vw"
-                            style={{ objectFit: 'contain' }}
-                          />
-                        </div>
+                        {/* Image 태그 대신 배열에 담아둔 item.icon(React Node)을 바로 렌더링합니다 */}
+                        <div className={s['icon-box']}>{item.icon}</div>
                       </div>
                     </div>
                   </div>

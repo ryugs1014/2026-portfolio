@@ -8,12 +8,14 @@ interface FadeInPortfolioProps {
   children: React.ReactNode;
   delay?: number;
   threshold?: number;
+  className?: string;
 }
 
 export default function FadeInMain({
   children,
   delay = 0,
   threshold = 0,
+  className = '',
 }: FadeInPortfolioProps) {
   // inView 상태를 직접 쓰지 않고, 별도의 상태로 관리합니다.
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +42,7 @@ export default function FadeInMain({
   return (
     <div
       ref={ref}
-      className={`${s['fade-wrapper']} ${isVisible ? s['is-visible'] : ''}`}
+      className={`${s['fade-wrapper']} ${className} ${isVisible ? s['is-visible'] : ''}`}
       style={{ transitionDelay: `${delay}s` }}
     >
       {children}

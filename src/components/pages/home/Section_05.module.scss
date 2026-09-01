@@ -53,10 +53,6 @@
     .header-left {
       border-color: var(--color-gray-1000);
     }
-
-    .icon-box {
-      filter: invert(1);
-    }
   }
 }
 
@@ -122,7 +118,7 @@
     }
 
     .content-text {
-      color: var(--color-gray-500);
+      color: var(--color-gray-700);
     }
   }
 
@@ -348,7 +344,7 @@
     .about-content {
       @include grid-box(null, rem(10));
       padding: rem(40) rem(20);
-      @include typo(14, 400, 1.5);
+      @include typo(17, 400, 1.6);
 
       .about-title {
         @include typo(20, 500, 1);

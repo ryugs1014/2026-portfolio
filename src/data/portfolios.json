@@ -11,7 +11,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786744350/dongle-diary-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087863/dongle-dairy-main.png",
     "main-image": "/image/portfolios/main/dongle-diary.png",
-    "sub-image": "/image/portfolios/main/dongle-diary.png",
+    "sub-image": "/image/portfolios/sub/dongle-diary-sub.png",
     "work-title": "동글일기 다이어리 앱",
     "work-title-short": "동글일기 다이어리",
     "work-title-eng": "Dongle Diary",
@@ -27,6 +27,7 @@
     "key-techs": "React Native, Expo, TypeScript, Zustand, OAuth(Google Sign-in), Google Drive API, Async Storage, GitHub, Vercel",
     "github": "https://github.com/ryugs1014/dongle-diary",
     "link": "https://github.com/ryugs1014/dongle-diary/releases/download/apk/application-dongle-diary-v1.0.0.apk",
+    "scale": 10,
 
     "features": [
       {
@@ -129,7 +130,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739639/heydealer-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087263/heydealer-main.png",
     "main-image": "/image/portfolios/main/heydealer.png",
-    "sub-image": "/image/portfolios/main/heydealer.png",
+    "sub-image": "/image/portfolios/sub/heydealer-sub.png",
     "work-title": "헤이딜러 웹사이트 클론 프로젝트",
     "work-title-short": "헤이딜러 클론",
     "work-title-eng": "Heydealer Colne",
@@ -145,6 +146,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), Swiper, Three.js, Framer-motion, GitHub, Vercel",
     "github": "https://github.com/ryugs1014/heydealer-fe-clone",
     "link": "https://heydealer-fe-clone.vercel.app",
+    "scale": 9,
 
     "features": [
       {
@@ -225,7 +227,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739820/narajangteo-video.mp4",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087686/narajangteo-video-main.mp4",
     "main-image": "/image/portfolios/main/narajangteo.png",
-    "sub-image": "/image/portfolios/main/narajangteo.png",
+    "sub-image": "/image/portfolios/sub/narajangteo-sub.png",
     "work-title": "글리처파트너스 사내 나라장터 공고 입찰 플랫폼",
     "work-title-short": "나라장터 공고 입찰 API",
     "work-title-eng": "G2B Data API",
@@ -241,6 +243,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), NextAuth, Upstash, GitHub, GitHub Action, Vercel, Vercel KV, Cron-Job, 공공데이터포털 Open API, Google-Spreadsheet",
     "github": "",
     "link": "https://partners.glitchor.com/login",
+    "scale": 12,
 
     "features": [
       {
@@ -327,7 +330,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739832/glitchor-partners-video.mp4",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087681/glitchor-partners-video-main.mp4",
     "main-image": "/image/portfolios/main/glitchor-partners.png",
-    "sub-image": "/image/portfolios/main/glitchor-partners.png",
+    "sub-image": "/image/portfolios/sub/glitchor-partners-sub.png",
     "work-title": "글리처파트너스 공식 웹사이트",
     "work-title-short": "글리처파트너스",
     "work-title-eng": "Glitchor Partners",
@@ -343,6 +346,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, Framer-motion, AOS, Swiper, i18next, Figma, Svgator, papaparse, Google-Spreadsheet",
     "github": "",
     "link": "https://partners.glitchor.com/",
+    "scale": 9,
 
     "features": [
       {
@@ -435,7 +439,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087670/moogm-video.mp4",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087687/moogm-video-main.mp4",
     "main-image": "/image/portfolios/main/moogm.png",
-    "sub-image": "/image/portfolios/main/moogm.png",
+    "sub-image": "/image/portfolios/sub/moogm-sub.png",
     "work-title": "무금 캐빈 호텔 공식 웹사이트",
     "work-title-short": "무금 캐빈 호텔",
     "work-title-eng": "CABIN HOTEL MOOGM",
@@ -451,6 +455,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), GitHub, Vercel, Supabase, Swiper, i18next, Figma, Google-Spreadsheet",
     "github": "",
     "link": "https://moogm-frontend-main.vercel.app",
+    "scale": 6,
 
     "features": [
       {
@@ -513,7 +518,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739648/glitchor-rental-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087261/glitchor-rental-main.png",
     "main-image": "/image/portfolios/main/glitchor-rental.png",
-    "sub-image": "/image/portfolios/main/glitchor-rental.png",
+    "sub-image": "/image/portfolios/sub/glitchor-rental-sub.png",
     "work-title": "글리처렌탈(더캡슐) 공식 웹사이트",
     "work-title-short": "더캡슐 글리처렌탈",
     "work-title-eng": "Glitchor Rental",
@@ -529,6 +534,7 @@
     "key-techs": "React, Next.js, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, AOS, Figma",
     "github": "",
     "link": "https://glitchor-rental.vercel.app",
+    "scale": 4,
 
     "features": [
       {
@@ -572,7 +578,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739654/wkbc-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087280/wkbc-main.png",
     "main-image": "/image/portfolios/main/wkbc.png",
-    "sub-image": "/image/portfolios/main/wkbc.png",
+    "sub-image": "/image/portfolios/sub/wkbc-sub.png",
     "work-title": "제23차 세계한인비즈니스대회(WKBC) 공식 플랫폼",
     "work-title-short": "2025 WKBC",
     "work-title-eng": "2025 WKBC",
@@ -588,6 +594,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, Axios, Redux, React-Quill, Java, PayPal, GitHub, Vercel, AOS, Swiper, i18next, Kakao Postcode API, Figma, Google-Spreadsheet",
     "github": "",
     "link": "https://wkbc.us/ko-KR",
+    "scale": 14,
 
     "features": [
       {
@@ -686,7 +693,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739842/stage-cloud-dao-video.mp4",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087694/stage-cloud-dao-video-main.mp4",
     "main-image": "/image/portfolios/main/stage-cloud-dao.png",
-    "sub-image": "/image/portfolios/main/stage-cloud-dao.png",
+    "sub-image": "/image/portfolios/sub/stage-cloud-dao-sub.png",
     "work-title": "스테이지 클라우드 DAO 플랫폼 기획 및 퍼블리싱",
     "work-title-short": "스테이지 클라우드 DAO",
     "work-title-eng": "STAGE CLOUD DAO",
@@ -702,6 +709,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), pnpm, GitHub, GSAP, Swiper, Recharts, Figma",
     "github": "",
     "link": "https://muta-stage-cloude-main.vercel.app",
+    "scale": 11,
 
     "features": [
       {
@@ -764,7 +772,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739690/kb-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087269/kb-main.png",
     "main-image": "/image/portfolios/main/kb.png",
-    "sub-image": "/image/portfolios/main/kb.png",
+    "sub-image": "/image/portfolios/sub/kb-sub.png",
     "work-title": "KB국민카드 FUTURE9 랜딩페이지 구축",
     "work-title-short": "KB국민카드 FUTURE 9",
     "work-title-eng": "KB FUTURE 9",
@@ -780,6 +788,7 @@
     "key-techs": "React, Next.js, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, AOS, Figma",
     "github": "",
     "link": "https://kb-future9.vercel.app",
+    "scale": 1,
 
     "features": [
       {
@@ -821,7 +830,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739675/starcorn-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087276/starcorn-main.png",
     "main-image": "/image/portfolios/main/starcorn.png",
-    "sub-image": "/image/portfolios/main/starcorn.png",
+    "sub-image": "/image/portfolios/sub/starcorn-sub.png",
     "work-title": "2024 스타콘 페스타 랜딩페이지 구축",
     "work-title-short": "2024 스타콘 페스타",
     "work-title-eng": "2024 STARCORN FESTA",
@@ -837,6 +846,7 @@
     "key-techs": "React, Next.js, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, AOS, Figma",
     "github": "",
     "link": "https://2024-starcorn.vercel.app",
+    "scale": 2,
 
     "features": [
       {
@@ -882,7 +892,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739851/samsung-video.mp4",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087692/samsung-video-main.mp4",
     "main-image": "/image/portfolios/main/samsung.png",
-    "sub-image": "/image/portfolios/main/samsung.png",
+    "sub-image": "/image/portfolios/sub/samsung-sub.png",
     "work-title": "삼성물산 FutureScape 랜딩페이지 구축",
     "work-title-short": "삼성물산 FUTURE SCAPE",
     "work-title-eng": "Samsung FutureScape ",
@@ -898,6 +908,7 @@
     "key-techs": "React, Next.js, Sass(SCSS), styled-components, GitHub, Vercel, GSAP, AOS, Figma",
     "github": "",
     "link": "https://samsung-futurescape.vercel.app",
+    "scale": 3,
 
     "features": [
       {
@@ -942,7 +953,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739683/asiaplat-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087257/asiaplat-main.png",
     "main-image": "/image/portfolios/main/asiaplat.png",
-    "sub-image": "/image/portfolios/main/asiaplat.png",
+    "sub-image": "/image/portfolios/sub/asiaplat-sub.png",
     "work-title": "ASIA PLAT 태국 영문 뉴스레터 플랫폼",
     "work-title-short": "ASIA PLAT",
     "work-title-eng": "ASIA PLAT",
@@ -958,6 +969,7 @@
     "key-techs": "React, Next.js, Sass(SCSS), styled-components, Express, GitHub, Vercel, GSAP, AOS, Figma, Lottie",
     "github": "",
     "link": "https://asiaplat.vercel.app",
+    "scale": 5,
 
     "features": [
       {
@@ -1015,7 +1027,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739661/nh-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087273/nh-main.png",
     "main-image": "/image/portfolios/main/nh.png",
-    "sub-image": "/image/portfolios/main/nh.png",
+    "sub-image": "/image/portfolios/sub/nh-sub.png",
     "work-title": "NH오픈비즈니스허브 스타트업 데이터 검색 플랫폼",
     "work-title-short": "NH 오픈비즈니스허브",
     "work-title-eng": "NH OPEN BUSINESS HUB",
@@ -1031,6 +1043,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, Tailwind CSS, Axios, Redux, jQuery, React Quill, React Form Builder, Java, Docker, GitHub, Vercel, AOS, Swiper, Google-Maps API, Figma",
     "github": "",
     "link": "https://nhdic.com",
+    "scale": 15,
 
     "features": [
       {
@@ -1129,7 +1142,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739668/hirekorea-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087268/hirekorea-main.png",
     "main-image": "/image/portfolios/main/hirekorea.png",
-    "sub-image": "/image/portfolios/main/hirekorea.png",
+    "sub-image": "/image/portfolios/sub/hirekorea-sub.png",
     "work-title": "하이어코리아 글로벌 HR 채용 플랫폼",
     "work-title-short": "하이어코리아 HR",
     "work-title-eng": "HIREKOREA HR",
@@ -1145,6 +1158,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, Axios, Redux, Java, Docker, Cron-Job, GitHub, Vercel, i18next, Figma, Google-Spreadsheet",
     "github": "",
     "link": "https://hirekorea-frontend-main.vercel.app/ko-KR",
+    "scale": 7,
 
     "features": [
       {
@@ -1192,7 +1206,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/video/upload/v1786739812/biventures-video.mp4",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/video/upload/v1787087678/biventures-video-main.mp4",
     "main-image": "/image/portfolios/main/biventures.png",
-    "sub-image": "/image/portfolios/main/biventures.png",
+    "sub-image": "/image/portfolios/sub/biventures-sub.png",
     "work-title": "비아이벤처스(BI Ventures) 공식 웹사이트",
     "work-title-short": "비아이벤처스",
     "work-title-eng": "BI VENTURES",
@@ -1208,6 +1222,7 @@
     "key-techs": "React, Next.js, Sass(SCSS), styled-components, EmailJS, Kakao Maps API, GitHub, Vercel, GSAP, AOS, React Animated Cursor, Figma, Lottie",
     "github": "",
     "link": "https://www.biventures.kr",
+    "scale": 8,
 
     "features": [
       {
@@ -1266,7 +1281,7 @@
     "main-contents": "https://res.cloudinary.com/o2ldruee/image/upload/v1786739633/barfdog-scroll.png",
     "main-contents-optimized": "https://res.cloudinary.com/o2ldruee/image/upload/v1787087258/barfdog-main.png",
     "main-image": "/image/portfolios/main/barfdog.png",
-    "sub-image": "/image/portfolios/main/barfdog.png",
+    "sub-image": "/image/portfolios/sub/barfdog-sub.png",
     "work-title": "바프독 반려견 맞춤형 커머스 플랫폼",
     "work-title-short": "프레쉬아워 바프독",
     "work-title-eng": "Freshour BARFDOG",
@@ -1282,6 +1297,7 @@
     "key-techs": "React, Next.js, TypeScript, Sass(SCSS), styled-components, Tailwind CSS, Axios, Redux, Java, GitLab, GitHub, Vercel, GSAP, AOS, Recharts, Swiper, Figma",
     "github": "",
     "link": "https://barfdog.co.kr",
+    "scale": 13,
 
     "features": [
       {
