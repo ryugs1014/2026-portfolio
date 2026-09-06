@@ -22,7 +22,6 @@ export default function WorkDetailModal({ id, onClose }: WorkDetailModalProps) {
     setMounted(true);
 
     const lenis = (window as any).lenisInstance;
-
     const currentScrollY = window.scrollY;
 
     document.body.style.position = 'fixed';
@@ -44,13 +43,16 @@ export default function WorkDetailModal({ id, onClose }: WorkDetailModalProps) {
       document.body.style.top = '';
       document.body.style.left = '';
       document.body.style.width = '';
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
 
       window.scrollTo(0, currentScrollY);
 
-      if (lenis) lenis.start();
+      if (lenis) {
+        lenis.scrollTo(currentScrollY, { immediate: true });
+        lenis.start();
+      }
     };
-  }, [id]);
+  }, []);
 
   // SSR 단계 Portal 렌더링 방지(SSR 단계에서 사용불가)
   if (!mounted) return null;
