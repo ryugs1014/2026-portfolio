@@ -154,6 +154,7 @@ export default function Section_02() {
   const [selectedPortfolioId, setSelectedPortfolioId] = useState<string | null>(
     null,
   );
+  const [hoveredIds, setHoveredIds] = useState<Set<string>>(new Set());
 
   const cursorRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
@@ -183,6 +184,17 @@ export default function Section_02() {
       return 0;
     });
   }, [portfolios, sortOption]);
+
+  useEffect(() => {
+    if (activeWork) {
+      setHoveredIds((prev) => {
+        if (prev.has(activeWork.id)) return prev; // 이미 기록된 ID면 무시
+        const newSet = new Set(prev);
+        newSet.add(activeWork.id);
+        return newSet;
+      });
+    }
+  }, [activeWork]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -464,17 +476,25 @@ export default function Section_02() {
               willChange: 'transform, opacity',
             }}
           >
-            {activeWork && (
-              <img
-                src={activeWork['main-image']}
-                alt="portfolio preview"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                }}
-              />
-            )}
+            {sortedPortfolios
+              .filter((work) => hoveredIds.has(work.id))
+              .map((work) => (
+                <img
+                  key={work.id}
+                  src={work['main-image']}
+                  alt="portfolio preview"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: activeWork?.id === work.id ? 1 : 0,
+                    pointerEvents: 'none',
+                  }}
+                />
+              ))}
           </div>
         )}
       </section>
